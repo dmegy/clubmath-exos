@@ -19,6 +19,37 @@ Catalogue d'exos sur Pythagore pour le Club Mathématique de Nancy. Rédaction e
 
 
 \begin{exo}
+On considère une ligne brisée $ABCDE$ avec des angles droits et des distances comme sur la figure.
+Calculer la distance $AE$.
+\begin{center}
+\begin{tikzpicture}[rotate=-50]
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(1,0){B}
+\tkzDefPoint(1,2){C}
+\tkzDefPoint(4,2){D}
+\tkzDefPoint(4,6){E}
+\tkzMarkRightAngles[size=.2](A,B,C B,C,D C,D,E)
+\tkzDrawSegments[very thick](A,B B,C C,D D,E)
+\tkzLabelSegment[below left](A,B){$1$}
+\tkzLabelSegment(B,C){$2$}
+\tkzLabelSegment(C,D){$3$}
+\tkzLabelSegment(D,E){$4$}
+\tkzDrawPoints(A,B,C,D,E)
+\tkzLabelPoints[left](A)\tkzLabelPoints[below](B)\tkzLabelPoints[above](C)\tkzLabelPoints[below](D)\tkzLabelPoints[right](E)
+
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Trouver un rectangle dont $[AE]$ est une diagonale et appliquer Pythagore.
+\end{hint}
+\begin{sol}
+Considérons un point $P$ tel que $BCDP$ est un rectangle. Alors $APE$ est rectangle en $P$.
+On a alors $AE^2 = (1+3)^2+(2+4)^2=4^2+6^2=52$, d'où $AE=2\sqrt{13}$.
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
 Dans un demi-cercle de rayon $1$cm, on inscrit un autre demi-cercle plus petit, comme sur la figure.
 Quel est le rayon du petit demi-cercle ?
 \begin{center}
@@ -64,89 +95,6 @@ On obtient un triangle équilatéral quand on dédouble le triangle suivant l'ax
 
 Dans toute la suite, un triangle \og $3-4-5$\fg{} est un triangle dont les côtés mesurent $3$cm, $4$cm et $5$cm. C'est un triangle rectangle, comme on peut le vérifier à l'aide du théorème de Pythagore.
 
-
-\begin{exo}[Triangle rectangle dans un quart de cercle]
-Un triangle rectangle \og $3-4-5$\fg{} est inscrit dans un quart de cercle comme ci-dessous;
-Quel est le rayon du quart de cercle ?
-\begin{center}
-\begin{tikzpicture}[scale=.8]
-\draw (0,0) -- ({2*sqrt(5)},0) arc (0:90:{2*sqrt(5)}) -- cycle;
-\draw[very thick] (0,{sqrt(5)}) node {$\bullet$} node[left] {$A$}
--- ({2*sqrt(5)},0) node[midway,fill=white] {$5$} node {$\bullet$} node[right] {$B$}
--- ({3*2*sqrt(5)/5},{sqrt(5)+3/sqrt(5)}) node[midway,fill=white] {$4$} node {$\bullet$} node[above] {$C$}
--- cycle node[midway,fill=white] {$3$}  ;
-\end{tikzpicture}
-\end{center}
-% source : https://twitter.com/maliuhudmuaz/status/1315383186852118530 
-\begin{hint}
-On peut compléter la figure comme suit :
-\begin{center}
-\begin{tikzpicture}[scale=1]
-\draw (0,0) -- ({2*sqrt(5)},0) arc (0:180:{2*sqrt(5)}) node[left] {$D$} node {$\bullet$} -- (0,0) -- (0,{2*sqrt(5)});
-\draw[very thick] (0,{sqrt(5)}) node {$\bullet$} node[left] {$A$}
--- ({2*sqrt(5)},0) node[midway,fill=white] {$5$} node {$\bullet$} node[right] {$B$}
--- ({3*2*sqrt(5)/5},{sqrt(5)+3/sqrt(5)}) node[midway,fill=white] {$4$} node {$\bullet$} node[above] {$C$}
--- cycle node[midway,fill=white] {$3$}  ;
-%\draw ({-2*sqrt(5)},0)-- (0,{sqrt(5)});
-\end{tikzpicture}
-\end{center}
-Ensuite, on peut prolonger la droite $(AC)$.
-\end{hint}
-\begin{sol}
-Complétons la figure comme suit :
-\begin{center}
-\begin{tikzpicture}[scale=1]
-\draw (0,0) -- ({2*sqrt(5)},0) arc (0:180:{2*sqrt(5)}) node[left] {$D$} node {$\bullet$} -- (0,0) -- (0,{2*sqrt(5)});
-\draw[very thick] (0,{sqrt(5)}) node {$\bullet$} node[left] {$A$}
--- ({2*sqrt(5)},0) node[midway,fill=white] {$5$} node {$\bullet$} node[right] {$B$}
--- ({3*2*sqrt(5)/5},{sqrt(5)+3/sqrt(5)}) node[midway,fill=white] {$4$} node {$\bullet$} node[above] {$C$}
--- cycle node[midway,fill=white] {$3$}  ;
-\draw ({-2*sqrt(5)},0)-- (0,{sqrt(5)});
-\end{tikzpicture}
-\end{center}
-Comme le triangle $ABC$ est rectangle en $C$, la droite $(AC)$ recoupe le droite $(OB)$ en $D$. Le triangle $DBC$ est rectangle en $C$ et on a $DC=8$ et $BC=4$, donc en appliquant le théorème de Pythagore, on obtient 
-\[ DB=\sqrt{64+16}=\sqrt{80} = 4\sqrt5.\]
-Le rayon est donc égal à $2\sqrt 5$.
-\end{sol}
-\end{exo}
-
-
-
-\begin{exo}[Carrés dans un triangle 3-4-5]
-% triangles semblables, aussi
-Dans un triangle rectangle $ABC$ de type \og $3-4-5$\fg, on inscrit un carré de deux manières différentes, comme sur les deux figures.
-Quelles sont les dimensions des deux carrés ?
-
-\begin{center}
-\begin{tikzpicture}[scale=1/7]
-\tkzDefPoint(0,0){A} \tkzDefPoint(28,0){B} \tkzDefPoint(28,21){C} 
-\tkzDrawPolygon[very thick](A,B,C)
-\tkzDefPoint(16,12){O} \tkzDefPoint(16,0){P}  \tkzDefPoint(28,12){Q} 
-\tkzDrawSegments(P,O O,Q)
-\tkzMarkRightAngle[size=2](C,B,A)
-\tkzLabelPoints[below left](A) \tkzLabelPoints[below right](B) \tkzLabelPoints[above right](C)
-\end{tikzpicture}
-\hspace{1cm}
-\begin{tikzpicture}[scale=1/37]
-\tkzDefPoint(0,0){A} \tkzDefPoint(148,0){B} \tkzDefPoint(148,111){C} 
-\tkzDefPoint(100,0){P} \tkzDefPoint(148,36){Q}
-\tkzDefSquare(P,Q)\tkzGetPoints{R}{S}
-\tkzDrawPolygon(P,Q,R,S)
-\tkzDrawPolygon[very thick](A,B,C)
-\tkzMarkRightAngle[size=10](C,B,A)
-
-\tkzLabelPoints[below left](A) \tkzLabelPoints[below right](B) \tkzLabelPoints[above right](C)
-\end{tikzpicture}
-\end{center}
-\begin{sol}
-Pour le deuxième carré, on a intérêt à noter $60x$ le côté du carré, de cette façon c'est divisible par $3$, $4$ et $5$. Ensuite on utilise les triangles semblables, mais du coup cet exo est faisable sans Pythagore. On trouve que $x=\frac{1}{37}$ par proportionnalité, le deuxième carré fait donc $60/37$ de côté.
-
-Avec Pythagore ça doit être plus pénible...
-
-Le première carré fait $12/7$ de côté. Là aussi, on a intérêt à noter $12y$ le côté, comme ça c'est divisible par trois et quatre. Et là aussi il vaut mieux faire ça avec des triangles semblables.
-Il est plus gros que le premier car $444=12\times 37 \geq 7\times 60=420$. Sur le dessin ça se voir quand même assez nettement.
-\end{sol}
-\end{exo}
 
 
 
@@ -196,105 +144,104 @@ En appliquant le théorème de Pythagore, on voit que les deux aires sont égale
 
 
 
+
 \begin{exo}
-On considère un triangle isocèle dont les côtés mesurent $13$cm, $13$cm et $10$cm.
-Quel est le rayon de son cercle circonscrit ?
+On considère deux cercles de rayon $2$cm et $3$cm qui ont un unique point de contact entre eux.
+Ils sont tous deux tangents en $P$ et $Q$ à une certaine droite.
+Quelle est la distance $PQ$ ?
 \begin{center}
-\begin{tikzpicture}[scale=1/3]
-\tkzDefPoint(0,0){H}\tkzDefPoint(-5,0){B}\tkzDefPoint(5,0){C}\tkzDefPoint(0,12){A}
-\tkzDefCircle[circum](A,B,C) \tkzGetPoint{O} 
-\tkzDrawCircle[very thick, black](O,A)
-\tkzDrawPolygon(A,B,C)
-\tkzLabelSegments[above left](A,B){$13$}\tkzLabelSegments(A,C){$13$}\tkzLabelSegments(B,C){$10$}
+\begin{tikzpicture}[scale=.7]
+\tkzDefPoint(0,2){O}\tkzDefPoint(sqrt{24},3){O'}
+\tkzDefPoint(0,0){P}\tkzDefPoint(sqrt{24},0){Q}
+\tkzDrawCircle[black,thick](O,P)
+\tkzDrawCircle[black,thick](O',Q)
+\tkzDrawLine(P,Q)
+\tkzDrawPoints(P,Q)
+\tkzLabelPoints(P,Q)
 \end{tikzpicture}
 \end{center}
 \begin{hint}
-Il y a une hauteur $h$ que l'on peut calculer à l'aide de Pythagore.
-Ensuite, si l'on note $H$ le pied de cette hauteur et $O$ le centre du cercle circonscrit, on peut par exemple appliquer Pythagore dans le triangle rectangle $OHB$.
 \end{hint}
 \begin{sol}
-On trouve une hauteur de $12$, et un rayon de $\frac{169}{24}$.
 \end{sol}
 \end{exo}
 
 
-
-
-
-\begin{exo}
-Dans un cercle $\mathcal C$, on a une corde $[AB]$ mesurant $4$cm. 
-De plus, on sait que la distance entre le milieu de cette corde et le cercle est de $1$cm.
-Quel est le rayon du cercle ?
+\begin{exo}[Spirale pythagoricienne]
+Cette spirale est formée de triangles rectangles juxtaposés. On a 
+$OA=AB=BC=CD= DE=EF=FG=GH=HI=1$.
+Que vaut $OI$ ?
 \begin{center}
-\begin{tikzpicture}
-\tkzDefPoint(-2,0){A} \tkzDefPoint(2,0){B}
-\tkzDefPoint(0,0){I} \tkzDefPoint(0,1){P}
-\tkzDrawSegment(A,B)
-\tkzDrawSegment[dashed](I,P)
-\tkzDefPoint(0,-1.5){O}
-\tkzDrawCircle[very thick](O,A)
-\tkzLabelSegment[below](A,I) {$2$}
-\tkzLabelSegment[below](I,B) {$2$}
-\tkzLabelSegment[right](I,P) {$1$}
-\tkzMarkRightAngle[size=.2](A,I,P)
-\tkzDrawPoints(A,B,P)
-\tkzLabelPoints[left](A) \tkzLabelPoints[right](B)
+%\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{qqwuqq}{rgb}{0,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,rotate=30,scale=1.2]
+%\clip(-1.28,-3.08) rectangle (4.72,2.7);
+%angles:
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.28284271247461906,0.) -- (0.28284271247461906,0.28284271247461906) -- (0.,0.28284271247461906) -- (0.,0.) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.2,0.8) -- (0.4,1.) -- (0.2,1.2) -- (0.,1.) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.7549360435341675,1.428337411163077) -- (1.033705413557638,1.476166673510697) -- (0.9858761512100178,1.7549360435341674) -- (0.7071067811865475,1.7071067811865475) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.5947420120656104,1.6108727725011909) -- (1.86007799947673,1.5129094437267652) -- (1.9580413282511557,1.7782454311378848) -- (1.692705340840036,1.8762087599123105) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (2.4245267948738216,1.3363429000893319) -- (2.6180399842767828,1.1300599741669628) -- (2.824322910199152,1.3235731635699242) -- (2.6308097207961905,1.5298560894922932) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.0476710481598275,0.7080978975204855) -- (3.1401089613180893,0.440786782504769) -- (3.407420076333806,0.5332246956630311) -- (3.314982163175544,0.8005358106787476) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.359379289033147,-0.12909847315852738) -- (3.3439260622996714,-0.41151872346562524) -- (3.626346312606769,-0.4269719501991008) -- (3.6417995393402447,-0.1445516998920029) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.328447719041178,-1.028752263517281) -- (3.214141911983702,-1.2874686767440788) -- (3.4728583252105,-1.4017744838015544) -- (3.5871641322679757,-1.1430580705747568) -- cycle; 
+
+
+
+\draw[thick]  (1.,0.)-- (0.,0.);
+\draw[thick]  (0.,1.)-- (1.,0.);
+\draw[thick]  (0.,1.)-- (0.,0.);
+\draw[thick] (1.,0.)-- (0.7071067811865475,1.7071067811865475);
+\draw[thick]  (1.,0.)-- (1.692705340840036,1.8762087599123105);
+\draw[thick]  (1.,0.)-- (2.6308097207961905,1.5298560894922932);
+\draw[thick]  (1.,0.)-- (3.314982163175544,0.8005358106787476);
+\draw[thick]  (1.,0.)-- (3.6417995393402447,-0.1445516998920029);
+\draw[thick]  (1.,0.)-- (3.5871641322679757,-1.1430580705747568);
+\draw[thick] (3.183032075771265,-2.057758721559405)-- (1.,0.);
+\draw[thick]  (0.,1.)-- (0.7071067811865475,1.7071067811865475);
+\draw[thick] (0.7071067811865475,1.7071067811865475)-- (1.692705340840036,1.8762087599123105);
+\draw[thick]  (1.692705340840036,1.8762087599123105)-- (2.6308097207961905,1.5298560894922932);
+\draw[thick] (2.6308097207961905,1.5298560894922932)-- (3.314982163175544,0.8005358106787476);
+\draw[thick]  (3.314982163175544,0.8005358106787476)-- (3.6417995393402447,-0.1445516998920029);
+\draw[thick] (3.6417995393402447,-0.1445516998920029)-- (3.5871641322679757,-1.1430580705747568);
+\draw[thick]  (3.183032075771265,-2.057758721559405)-- (3.5871641322679757,-1.1430580705747568);
+
+
+\draw[thick]  (0.,0.) node {$\bullet$};
+\draw[thick]  (-0.36,0.09) node {$A$};
+\draw[thick] (0.,1.) node {$\bullet$};
+\draw[thick]  (-0.36,1.37) node {$B$};
+\draw[thick] (1.,0.) node {$\bullet$};
+\draw[thick]  (0.78,-0.35) node {$O$};
+\draw[thick]  (0.7071067811865475,1.7071067811865475) node {$\bullet$};
+\draw[thick]  (0.5,2.17) node {$C$};
+\draw[thick]  (1.692705340840036,1.8762087599123105) node {$\bullet$};
+\draw[thick]  (1.84,2.21) node {$D$};
+\draw[thick]  (2.6308097207961905,1.5298560894922932) node {$\bullet$};
+\draw[thick]  (2.78,1.85) node {$E$};
+\draw[thick]  (3.314982163175544,0.8005358106787476) node {$\bullet$};
+\draw[thick]  (3.46,1.13) node {$F$};
+\draw[thick]  (3.6417995393402447,-0.1445516998920029) node {$\bullet$};
+\draw[thick]  (3.78,0.19) node {$G$};
+\draw[thick]  (3.5871641322679757,-1.1430580705747568) node {$\bullet$};
+\draw[thick]  (3.88,-1.07) node {$H$};
+\draw[thick]  (3.183032075771265,-2.057758721559405) node {$\bullet$};
+\draw[thick] (3.54,-2.11) node {$I$};
+
+
+
 \end{tikzpicture}
 \end{center}
 \begin{hint}
-Placer le centre $O$ du cercle. Que vaut la distance de $O$ à la corde, en fonction du rayon $R$ ?
-Ensuite, on peut appliquer Pythagore.
+Appliquer Pythagore dans les triangles rectangles en partant du plus petit. Le résultat demandé est un nombre entier.
 \end{hint}
 \begin{sol}
-Le diamètre vaut $5$cm.
 \end{sol}
 \end{exo}
 
 
 
-
-\begin{exo}
-Dans un rectangle de dimensions $3\mathrm{cm}\times 2\mathrm{cm}$, on inscrit deux demi-cercles de même rayon qui se touchent en un seul point, comme sur la figure.
-Quel est le rayon de ces deux demi-cercles ? (Ce n'est pas $1$!)
-\begin{center}
-\begin{tikzpicture}[scale=2]
-\draw[very thick] (0,0) rectangle (3,2);
-\tkzDefPoint(13/12,0){O} \tkzDefPoint(23/12,2){O'} 
-\tkzDefPoint(26/12,0){A} \tkzDefPoint(10/12,2){B} 
-\tkzDrawSemiCircle(O,A)
-\tkzDrawSemiCircle(O',B)
-\tkzDrawPoints(O,O')
-\tkzLabelPoints(O,O')
-\end{tikzpicture}
-\end{center}
-\begin{sol}
-On peut par exemple projeter le centre du rectangle sur une base, noter $x$ la distance de $O$ à ce projeté, et on obtient alors en considérant la largeur et la hauteur du rectangle :  $3=2R+2x$ et $2=2\sqrt{R^2-x^2}$, c'est-à-dire $1=R^2-x^2=\frac32(R-x)$, d'où finalement le système $R+x=\frac32$ et $R-x=\frac23$ et donc $2R=\frac{9+4}{6}$ et finalement $R=\frac{13}{12}$.
-
-Autre méthode : on projette $O'$ sur la base, et on applique Pythagore dans $OO'H$. On a $OH=3-2R$, donc :
-\[ (3-2R)^2+4=4R^2\]
-Et donc $13-12R=0$, c'est plus rapide !
-\end{sol}
-\end{exo}
-
-
-
-
-
-%
-%\begin{exo}
-%\url{https://www.youtube.com/watch?v=og9Ak5ARqe4}
-%
-%Pas mal mais le rayon que 'on trouve est dégueu... Il faut faire trois fois pythagore.
-%\end{exo}
-
-
-
-
-
-
-
-
-
+% - - - - - - - - - - - - - - - - - - - - 
 
 \begin{exo}% triangles égaux
 Dans un carré $ABCD$, on trace un point $M$ sur le côté $[BC]$.
@@ -302,7 +249,6 @@ Les perpendiculaires à $(AM)$ passant par $D$ et $B$ coupent $(AM)$ en $P$ et $
 Sachant que $DP=5$cm et $BQ=4$cm, déterminer l'aire du carré $ABCD$.%\\
 %(Bonus : calculer ensuite la distance $AM$.)
 % a besoin de triangles semblables ou de Thalès.
-
 \begin{center}
 \begin{tikzpicture}[rotate=atan(4/5), scale=.8]
 \tkzDefPoint(0,0){A} \tkzDefPoint(5,-4){B} \tkzDefPoint(9,1){C} \tkzDefPoint(4,5){D}
@@ -333,6 +279,156 @@ Pour trouver la distance $AM$, il suffit de trouver $QM$. Le plus simple est d'u
 
 
 
+% - - - - - - - -
+\begin{exo}
+On considère un triangle isocèle dont les côtés mesurent $13$cm, $13$cm et $10$cm.
+Quel est le rayon de son cercle circonscrit ?
+\begin{center}
+\begin{tikzpicture}[scale=1/3]
+\tkzDefPoint(0,0){H}\tkzDefPoint(-5,0){B}\tkzDefPoint(5,0){C}\tkzDefPoint(0,12){A}
+\tkzDefCircle[circum](A,B,C) \tkzGetPoint{O} 
+\tkzDrawCircle[very thick, black](O,A)
+\tkzDrawPolygon(A,B,C)
+\tkzLabelSegments[above left](A,B){$13$}\tkzLabelSegments(A,C){$13$}\tkzLabelSegments(B,C){$10$}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Il y a une hauteur $h$ que l'on peut calculer à l'aide de Pythagore.
+Ensuite, si l'on note $H$ le pied de cette hauteur et $O$ le centre du cercle circonscrit, on peut par exemple appliquer Pythagore dans le triangle rectangle $OHB$.
+\end{hint}
+\begin{sol}
+On trouve une hauteur de $12$, et un rayon de $\frac{169}{24}$.
+\end{sol}
+\end{exo}
+
+
+
+
+% - - - - - - - -
+\begin{exo}
+Dans un cercle $\mathcal C$, on a une corde $[AB]$ mesurant $4$cm. 
+De plus, on sait que la distance entre le milieu de cette corde et le cercle est de $1$cm.
+Quel est le rayon du cercle ?
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(-2,0){A} \tkzDefPoint(2,0){B}
+\tkzDefPoint(0,0){I} \tkzDefPoint(0,1){P}
+\tkzDrawSegment(A,B)
+\tkzDrawSegment[dashed](I,P)
+\tkzDefPoint(0,-1.5){O}
+\tkzDrawCircle[very thick](O,A)
+\tkzLabelSegment[below](A,I) {$2$}
+\tkzLabelSegment[below](I,B) {$2$}
+\tkzLabelSegment[right](I,P) {$1$}
+\tkzMarkRightAngle[size=.2](A,I,P)
+\tkzDrawPoints(A,B,P)
+\tkzLabelPoints[left](A) \tkzLabelPoints[right](B)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Placer le centre $O$ du cercle. Que vaut la distance de $O$ à la corde, en fonction du rayon $R$ ?
+Ensuite, on peut appliquer Pythagore.
+\end{hint}
+\begin{sol}
+Le diamètre vaut $5$cm.
+\end{sol}
+\end{exo}
+
+
+% - - - - - - - - - - - - - - - - - - - - 
+
+\begin{exo}
+Dans un rectangle de dimensions $3\mathrm{cm}\times 2\mathrm{cm}$, on inscrit deux demi-cercles de même rayon qui se touchent en un seul point, comme sur la figure.
+Quel est le rayon de ces deux demi-cercles ? (Ce n'est pas $1$!)
+\begin{center}
+\begin{tikzpicture}[scale=2]
+\draw[very thick] (0,0) rectangle (3,2);
+\tkzDefPoint(13/12,0){O} \tkzDefPoint(23/12,2){O'} 
+\tkzDefPoint(26/12,0){A} \tkzDefPoint(10/12,2){B} 
+\tkzDrawSemiCircle(O,A)
+\tkzDrawSemiCircle(O',B)
+\tkzDrawPoints(O,O')
+\tkzLabelPoints(O,O')
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+On peut par exemple projeter le centre du rectangle sur une base, noter $x$ la distance de $O$ à ce projeté, et on obtient alors en considérant la largeur et la hauteur du rectangle :  $3=2R+2x$ et $2=2\sqrt{R^2-x^2}$, c'est-à-dire $1=R^2-x^2=\frac32(R-x)$, d'où finalement le système $R+x=\frac32$ et $R-x=\frac23$ et donc $2R=\frac{9+4}{6}$ et finalement $R=\frac{13}{12}$.
+
+Autre méthode : on projette $O'$ sur la base, et on applique Pythagore dans $OO'H$. On a $OH=3-2R$, donc :
+\[ (3-2R)^2+4=4R^2\]
+Et donc $13-12R=0$, c'est plus rapide !
+\end{sol}
+\end{exo}
+
+
+% - - - - - - - - - - - - - - - - - - - - 
+
+\begin{exo}[Triangle rectangle dans un quart de cercle]
+Un triangle rectangle \og $3-4-5$\fg{} est inscrit dans un quart de cercle comme ci-dessous;
+Quel est le rayon du quart de cercle ?
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\draw (0,0) -- ({2*sqrt(5)},0) arc (0:90:{2*sqrt(5)}) -- cycle;
+\draw[very thick] (0,{sqrt(5)}) node {$\bullet$} node[left] {$A$}
+-- ({2*sqrt(5)},0) node[midway,fill=white] {$5$} node {$\bullet$} node[right] {$B$}
+-- ({3*2*sqrt(5)/5},{sqrt(5)+3/sqrt(5)}) node[midway,fill=white] {$4$} node {$\bullet$} node[above] {$C$}
+-- cycle node[midway,fill=white] {$3$}  ;
+\end{tikzpicture}
+\end{center}
+% source : https://twitter.com/maliuhudmuaz/status/1315383186852118530 
+\begin{hint}
+On peut compléter la figure comme suit :
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\draw (0,0) -- ({2*sqrt(5)},0) arc (0:180:{2*sqrt(5)}) node[left] {$D$} node {$\bullet$} -- (0,0) -- (0,{2*sqrt(5)});
+\draw[very thick] (0,{sqrt(5)}) node {$\bullet$} node[left] {$A$}
+-- ({2*sqrt(5)},0) node[midway,fill=white] {$5$} node {$\bullet$} node[right] {$B$}
+-- ({3*2*sqrt(5)/5},{sqrt(5)+3/sqrt(5)}) node[midway,fill=white] {$4$} node {$\bullet$} node[above] {$C$}
+-- cycle node[midway,fill=white] {$3$}  ;
+%\draw ({-2*sqrt(5)},0)-- (0,{sqrt(5)});
+\end{tikzpicture}
+\end{center}
+Ensuite, on peut prolonger la droite $(AC)$.
+\end{hint}
+\begin{sol}
+Complétons la figure comme suit :
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\draw (0,0) -- ({2*sqrt(5)},0) arc (0:180:{2*sqrt(5)}) node[left] {$D$} node {$\bullet$} -- (0,0) -- (0,{2*sqrt(5)});
+\draw[very thick] (0,{sqrt(5)}) node {$\bullet$} node[left] {$A$}
+-- ({2*sqrt(5)},0) node[midway,fill=white] {$5$} node {$\bullet$} node[right] {$B$}
+-- ({3*2*sqrt(5)/5},{sqrt(5)+3/sqrt(5)}) node[midway,fill=white] {$4$} node {$\bullet$} node[above] {$C$}
+-- cycle node[midway,fill=white] {$3$}  ;
+\draw ({-2*sqrt(5)},0)-- (0,{sqrt(5)});
+\end{tikzpicture}
+\end{center}
+Comme le triangle $ABC$ est rectangle en $C$, la droite $(AC)$ recoupe le droite $(OB)$ en $D$. Le triangle $DBC$ est rectangle en $C$ et on a $DC=8$ et $BC=4$, donc en appliquant le théorème de Pythagore, on obtient 
+\[ DB=\sqrt{64+16}=\sqrt{80} = 4\sqrt5.\]
+Le rayon est donc égal à $2\sqrt 5$.
+\end{sol}
+\end{exo}
+
+
+
+
+
+%
+%\begin{exo}
+%\url{https://www.youtube.com/watch?v=og9Ak5ARqe4}
+%
+%Pas mal mais le rayon que 'on trouve est dégueu... Il faut faire trois fois pythagore.
+%\end{exo}
+
+
+
+
+
+
+
+
+
+
+% - - - - - - - - - - - - - - - - - - - - 
 
 \begin{exo}[Le triangle $15^\circ-75^\circ-90^\circ$]
 Le triangle $ABC$ a des angles qui mesurent $15^\circ$, $75^\circ$ et $90^\circ$, comme sur la figure ci-dessous. Son hypoténuse $AB$ mesure $1$ cm. 
@@ -432,79 +528,6 @@ Le rayon du quart de cercle est $\sqrt 3$.
 
 
 
-\begin{exo}[Spirale pythagoricienne]
-Cette spirale est formée de triangles rectangles juxtaposés. On a 
-$OA=AB=BC=CD= DE=EF=FG=GH=HI=1$.
-Que vaut $OI$ ?
-\begin{center}
-%\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{qqwuqq}{rgb}{0,0,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,rotate=30,scale=1.2]
-%\clip(-1.28,-3.08) rectangle (4.72,2.7);
-%angles:
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.28284271247461906,0.) -- (0.28284271247461906,0.28284271247461906) -- (0.,0.28284271247461906) -- (0.,0.) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.2,0.8) -- (0.4,1.) -- (0.2,1.2) -- (0.,1.) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.7549360435341675,1.428337411163077) -- (1.033705413557638,1.476166673510697) -- (0.9858761512100178,1.7549360435341674) -- (0.7071067811865475,1.7071067811865475) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.5947420120656104,1.6108727725011909) -- (1.86007799947673,1.5129094437267652) -- (1.9580413282511557,1.7782454311378848) -- (1.692705340840036,1.8762087599123105) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (2.4245267948738216,1.3363429000893319) -- (2.6180399842767828,1.1300599741669628) -- (2.824322910199152,1.3235731635699242) -- (2.6308097207961905,1.5298560894922932) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.0476710481598275,0.7080978975204855) -- (3.1401089613180893,0.440786782504769) -- (3.407420076333806,0.5332246956630311) -- (3.314982163175544,0.8005358106787476) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.359379289033147,-0.12909847315852738) -- (3.3439260622996714,-0.41151872346562524) -- (3.626346312606769,-0.4269719501991008) -- (3.6417995393402447,-0.1445516998920029) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.328447719041178,-1.028752263517281) -- (3.214141911983702,-1.2874686767440788) -- (3.4728583252105,-1.4017744838015544) -- (3.5871641322679757,-1.1430580705747568) -- cycle; 
-
-
-
-\draw[thick]  (1.,0.)-- (0.,0.);
-\draw[thick]  (0.,1.)-- (1.,0.);
-\draw[thick]  (0.,1.)-- (0.,0.);
-\draw[thick] (1.,0.)-- (0.7071067811865475,1.7071067811865475);
-\draw[thick]  (1.,0.)-- (1.692705340840036,1.8762087599123105);
-\draw[thick]  (1.,0.)-- (2.6308097207961905,1.5298560894922932);
-\draw[thick]  (1.,0.)-- (3.314982163175544,0.8005358106787476);
-\draw[thick]  (1.,0.)-- (3.6417995393402447,-0.1445516998920029);
-\draw[thick]  (1.,0.)-- (3.5871641322679757,-1.1430580705747568);
-\draw[thick] (3.183032075771265,-2.057758721559405)-- (1.,0.);
-\draw[thick]  (0.,1.)-- (0.7071067811865475,1.7071067811865475);
-\draw[thick] (0.7071067811865475,1.7071067811865475)-- (1.692705340840036,1.8762087599123105);
-\draw[thick]  (1.692705340840036,1.8762087599123105)-- (2.6308097207961905,1.5298560894922932);
-\draw[thick] (2.6308097207961905,1.5298560894922932)-- (3.314982163175544,0.8005358106787476);
-\draw[thick]  (3.314982163175544,0.8005358106787476)-- (3.6417995393402447,-0.1445516998920029);
-\draw[thick] (3.6417995393402447,-0.1445516998920029)-- (3.5871641322679757,-1.1430580705747568);
-\draw[thick]  (3.183032075771265,-2.057758721559405)-- (3.5871641322679757,-1.1430580705747568);
-
-
-\draw[thick]  (0.,0.) node {$\bullet$};
-\draw[thick]  (-0.36,0.09) node {$A$};
-\draw[thick] (0.,1.) node {$\bullet$};
-\draw[thick]  (-0.36,1.37) node {$B$};
-\draw[thick] (1.,0.) node {$\bullet$};
-\draw[thick]  (0.78,-0.35) node {$O$};
-\draw[thick]  (0.7071067811865475,1.7071067811865475) node {$\bullet$};
-\draw[thick]  (0.5,2.17) node {$C$};
-\draw[thick]  (1.692705340840036,1.8762087599123105) node {$\bullet$};
-\draw[thick]  (1.84,2.21) node {$D$};
-\draw[thick]  (2.6308097207961905,1.5298560894922932) node {$\bullet$};
-\draw[thick]  (2.78,1.85) node {$E$};
-\draw[thick]  (3.314982163175544,0.8005358106787476) node {$\bullet$};
-\draw[thick]  (3.46,1.13) node {$F$};
-\draw[thick]  (3.6417995393402447,-0.1445516998920029) node {$\bullet$};
-\draw[thick]  (3.78,0.19) node {$G$};
-\draw[thick]  (3.5871641322679757,-1.1430580705747568) node {$\bullet$};
-\draw[thick]  (3.88,-1.07) node {$H$};
-\draw[thick]  (3.183032075771265,-2.057758721559405) node {$\bullet$};
-\draw[thick] (3.54,-2.11) node {$I$};
-
-
-
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-Appliquer Pythagore dans les triangles rectangles en partant du plus petit. Le résultat demandé est un nombre entier.
-\end{hint}
-\begin{sol}
-\end{sol}
-\end{exo}
-
-
 
 % - - - - - - - -
 \begin{exo}[Théorème des lunules]
@@ -552,6 +575,45 @@ Calculer la distance $AP$.
 \tkzLabelSegment[right](B,C){$3$}
 \end{tikzpicture}
 \end{center}
+\end{exo}
+
+
+
+
+\begin{exo}[Carrés dans un triangle 3-4-5]
+% triangles semblables, aussi
+Dans un triangle rectangle $ABC$ de type \og $3-4-5$\fg, on inscrit un carré de deux manières différentes, comme sur les deux figures.
+Quelles sont les dimensions des deux carrés ?
+
+\begin{center}
+\begin{tikzpicture}[scale=1/7]
+\tkzDefPoint(0,0){A} \tkzDefPoint(28,0){B} \tkzDefPoint(28,21){C} 
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDefPoint(16,12){O} \tkzDefPoint(16,0){P}  \tkzDefPoint(28,12){Q} 
+\tkzDrawSegments(P,O O,Q)
+\tkzMarkRightAngle[size=2](C,B,A)
+\tkzLabelPoints[below left](A) \tkzLabelPoints[below right](B) \tkzLabelPoints[above right](C)
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[scale=1/37]
+\tkzDefPoint(0,0){A} \tkzDefPoint(148,0){B} \tkzDefPoint(148,111){C} 
+\tkzDefPoint(100,0){P} \tkzDefPoint(148,36){Q}
+\tkzDefSquare(P,Q)\tkzGetPoints{R}{S}
+\tkzDrawPolygon(P,Q,R,S)
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzMarkRightAngle[size=10](C,B,A)
+
+\tkzLabelPoints[below left](A) \tkzLabelPoints[below right](B) \tkzLabelPoints[above right](C)
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+Pour le deuxième carré, on a intérêt à noter $60x$ le côté du carré, de cette façon c'est divisible par $3$, $4$ et $5$. Ensuite on utilise les triangles semblables, mais du coup cet exo est faisable sans Pythagore. On trouve que $x=\frac{1}{37}$ par proportionnalité, le deuxième carré fait donc $60/37$ de côté.
+
+Avec Pythagore ça doit être plus pénible...
+
+Le première carré fait $12/7$ de côté. Là aussi, on a intérêt à noter $12y$ le côté, comme ça c'est divisible par trois et quatre. Et là aussi il vaut mieux faire ça avec des triangles semblables.
+Il est plus gros que le premier car $444=12\times 37 \geq 7\times 60=420$. Sur le dessin ça se voir quand même assez nettement.
+\end{sol}
 \end{exo}
 
 
