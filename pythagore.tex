@@ -368,6 +368,90 @@ Le diamètre vaut $5$cm.
 \end{exo}
 
 
+
+% - - - - - -
+
+\begin{exo}
+Dans un carré dont les côtés mesurent $1$cm, on inscrit un quart de cercle puis un petit cercle comme sur la figure.
+Quel est le rayon du petit cercle ?
+\begin{center}
+\begin{tikzpicture}[scale=4]
+\tkzDefPoint(0,0){O} \tkzDefPoint(1,0){A} \tkzDefPoint(1,1){B} \tkzDefPoint(0,1){C}
+\tkzDefPoint(2*sqrt{2}-2,2*sqrt{2}-2){O'}
+\tkzDefPoint(1/sqrt{2},1/sqrt{2}){P}
+\tkzDrawPoint(O')
+\tkzDrawArc[black,thick](O,A)(C)
+\tkzDrawPolygon[very thick](O,A,B,C)
+\tkzDrawCircle[black,thick](O',P)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Tracer le centre du petit cercle et décomposer la diagonale du carré en plusieurs segments.
+\end{hint}
+\begin{sol}
+On décompose la diagonale en trois segments : on obtient
+\[ \sqrt 2 = 1+R+R\sqrt 2\]
+Ceci aboutit à $R=3-2\sqrt{2}$.
+\end{sol}
+\end{exo}
+
+
+% - - - - - - - - - - - - - - - - - - - - 
+
+
+\begin{exo}
+Quel est le rayon du cercle inscrit dans un triangle équilatéral de côté $1$cm?
+\begin{center}
+\begin{tikzpicture}[rotate=-30,scale=1.2]
+\tkzDefPoint(0,0){O} \tkzDefPoint(0:2){A}\tkzDefPoint(120:2){B}\tkzDefPoint(240:2){C}
+\tkzDefPoint(60:1){P}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDrawCircle(O,P)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Il est peut-être plus simple de s'imaginer que le cercle est de rayon $1$ et de chercher la taille du triangle équilatéral.
+Tracer les hauteurs de ce triangle équilatéral.
+\end{hint}
+\begin{sol}
+On trouve $R=\frac{1}{2\sqrt 3}$. (Si le triangle est de côté $1$.)
+
+Sinon, on peut remarquer que pour un triangle équilatéral, le centre du cercle inscrit est également le centre de gravité, ou le centre du cercle circonscrit. Il se trouve donc au tiers des médianes en partant de la base.
+Or, les médianes sont les hauteurs, elles mesurent $\frac{\sqrt 3}{2}$.
+\end{sol}
+\end{exo}
+
+
+% - - - - - - -
+
+
+\begin{exo}
+Dans un triangle équilatéral de côté $1$cm, on inscrit un premier cercle, puis trois autres petits cercles, comme sur la figure.
+Calculer le rayon $r$ des petits cercles.
+\begin{center}
+\begin{tikzpicture}[rotate=-30,scale=1.2]
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(0:2){A}\tkzDefPoint(120:2){B}\tkzDefPoint(240:2){C}
+\tkzDefPoint(0:1){P}\tkzDefPoint(120:1){Q}\tkzDefPoint(240:1){R}
+\tkzDefPoint(0:4/3){X} \tkzDefPoint(120:4/3){Y} \tkzDefPoint(240:4/3){Z}
+\tkzDrawCircle(X,P)
+\tkzDrawCircle(Y,Q)
+\tkzDrawCircle(Z,R)
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDrawCircle(O,P)
+
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Quelle est la taille des petits cercles, par rapport au grand cercle inscrit ?
+\end{hint}
+\begin{sol}
+Les petits cercles sont trois fois plus petits que le grand cercle, comme on le voit en trançant les tangentes communes aux cercles, ce qui partage le triangle en un hexagone de côté $1/3$ et trois petits triangles équilatéraux.
+
+Comme on sait que $R=\frac{1}{2\sqrt 3}$, on trouve donc $r=\frac{1}{6\sqrt 3}$.
+\end{sol}
+\end{exo}
+
 % - - - - - - - - - - - - - - - - - - - - 
 
 \begin{exo}
