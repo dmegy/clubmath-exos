@@ -1,0 +1,57 @@
+
+
+% - - - - - - - - - - - - - -
+% PARAMETRAGE DU PACKAGE ANSWERS 
+% POUR LES INDICATIONS ET CORRECTIONS
+% - - - - - - - - - - - - - - 
+
+\usepackage{answers}
+
+\Newassociation{sol}{Soln}{solutions}
+% ira dans le fichier d'identifiant 'solutions'
+% et écrira les solutions dans un environnement 'Soln'
+\Newassociation{hint}{Hint}{indications}
+
+\newenvironment{exo}{\begin{ex} \label{enonce.\theex} }{\end{ex} }
+
+\renewenvironment{Soln}[1]{\noindent{\bf Correction de l'exercice \ref{enonce.#1}.} \\ }
+
+\renewenvironment{Hint}[1]{ \noindent{\bf Exercice  \ref{enonce.#1}.} \label{hint.#1}}
+
+
+% - - - - - - - - - - - - - - 
+% FIN PARAMETRAGE ANSWERS
+% - - - - - - - - - - - - - - 
+
+%-----------------------------
+% MACROS POUR LES FEUILLES DE TD
+
+
+\newenvironment{feuilleTD}{
+
+
+\Opensolutionfile{indications}[\jobname_hints]
+\Opensolutionfile{solutions}[\jobname_sol]
+}{
+\Closesolutionfile{indications}
+\Closesolutionfile{solutions}
+}
+
+\newcommand{\indications}{
+\newpage
+\noindent {\Large \bf Indications} \hrulefill
+
+\vspace{1em}
+\Readsolutionfile{indications}
+}
+
+\newcommand{\correction}{
+\newpage
+\hrule
+\begin{center}
+{\Large \bf Correction}
+\end{center}
+\hrule
+\vspace{1em}
+\Readsolutionfile{solutions}
+}

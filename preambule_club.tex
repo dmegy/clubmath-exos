@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage{mathrsfs,stmaryrd}
+\usepackage{fancybox,mdframed,multicol,comment,enumitem}
+\usepackage{microtype}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,          % color of internal links
+    citecolor=blue,        % color of links to bibliography
+    filecolor=blue,      % color of file links
+    urlcolor=black           % color of external links
+}
+
+%\usepackage[dvipsnames]{xcolor}
+
+\usepackage[normalem]{ulem} % pour souligner avec changements de ligne
+\usepackage{pgf,pgfmath,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary[patterns]
+\tikzset{every picture/.style={execute at begin picture={
+   \shorthandoff{:;!?};}
+}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+\def\point{node {$\bullet$}}
+
+\usepackage{tkz-euclide}
+
+
+
+\theoremstyle{definition}
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}[theoreme]{Définition}
+\newtheorem{definitions}[theoreme]{Définitions}
+\newtheorem{lemme}[theoreme]{Lemme}
+\newtheorem{proposition}[theoreme]{Proposition}
+\newtheorem{corollaire}[theoreme]{Corollaire}
+\newtheorem{remarque}[theoreme]{Remarque}
+\newtheorem{ex}{Problème}
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathbb U}
+\newcommand{\F}{\mathbb F}
+\newcommand{\G}{\mathbb G}
+
+\newcommand*{\etoile}
+{
+\begin{center}
+$\star$\par
+$\star$\hspace*{3ex}$\star$
+\end{center}
+}
+
+\newcommand{\ensemble}[2]{\left \{ #1  
+    \ifx&#2&%
+       %
+    \else%
+       \, \middle | \, #2%
+    \fi%
+\right \}}
+
+\newcommand{\modulo}[1]{\:\left(\operatorname{mod}\:#1\right)}
+
+% délimiteurs
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% MISE EN FORME CLUB %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+
+\usepackage[margin=2.5cm]{geometry}
+\everymath{\displaystyle}
+\usepackage{fourier}
+%\usepackage{fourier,eulervm}% Adobe Utopia et Euler
+% En-tête des feuilles :
+
+\newcommand{\enTete}[1]{
+\noindent \textbf{\textsf{\href{http://depmath-nancy.univ-lorraine.fr/club/}{Club Mathématique de Nancy} \hfill Institut Élie Cartan}}
+\hrule
+\begin{center}
+{\Huge \textbf{#1}}
+\end{center}
+\hrule
+\vspace{1em}
+}
+
