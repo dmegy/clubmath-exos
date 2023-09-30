@@ -304,6 +304,39 @@ On trouve une hauteur de $12$, et un rayon de $\frac{169}{24}$.
 
 
 
+\begin{exo}[Zig-Zag dans un carré]
+Que vaut  à chaque fois le côté du carré ?
+\begin{center}
+\begin{tikzpicture}[scale=1,rotate=30]
+\draw[very thick] (0,0)  -- (1,0) node[midway, above] {$1$} 
+-- (1,2) node[midway, right] {$2$}  
+-- (4,2) node[midway, below] {$3$}  ;
+\draw[very thick] (0,0) -- (1,3) -- (4,2) -- (3,-1) -- cycle;
+\draw [black] (1,0) rectangle (.8,.2) ;
+\draw [black] (1,2) rectangle (1.2,1.8) ;
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[scale=.18,rotate=20]
+\draw[very thick] (0,0)  -- (14,0) node[midway, above] {$14$} 
+-- (14,7) node[midway, right] {$7$}  
+-- (23,7) node[midway, below] {$9$}  ;
+\draw[very thick] (0,0) -- (8,15) -- (23,7) -- (15,-8) -- cycle;
+\draw [black] (13,0) rectangle (14,1) ;
+\draw [black] (14,6) rectangle (15,7) ;
+\end{tikzpicture}
+
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+Le côté vaut $\sqrt{10}$.
+
+Pour le second la source d'origine est : \url{https://twitter.com/0y6tr4/status/1522092641017602049}. Mais en fait le premier est mieux, plus simple
+\end{sol}
+\end{exo}
+
+
+
 % - - - - - - - -
 \begin{exo}
 Dans un cercle $\mathcal C$, on a une corde $[AB]$ mesurant $4$cm. 
@@ -359,6 +392,105 @@ Autre méthode : on projette $O'$ sur la base, et on applique Pythagore dans $OO
 Et donc $13-12R=0$, c'est plus rapide !
 \end{sol}
 \end{exo}
+
+
+
+
+
+\begin{exo}[Cercles  tangents]
+Les trois petits  cercles sont de rayon $1$.
+Le grand cercle leur est simultanément tangent. Quel est son rayon ?
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\draw  (30:{2*sqrt(3)/3}) node {$R=1$}  circle (1);
+\draw   (150:{2*sqrt(3)/3}) node {$R=1$} circle (1);
+\draw  (270:{2*sqrt(3)/3}) node {$R=1$} circle (1);
+
+\draw[very thick] (0,0) circle ({1+2*sqrt(3)/3});
+% rajouter petit cercle ?
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Tracer le triangle (équilatéral) reliant les centres des trois petits cercles. Combien mesure  sa hauteur ?
+\end{hint}
+\end{exo}
+
+
+
+
+\begin{exo}[Zig-zag dans un cercle]
+Quel est le rayon du cercle ci-dessous ?
+\begin{center}
+\begin{tikzpicture}[scale=.5,rotate=20]
+\draw  (0,0) circle ({2*sqrt(5)});
+\draw[very thick] (-4,-2) node {$\bullet$}  node[below] {$A$} -- (-4,2) node {$\bullet$} node[left] {$B$} -- (2,2) node {$\bullet$} node[right] {$C$} -- (2,4) node {$\bullet$} node[above] {$D$};
+\draw (-4,1.5) -- (-3.5,1.5) --(-3.5,2);
+\draw (1.5,2) -- (1.5,2.5) -- (2,2.5);
+\draw (-4,0) node[right] {$2$};
+\draw (-1,2) node[below] {$3$};
+\draw (2,3) node[right] {$1$};
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+La droite $(BC)$ recoupe le cercle en  un point $E$. Que dire de $[AE]$ ?
+L'objectif est de calculer la distance $CE$, après quoi le rayon du cercle est relativement rapide à obtenir.
+
+Autre indication : il y a une racine carrée dans la réponse.
+\end{hint}
+\end{exo}
+
+\begin{exo}[Zig-zag dans un cercle,bis]
+Quel est le rayon du cercle ci-dessous ?
+\begin{center}
+\begin{tikzpicture}[scale=1,rotate=20]
+\draw  (2.5,0) circle (2.5);
+\draw[very thick] (0,0) node {$\bullet$}  node[left] {$A$} 
+-- (1,0) node {$\bullet$} node[right] {$B$} node[midway, below] {$1$}
+-- (1,2) node {$\bullet$} node[left] {$C$} node[midway, right] {$2$}
+-- (4,2) node {$\bullet$} node[above] {$D$} node[midway, below] {$3$};
+
+\draw (1,0) rectangle (.8,.2);
+\draw (1,2) rectangle (1.2,1.8);
+
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+La droite $(BC)$ recoupe le cercle en  un point $E$. Que dire de $[AE]$ ?
+L'objectif est de calculer la distance $CE$, après quoi le rayon du cercle est relativement rapide à obtenir.
+\end{hint}
+\begin{sol}
+Le diamètre est $5$.
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Quatre carrés placés en damier sont inscrits dans un cercle qu'ils touchent en trois points, comme sur la figure.
+Si les carrés mesurent chacun $1\mathrm{cm}^2$, quel est le rayon du cercle ?
+
+\begin{center}
+\begin{tikzpicture}[rotate=30]
+\fill[color=gray] (0,0) rectangle (1,1);
+\fill[color=gray] (1,1) rectangle (2,2);
+\fill[color=gray] (1,2) rectangle (0,3);
+\fill[color=gray]  (0,3) rectangle (-1,4);
+\draw (.5,2.25) circle (sqrt{85}/4);
+\draw (0,0) node {$\bullet$};
+\draw (1,0) node {$\bullet$};
+\draw (-1,4) node {$\bullet$};
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+On peut trouver le centre en intersectant les médiatrices de deux cordes.
+\end{hint}
+\begin{sol}
+Le rayon vaut $\sqrt{85}/4$.
+\end{sol}
+\end{exo}
+
+
+
+
+
 
 
 % - - - - - - - - - - - - - - - - - - - - 
@@ -775,134 +907,8 @@ On en déduit que
 
 
 
-\begin{exo}[Cercles  tangents]
-Les trois petits  cercles sont de rayon $1$.
-Le grand cercle leur est simultanément tangent. Quel est son rayon ?
-\begin{center}
-\begin{tikzpicture}[scale=1]
-\draw  (30:{2*sqrt(3)/3}) node {$R=1$}  circle (1);
-\draw   (150:{2*sqrt(3)/3}) node {$R=1$} circle (1);
-\draw  (270:{2*sqrt(3)/3}) node {$R=1$} circle (1);
 
-\draw[very thick] (0,0) circle ({1+2*sqrt(3)/3});
-% rajouter petit cercle ?
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-Tracer le triangle (équilatéral) reliant les centres des trois petits cercles. Combien mesure  sa hauteur ?
-\end{hint}
-\end{exo}
-
-
-
-
-\begin{exo}[Zig-zag dans un cercle]
-Quel est le rayon du cercle ci-dessous ?
-\begin{center}
-\begin{tikzpicture}[scale=.5,rotate=20]
-\draw  (0,0) circle ({2*sqrt(5)});
-\draw[very thick] (-4,-2) node {$\bullet$}  node[below] {$A$} -- (-4,2) node {$\bullet$} node[left] {$B$} -- (2,2) node {$\bullet$} node[right] {$C$} -- (2,4) node {$\bullet$} node[above] {$D$};
-\draw (-4,1.5) -- (-3.5,1.5) --(-3.5,2);
-\draw (1.5,2) -- (1.5,2.5) -- (2,2.5);
-\draw (-4,0) node[right] {$2$};
-\draw (-1,2) node[below] {$3$};
-\draw (2,3) node[right] {$1$};
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-La droite $(BC)$ recoupe le cercle en  un point $E$. Que dire de $[AE]$ ?
-L'objectif est de calculer la distance $CE$, après quoi le rayon du cercle est relativement rapide à obtenir.
-
-Autre indication : il y a une racine carrée dans la réponse.
-\end{hint}
-\end{exo}
-
-\begin{exo}[Zig-zag dans un cercle,bis]
-Quel est le rayon du cercle ci-dessous ?
-\begin{center}
-\begin{tikzpicture}[scale=1,rotate=20]
-\draw  (2.5,0) circle (2.5);
-\draw[very thick] (0,0) node {$\bullet$}  node[left] {$A$} 
--- (1,0) node {$\bullet$} node[right] {$B$} node[midway, below] {$1$}
--- (1,2) node {$\bullet$} node[left] {$C$} node[midway, right] {$2$}
--- (4,2) node {$\bullet$} node[above] {$D$} node[midway, below] {$3$};
-
-\draw (1,0) rectangle (.8,.2);
-\draw (1,2) rectangle (1.2,1.8);
-
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-La droite $(BC)$ recoupe le cercle en  un point $E$. Que dire de $[AE]$ ?
-L'objectif est de calculer la distance $CE$, après quoi le rayon du cercle est relativement rapide à obtenir.
-\end{hint}
-\begin{sol}
-Le diamètre est $5$.
-\end{sol}
-\end{exo}
-
-\begin{exo}
-Quatre carrés placés en damier sont inscrits dans un cercle qu'ils touchent en trois points, comme sur la figure.
-Si les carrés mesurent chacun $1\mathrm{cm}^2$, quel est le rayon du cercle ?
-
-\begin{center}
-\begin{tikzpicture}[rotate=30]
-\fill[color=gray] (0,0) rectangle (1,1);
-\fill[color=gray] (1,1) rectangle (2,2);
-\fill[color=gray] (1,2) rectangle (0,3);
-\fill[color=gray]  (0,3) rectangle (-1,4);
-\draw (.5,2.25) circle (sqrt{85}/4);
-\draw (0,0) node {$\bullet$};
-\draw (1,0) node {$\bullet$};
-\draw (-1,4) node {$\bullet$};
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-On peut trouver le centre en intersectant les médiatrices de deux cordes.
-\end{hint}
-\begin{sol}
-Le rayon vaut $\sqrt{85}/4$.
-\end{sol}
-\end{exo}
-
-
-
-
-
-\begin{exo}[Zig-Zag, ter]
-Que vaut  à chaque fois le côté du carré ?
-\begin{center}
-\begin{tikzpicture}[scale=1,rotate=30]
-\draw[very thick] (0,0)  -- (1,0) node[midway, above] {$1$} 
--- (1,2) node[midway, right] {$2$}  
--- (4,2) node[midway, below] {$3$}  ;
-\draw[very thick] (0,0) -- (1,3) -- (4,2) -- (3,-1) -- cycle;
-\draw [black] (1,0) rectangle (.8,.2) ;
-\draw [black] (1,2) rectangle (1.2,1.8) ;
-\end{tikzpicture}
-\hspace{1cm}
-\begin{tikzpicture}[scale=.18,rotate=20]
-\draw[very thick] (0,0)  -- (14,0) node[midway, above] {$14$} 
--- (14,7) node[midway, right] {$7$}  
--- (23,7) node[midway, below] {$9$}  ;
-\draw[very thick] (0,0) -- (8,15) -- (23,7) -- (15,-8) -- cycle;
-\draw [black] (13,0) rectangle (14,1) ;
-\draw [black] (14,6) rectangle (15,7) ;
-\end{tikzpicture}
-
-\end{center}
-\begin{hint}
-\end{hint}
-\begin{sol}
-Le côté vaut $\sqrt{10}$.
-
-Pour le second la source d'origine est : \url{https://twitter.com/0y6tr4/status/1522092641017602049}. Mais en fai le premier est mieux, plus simple
-\end{sol}
-\end{exo}
-
-
-
-Rajouter \url{https://twitter.com/maliuhudmuaz/status/1315383186852118530} utilse les demi-cercles.
+%Rajouter \url{https://twitter.com/maliuhudmuaz/status/1315383186852118530} utilse les demi-cercles.
 
 \subsection{Circle Packing}
 
@@ -1065,86 +1071,16 @@ Mettre les premiers, regarder la biblio pour voir si c'est optimal ou pas.
 
 
 
-\begin{exo}[Spirale pythagoricienne]
-Cette spirale est formée de triangles rectangles juxtaposés. On a 
-$OA=AB=BC=CD= DE=EF=FG=GH=HI=1$.
-Que vaut son aire ?
-\begin{center}
-%\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
-\definecolor{qqwuqq}{rgb}{0,0,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,rotate=30,scale=1.1]
-%\clip(-1.28,-3.08) rectangle (4.72,2.7);
-%angles:
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.28284271247461906,0.) -- (0.28284271247461906,0.28284271247461906) -- (0.,0.28284271247461906) -- (0.,0.) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.2,0.8) -- (0.4,1.) -- (0.2,1.2) -- (0.,1.) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.7549360435341675,1.428337411163077) -- (1.033705413557638,1.476166673510697) -- (0.9858761512100178,1.7549360435341674) -- (0.7071067811865475,1.7071067811865475) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (1.5947420120656104,1.6108727725011909) -- (1.86007799947673,1.5129094437267652) -- (1.9580413282511557,1.7782454311378848) -- (1.692705340840036,1.8762087599123105) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (2.4245267948738216,1.3363429000893319) -- (2.6180399842767828,1.1300599741669628) -- (2.824322910199152,1.3235731635699242) -- (2.6308097207961905,1.5298560894922932) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.0476710481598275,0.7080978975204855) -- (3.1401089613180893,0.440786782504769) -- (3.407420076333806,0.5332246956630311) -- (3.314982163175544,0.8005358106787476) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.359379289033147,-0.12909847315852738) -- (3.3439260622996714,-0.41151872346562524) -- (3.626346312606769,-0.4269719501991008) -- (3.6417995393402447,-0.1445516998920029) -- cycle; 
-\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.328447719041178,-1.028752263517281) -- (3.214141911983702,-1.2874686767440788) -- (3.4728583252105,-1.4017744838015544) -- (3.5871641322679757,-1.1430580705747568) -- cycle; 
 
 
-
-\draw[thick]  (1.,0.)-- (0.,0.);
-\draw[thick]  (0.,1.)-- (1.,0.);
-\draw[thick]  (0.,1.)-- (0.,0.);
-\draw[thick] (1.,0.)-- (0.7071067811865475,1.7071067811865475);
-\draw[thick]  (1.,0.)-- (1.692705340840036,1.8762087599123105);
-\draw[thick]  (1.,0.)-- (2.6308097207961905,1.5298560894922932);
-\draw[thick]  (1.,0.)-- (3.314982163175544,0.8005358106787476);
-\draw[thick]  (1.,0.)-- (3.6417995393402447,-0.1445516998920029);
-\draw[thick]  (1.,0.)-- (3.5871641322679757,-1.1430580705747568);
-\draw[thick] (3.183032075771265,-2.057758721559405)-- (1.,0.);
-\draw[thick]  (0.,1.)-- (0.7071067811865475,1.7071067811865475);
-\draw[thick] (0.7071067811865475,1.7071067811865475)-- (1.692705340840036,1.8762087599123105);
-\draw[thick]  (1.692705340840036,1.8762087599123105)-- (2.6308097207961905,1.5298560894922932);
-\draw[thick] (2.6308097207961905,1.5298560894922932)-- (3.314982163175544,0.8005358106787476);
-\draw[thick]  (3.314982163175544,0.8005358106787476)-- (3.6417995393402447,-0.1445516998920029);
-\draw[thick] (3.6417995393402447,-0.1445516998920029)-- (3.5871641322679757,-1.1430580705747568);
-\draw[thick]  (3.183032075771265,-2.057758721559405)-- (3.5871641322679757,-1.1430580705747568);
-
-
-\draw[thick]  (0.,0.) node {$\bullet$};
-\draw[thick]  (-0.36,0.09) node {$A$};
-\draw[thick] (0.,1.) node {$\bullet$};
-\draw[thick]  (-0.36,1.37) node {$B$};
-\draw[thick] (1.,0.) node {$\bullet$};
-\draw[thick]  (0.78,-0.35) node {$O$};
-\draw[thick]  (0.7071067811865475,1.7071067811865475) node {$\bullet$};
-\draw[thick]  (0.5,2.17) node {$C$};
-\draw[thick]  (1.692705340840036,1.8762087599123105) node {$\bullet$};
-\draw[thick]  (1.84,2.21) node {$D$};
-\draw[thick]  (2.6308097207961905,1.5298560894922932) node {$\bullet$};
-\draw[thick]  (2.78,1.85) node {$E$};
-\draw[thick]  (3.314982163175544,0.8005358106787476) node {$\bullet$};
-\draw[thick]  (3.46,1.13) node {$F$};
-\draw[thick]  (3.6417995393402447,-0.1445516998920029) node {$\bullet$};
-\draw[thick]  (3.78,0.19) node {$G$};
-\draw[thick]  (3.5871641322679757,-1.1430580705747568) node {$\bullet$};
-\draw[thick]  (3.88,-1.07) node {$H$};
-\draw[thick]  (3.183032075771265,-2.057758721559405) node {$\bullet$};
-\draw[thick] (3.54,-2.11) node {$I$};
-
-
-
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-\end{hint}
-\begin{sol}
-\end{sol}
-\end{exo}
-
-
-\begin{exo}[]\url{https://twitter.com/archimedes_000/status/1524521121827151874} très bon
-\begin{center}
-\begin{tikzpicture}[scale=1]
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-\end{hint}
-\end{exo}
+%\begin{exo}[]\url{https://twitter.com/archimedes_000/status/1524521121827151874} très bon
+%\begin{center}
+%\begin{tikzpicture}[scale=1]
+%\end{tikzpicture}
+%\end{center}
+%\begin{hint}
+%\end{hint}
+%\end{exo}
 
 
 \begin{exo}[Comparaisons de racines carrées]
@@ -1184,11 +1120,7 @@ Tracer les centres des cercles et les relier.
 \end{hint}
 \end{exo}
 
-
-
-
-
-
+%- - - - - - - - - -
 
 \begin{exo}[Cercles de Ford]
 Sur une droite graduée, on \og pose\fg{} des cercles de diamètre $\frac{1}{n^2}$ sur les abscisses $\frac{1}{n}$, comme sur la figure ci-dessous. Montrer que tous ces cercles sont tangents, et qu'ils sont tous tangents au cercle de diamètre $1$ posé en l'origine !!
