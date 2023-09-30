@@ -14,6 +14,9 @@
 Catalogue d'exos sur Pythagore pour le Club Mathématique de Nancy. Rédaction en cours, ne pas diffuser.
 
 
+(Les exercices sont faisables sans connaître le concept de cosinus ni de sinus, uniquement avec Pythagore.)
+
+
 
 \begin{exo}
 Dans un demi-cercle de rayon $1$cm, on inscrit un autre demi-cercle plus petit, comme sur la figure.
@@ -32,7 +35,6 @@ Quel est le rayon du petit demi-cercle ?
 
 
 
-(Les exercices suivants sont faisables sans connaître le concept de cosinus ni de sinus, uniquement avec Pythagore.)
 
 \begin{exo}[Le triangle $30^\circ-60^\circ-90^\circ$]
 Le triangle $ABC$ a des angles qui mesurent $30^\circ$, $60^\circ$ et $90^\circ$.
@@ -54,81 +56,10 @@ Quelle est la longueur des deux autres côtés ?
 Considérer la symétrie axiale d'axe $(AC)$.
 \end{hint}
 \begin{sol}
-On obtient un triangle équilatéral.
+On obtient un triangle équilatéral quand on dédouble le triangle suivant l'axe proposé. On en déduit qu'un côté mesure $1/2$, et ensuite Pythagore donne $\sqrt{1-\frac14} = \frac{\sqrt 3}{2}$ pour le troisième côté.
 \end{sol}
 \end{exo}
 
-
-
-\begin{exo}[Le triangle $15^\circ-75^\circ-90^\circ$]
-Le triangle $ABC$ a des angles qui mesurent $15^\circ$, $75^\circ$ et $90^\circ$, comme sur la figure ci-dessous. Son hypoténuse $AB$ mesure $1$ cm. 
-Montrer que  $AC=\frac{\sqrt 3 +1}{2\sqrt 2}$ puis que $CB=\frac{\sqrt 3 - 1}{2\sqrt 2}$.
-
-% en s'aidant des indications en pointillés sur la figure.
-
-\begin{center}
-\begin{tikzpicture}[scale=4]
-\tkzDefPoint(-1,0){A}
-\tkzDefPoint(0,0){B}
-\tkzDefPoint(1,0){D}
-\tkzDefPoint({sqrt(3)/2},1/2){E}
-\tkzDefPoint({sqrt(3)/2},0){P}
-\tkzDefPointBy[projection = onto A--E](B)
-\tkzGetPoint{C}
-\tkzDrawPolygon[very thick](A,B,C)
-%\tkzDrawSegments[dashed](C,E B,E E,D E,P B,D)
-%\tkzMarkRightAngles[size=.1](E,P,A A,C,B)
-\tkzMarkRightAngles[size=.1](A,C,B)
-%\tkzDrawSemiCircle[dashed](B,D)
-\tkzLabelPoints[below left](A)
-\tkzLabelPoints[below right](B)
-\tkzDrawPoint(B)
-\tkzLabelPoints[above](C)
-\tkzLabelAngle[pos=.4](B,A,C){$15^\circ$}
-\tkzLabelSegment[below](A,B){$1$}
-\end{tikzpicture}
-\end{center}
-\begin{hint}
-Attention, le calcul peut mener à des expressions qui \emph{semblent} différentes de celles demandées : il faut alors démontrer qu'elles coïncident avec les expressions demandées. Par exemple, on a $\sqrt{6+2\sqrt 5} = 1+\sqrt 5$. (Exercice : pourquoi ?)
-\end{hint}
-\begin{sol}
-Considérer la symétrie axiale d'axe $(AC)$. 
-On note $B'$ l'image de $B$ par cette symétrie.
-Ensuite, projeter perpendiculairement le point $B$ sur la droite $(AB')$, et reconnaître un triangle rectangle ayant un angle de $30^\circ$ et une hypoténuse de $1cm$.
-\end{sol}
-\end{exo}
-
-
-
-\begin{exo}[Consolidation : le triangle $22,5^\circ-67,5^\circ-90^\circ$]
-Le triangle $ABC$ a des angles qui mesurent $22,5^\circ$, $67,5^\circ$ et $90^\circ$, comme sur la figure ci-dessous. Son hypoténuse mesure $1$ cm. 
-
-En utilisant la même technique qu'au problème précédent, calculer $AC$.
-
-\begin{center}
-\begin{tikzpicture}[scale=5]
-\clip (-1.5,.5) rectangle (.5,-.25);
-\tkzDefPoint(-1,0){A}
-\tkzDefPoint(0,0){B}
-\tkzDefPoint(1,0){D}
-\tkzDefPoint({sqrt(2)/2},{sqrt(2)/2}){E}
-\tkzDefPoint({sqrt(2)/2},0){P}
-\tkzDefPointBy[projection = onto A--E](B)
-\tkzGetPoint{C}
-\tkzDrawPolygon[very thick](A,B,C)
-%\tkzDrawSegments[dashed](C,E B,E E,D E,P B,D)
-%\tkzMarkRightAngles[size=.1](E,P,A  A,C,B)
-%\tkzDrawSemiCircle[dashed](B,D)
-\tkzLabelPoints[below left](A)
-\tkzLabelPoints[below right](B)
-\tkzDrawPoint(B)
-\tkzLabelPoints[above](C)
-\tkzLabelAngle[pos=.4](B,A,C){$22,5^\circ$}
-\tkzLabelSegment[below](A,B){$1$}
-\tkzMarkRightAngle[size=.1](A,C,B)
-\end{tikzpicture}
-\end{center}
-\end{exo}
 
 
 Dans toute la suite, un triangle \og $3-4-5$\fg{} est un triangle dont les côtés mesurent $3$cm, $4$cm et $5$cm. C'est un triangle rectangle, comme on peut le vérifier à l'aide du théorème de Pythagore.
@@ -290,6 +221,35 @@ On trouve une hauteur de $12$, et un rayon de $\frac{169}{24}$.
 
 
 
+\begin{exo}
+Dans un cercle $\mathcal C$, on a une corde $[AB]$ mesurant $4$cm. 
+De plus, on sait que la distance entre le milieu de cette corde et le cercle est de $1$cm.
+Quel est le rayon du cercle ?
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(-2,0){A} \tkzDefPoint(2,0){B}
+\tkzDefPoint(0,0){I} \tkzDefPoint(0,1){P}
+\tkzDrawSegment(A,B)
+\tkzDrawSegment[dashed](I,P)
+\tkzDefPoint(0,-1.5){O}
+\tkzDrawCircle[very thick](O,A)
+\tkzLabelSegment[below](A,I) {$2$}
+\tkzLabelSegment[below](I,B) {$2$}
+\tkzLabelSegment[right](I,P) {$1$}
+\tkzMarkRightAngle[size=.2](A,I,P)
+\tkzDrawPoints(A,B,P)
+\tkzLabelPoints[left](A) \tkzLabelPoints[right](B)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Placer le centre $O$ du cercle. Que vaut la distance de $O$ à la corde, en fonction du rayon $R$ ?
+Ensuite, on peut appliquer Pythagore.
+\end{hint}
+\begin{sol}
+Le diamètre vaut $5$cm.
+\end{sol}
+\end{exo}
+
 
 
 
@@ -319,28 +279,6 @@ Et donc $13-12R=0$, c'est plus rapide !
 
 
 
-
-\begin{exo}
-Dans un cercle $\mathcal C$, on a une corde $[AB]$ mesurant $4$cm. 
-De plus, on sait que la distance entre le milieu de cette corde et le cercle est de $1$cm.
-Quel est le rayon du cercle ?
-\begin{center}
-\begin{tikzpicture}
-\tkzDefPoint(-2,0){A} \tkzDefPoint(2,0){B}
-\tkzDefPoint(0,0){I} \tkzDefPoint(0,1){P}
-\tkzDrawSegment(A,B)
-\tkzDrawSegment[dashed](I,P)
-\tkzDefPoint(0,-1.5){O}
-\tkzDrawCircle[very thick](O,A)
-\tkzLabelSegment[below](A,I) {$2$}
-\tkzLabelSegment[below](I,B) {$2$}
-\tkzLabelSegment[right](I,P) {$1$}
-\tkzMarkRightAngle[size=.2](A,I,P)
-\tkzDrawPoints(A,B,P)
-\tkzLabelPoints[left](A) \tkzLabelPoints[right](B)
-\end{tikzpicture}
-\end{center}
-\end{exo}
 
 %
 %\begin{exo}
@@ -390,6 +328,83 @@ Le carré a donc une aire de $41\mathrm{cm}^2$.
 Pour trouver la distance $AM$, il suffit de trouver $QM$. Le plus simple est d'utiliser des triangles semblables, ou Thalès, on trouve $QM=16/5$, donc $AM=5+16/5=41/5$.
 \end{sol}
 \end{exo}
+
+
+
+
+
+
+\begin{exo}[Le triangle $15^\circ-75^\circ-90^\circ$]
+Le triangle $ABC$ a des angles qui mesurent $15^\circ$, $75^\circ$ et $90^\circ$, comme sur la figure ci-dessous. Son hypoténuse $AB$ mesure $1$ cm. 
+Montrer que  $AC=\frac{\sqrt 3 +1}{2\sqrt 2}$ puis que $CB=\frac{\sqrt 3 - 1}{2\sqrt 2}$.
+
+% en s'aidant des indications en pointillés sur la figure.
+
+\begin{center}
+\begin{tikzpicture}[scale=4]
+\tkzDefPoint(-1,0){A}
+\tkzDefPoint(0,0){B}
+\tkzDefPoint(1,0){D}
+\tkzDefPoint({sqrt(3)/2},1/2){E}
+\tkzDefPoint({sqrt(3)/2},0){P}
+\tkzDefPointBy[projection = onto A--E](B)
+\tkzGetPoint{C}
+\tkzDrawPolygon[very thick](A,B,C)
+%\tkzDrawSegments[dashed](C,E B,E E,D E,P B,D)
+%\tkzMarkRightAngles[size=.1](E,P,A A,C,B)
+\tkzMarkRightAngles[size=.1](A,C,B)
+%\tkzDrawSemiCircle[dashed](B,D)
+\tkzLabelPoints[below left](A)
+\tkzLabelPoints[below right](B)
+\tkzDrawPoint(B)
+\tkzLabelPoints[above](C)
+\tkzLabelAngle[pos=.4](B,A,C){$15^\circ$}
+\tkzLabelSegment[below](A,B){$1$}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Attention, le calcul peut mener à des expressions qui \emph{semblent} différentes de celles demandées : il faut alors démontrer qu'elles coïncident avec les expressions demandées. Par exemple, on a $\sqrt{6+2\sqrt 5} = 1+\sqrt 5$. (Exercice : pourquoi ?)
+\end{hint}
+\begin{sol}
+Considérer la symétrie axiale d'axe $(AC)$. 
+On note $B'$ l'image de $B$ par cette symétrie.
+Ensuite, projeter perpendiculairement le point $B$ sur la droite $(AB')$, et reconnaître un triangle rectangle ayant un angle de $30^\circ$ et une hypoténuse de $1cm$.
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}[Consolidation : le triangle $22,5^\circ-67,5^\circ-90^\circ$]
+Le triangle $ABC$ a des angles qui mesurent $22,5^\circ$, $67,5^\circ$ et $90^\circ$, comme sur la figure ci-dessous. Son hypoténuse mesure $1$ cm. 
+
+En utilisant la même technique qu'au problème précédent, calculer $AC$.
+
+\begin{center}
+\begin{tikzpicture}[scale=5]
+\clip (-1.5,.5) rectangle (.5,-.25);
+\tkzDefPoint(-1,0){A}
+\tkzDefPoint(0,0){B}
+\tkzDefPoint(1,0){D}
+\tkzDefPoint({sqrt(2)/2},{sqrt(2)/2}){E}
+\tkzDefPoint({sqrt(2)/2},0){P}
+\tkzDefPointBy[projection = onto A--E](B)
+\tkzGetPoint{C}
+\tkzDrawPolygon[very thick](A,B,C)
+%\tkzDrawSegments[dashed](C,E B,E E,D E,P B,D)
+%\tkzMarkRightAngles[size=.1](E,P,A  A,C,B)
+%\tkzDrawSemiCircle[dashed](B,D)
+\tkzLabelPoints[below left](A)
+\tkzLabelPoints[below right](B)
+\tkzDrawPoint(B)
+\tkzLabelPoints[above](C)
+\tkzLabelAngle[pos=.4](B,A,C){$22,5^\circ$}
+\tkzLabelSegment[below](A,B){$1$}
+\tkzMarkRightAngle[size=.1](A,C,B)
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
 
 \begin{exo}
 Dans un quart de cercle, on inscrit un demi-cercle comme sur la figure.
