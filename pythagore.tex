@@ -523,7 +523,48 @@ Finalement, on obtient $\ell = x+y = 2x+2 = 2+2\sqrt 3$ pour la longueur du côt
 \end{exo}
 
 
+% - - - - - - - -
 
+\begin{exo}
+Combien mesure le côté du triangle équilatéral, si les six cercles ont un rayon de $1$cm ?
+(Généraliser ensuite avec plus de cercles : au lieu de six cercles, traiter le cas avec dix cercles, puis quinze etc.)
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\def\ractrois{1.7320508076}
+\draw (0,2*\ractrois) circle (1);
+\draw (-1,\ractrois) circle (1);\draw (1,\ractrois) circle (1);
+\draw (-2,0) circle (1); \draw (0,0) circle (1); \draw (2,0) circle (1);
+\draw [very thick] (-2-\ractrois,-1) -- (2+\ractrois,-1) -- (0,2+2*\ractrois) -- cycle;
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+On peut par exemple tracer es centres des cercles puis tracer le triangle qui relie les trois cercles extrémaux.
+\end{hint}
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\def\ractrois{1.7320508076}
+\draw (0,2*\ractrois) circle (1);
+\draw (-1,\ractrois) circle (1);\draw (1,\ractrois) circle (1);
+\draw (-2,0) circle (1); \draw (0,0) circle (1); \draw (2,0) circle (1);
+\draw  (-2-\ractrois,-1) -- (2+\ractrois,-1) -- (0,2+2*\ractrois) -- cycle;
+\draw (-2,0) -- (2,0) -- (0,2*\ractrois) -- cycle;
+\draw[very thick] (-2,-1) -- (-2,0) -- (-2-\ractrois,-1) -- cycle;
+\draw[very thick] (2,-1) -- (2,0) -- (2+\ractrois,-1) -- cycle;
+\end{tikzpicture}
+\end{center}
+Le triangle \og intérieur\fg, celui qui relie les centres des trois cercles extrémaux, fait $4$cm de côté.
+Ensuite, il faut rajouter ce qui correspond aux deux petits triangles marqués sur la figure. 
+
+Ces petits triangles sont des triangles rectangle avec des angles de $30^\circ$ et $60^\circ$ et un petit côté de $1$cm.
+L'autre côté mesure donc $\sqrt 3$ (et l'hypoténuse mesure $2$cm).
+
+Le grand triangle équilatéral a donc un côté qui mesure $4+2\sqrt 3$cm.
+
+Généralisation : s'il y a $N$ cercles sur la rangée du bas, alors le côté est égal à $2N-2+2\sqrt 3$.
+Il y a alors $\frac{N(N+1)}{2}$ cercles dans le triangle.
+\end{sol}
+\end{exo}
 
 
 
