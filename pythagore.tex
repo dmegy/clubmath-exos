@@ -98,7 +98,32 @@ On obtient un triangle équilatéral quand on dédouble le triangle suivant l'ax
 Dans toute la suite, un triangle \og $3-4-5$\fg{} est un triangle dont les côtés mesurent $3$cm, $4$cm et $5$cm. C'est un triangle rectangle, comme on peut le vérifier à l'aide du théorème de Pythagore.
 
 
+% - - - - -
 
+
+\begin{exo}
+On inscrit cinq cercles identiques dans un carré, comme sur la figure.
+Sachant que le rayon des cercles est égal à $1cm$, quelles sont les dimensions du carré ?
+\begin{center}
+\begin{tikzpicture}
+\def\sqrtt{1.4142135624}
+\draw[very thick] (-\sqrtt-1,-\sqrtt-1) rectangle (1+\sqrtt,1+\sqrtt) ;
+\draw (0,0) circle( 1);
+\draw (\sqrtt,\sqrtt) circle( 1);
+\draw (\sqrtt,-\sqrtt) circle( 1);
+\draw (-\sqrtt,\sqrtt) circle( 1);
+\draw (-\sqrtt,-\sqrtt) circle( 1);
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Tracer une diagonale du carré : combien mesure-t-elle ?
+\end{hint}
+\begin{sol}
+La diagonale mesure $d=4+2\sqrt 2$.
+On en déduit que le côté du carré est égal à  :
+\[ c = \frac{d}{\sqrt 2} = 2\sqrt 2+2.\]
+\end{sol}
+\end{exo}
 
 
 \begin{exo}
