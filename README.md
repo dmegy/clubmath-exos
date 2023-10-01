@@ -9,6 +9,12 @@ Structure : un fichier latex par thème. Chaque fichier contient des problèmes 
 
 Dès qu'une thématique devient assez grosse, on fait un fichier latex séparé, si possible.
 
-À terme, idéalement, tous les exos du club seront placés ici.
+Ajout d'exos ou de thèmes
+---
+
+Le fichier "todo.txt" sert de liste d'attente d'exos à rajouter.
+
+
+
 
 
