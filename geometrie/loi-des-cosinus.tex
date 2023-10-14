@@ -1,0 +1,96 @@
+\input{../preambule_club}
+\input{../macros_answers}
+
+
+
+\begin{document}
+\Opensolutionfile{indications}[_\jobname_hints]
+\Opensolutionfile{solutions}[_\jobname_sol]
+
+
+\title{Loi des cosinus (alias Al-Kashi)}
+\author{Damien Mégy}
+\maketitle
+
+Catalogue d'exos sur Pythagore généralisé (=loi des cosinus, =Al Kashi) pour le Club Mathématique de Nancy. Rédaction en cours, ne pas diffuser.
+
+Wikipedia : \url{https://fr.wikipedia.org/wiki/Loi_des_cosinus}
+
+Mettre tout ce qu'il y a ici: \url{https://studymath.github.io/trigonometry/2017/02/02/the-law-of-cosines.html}
+
+Mettre la superbe preuve sans mots de \url{https://www.cut-the-knot.org/Curriculum/Geometry/GeoGebra/CosineLawAB.shtml}
+
+
+
+\begin{exo}
+La preier de \url{https://geometry.ru/articles/Luis_Casey.pdf}
+
+Deux cercles sont tangent à un troisième. On calcule la distance entre les points de contact d'une tangente commune aux deux cercles en fonction  des trois rayons, et de la distance entre les pts de contact avec le troisième cercle.
+
+Ceci sert ensuite à prouver le théorème de Casey, avec Ptolémée.
+\end{exo}
+
+
+\begin{exo}[Formules de Mahavira via Al-Kashi]
+Soit $ABCD$ un quadrilatère inscriptible. On note $a=AB$, $b=BC$, $c=CD$ et $d=DA$.
+Montrer que la diagonale $BD$ est calculable en fonction des côtés grâce à la formule
+\[ BD = \frac{(ab+cd)(ac+bd)}{ad+bc}.\]
+\begin{hint}
+Il s'agit de montrer que $BD(ad+bc) = (ab+cd)(ac+bd)$.
+Pour cela, écrire  $BD$ de deux manières distinctes avec Al-Kashi. 
+Quelle est la relation entre les angles $\widehat A$ et $\widehat C$ ?
+\end{hint}
+\begin{sol}
+On a d'une part 
+\[BD  = b^2+c^2-2bc\cos \widehat C,\]
+et d'autre part 
+\[ BD = a^2+d^2-2ad\cos\widehat A =a^2+d^2-2ad\cos\widehat C, \]
+car $\widehat A = \pi - \widehat C$ puisque le quadrilatère est inscriptible.
+
+On multiplie la première expression par $ad$ et la seconde par $bc$, on somme et on vérifie que ça se factorise comme annoncé.
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}[Le théorème d'Appolonius]
+Soit $ABC$ un triangle de côtés $a$, $b$ et $c$, et soit $P$ le milieu du segment $[BC]$. On note $p=AP$.
+Montrer que l'on a 
+\[ 2(b^2+c^2)=a^2+4p^2.\]
+\begin{hint}
+La droite $(AP)$ coupe le cercle circonscrit en un point $D$. 
+\end{hint}
+\begin{sol}
+
+
+Preuve avec la loi des cosinus : \url{https://en.wikipedia.org/wiki/Apollonius%27s_theorem}
+
+Sinon, Ptolémée, mais lorsque placé dans l'autre feuille : 
+
+On applique Ptolémée dans le quadrilatère $ABDC$ puis on utilise deux paires de triangles semblables pour écrire toutes les distances en fonction de $a$, $b$, $c$ et $p$.
+\end{sol}
+\end{exo}
+
+\begin{exo}[Le théorème de Stewart]
+Soit $ABC$ un triangle de côtés $a$, $b$ et $c$, et soit $P$ un point du segment $[BC]$. On note $p=AP$, $m=BP$ et $n=PC$.
+Montrer que l'on a 
+\[ b^2m+c^2,=a(p^2+mn)\]
+\begin{hint}
+La droite $(AP)$ coupe le cercle circonscrit en un point $D$. 
+\end{hint}
+\begin{sol}
+On applique Ptolémée dans le quadrilatère $ABDC$ puis on utilise deux paires de triangles semblables pour écrire toutes les distances en fonction de $a$, $b$, $c$, $m$, $n$, $p$.
+
+Il y a aussi une preuve avec la loi des cosinus, à mettre dans l'autre feuille.
+\end{sol}
+\end{exo}
+
+
+\Closesolutionfile{indications}
+\Closesolutionfile{solutions}
+
+\indications
+\correction
+
+\end{document}
+

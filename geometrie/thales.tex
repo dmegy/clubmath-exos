@@ -1,0 +1,586 @@
+\input{../preambule_club}
+\input{../macros_answers}
+
+
+\begin{document}
+\Opensolutionfile{indications}[_\jobname_hints]
+\Opensolutionfile{solutions}[_\jobname_sol]
+
+
+\title{Autour du théorème de Thalès}
+\author{Damien Mégy}
+\maketitle
+
+Catalogue d'exos sur Thalès pour le Club Mathématique de Nancy. Rédaction en cours, ne pas diffuser. 
+
+\tableofcontents
+
+\section{Uniquement avec le théorème des milieux}
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+
+\section{Thalès, version générale mais non croisé}
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+\section{Thalès, version générale avec croisements}
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+
+% - - - - - - - -
+% - - - - - - - -
+% - - - - - - - -
+%\begin{exo}[Théorème de Varignon] \label{Varignon}
+%Soit $ABCD$ un quadrilatère convexe quelconque et $I$, $J$, $K$, $L$ les milieux de ses côtés.
+%Montrer que $IJKL$ est ... un parallélogramme. (Toujours!)
+%%Montrer ensuite que l'aire de $ABCD$ est le double de celle de $IJKL$.
+%\begin{center}
+%\begin{tikzpicture}
+%\tkzDefPoints{-4/-1/A, 4/-1.5/B, 3/1.5/C, -2/1/D, 0/0/O}
+%\tkzDefMidPoint(A,B)\tkzGetPoint{I}
+%\tkzDefMidPoint(B,C)\tkzGetPoint{J}
+%\tkzDefMidPoint(C,D)\tkzGetPoint{K}
+%\tkzDefMidPoint(D,A)\tkzGetPoint{L}
+%
+%
+%\tkzDrawPolygon[very thick](A,B,C,D)
+%\tkzDrawPolygon[dashed](I,J,K,L)
+%\tkzDrawPoints(I,J,K,L)
+%\tkzMarkSegments[mark=|||](A,I I,B)
+%\tkzMarkSegments[mark=||](B,J J,C)
+%\tkzMarkSegments[mark=s](C,K K,D)
+%\tkzMarkSegments[mark=|](D,L L,A)
+%\tkzAutoLabelPoints[center=O](A,B,C,D,I,J,K,L)
+%\end{tikzpicture}
+%\end{center}
+%\begin{hint} 
+%Tracer les diagonales $[AC]$ et $[BD]$. % et utiliser Thalès
+%\end{hint}
+%% couper le quadrilatère en deux triangles et montrer que les côtés sont parallèles à l'aide de Thalès.
+%% pour une deuxième preuve de l'aire, voir 
+%% http://serge.mehl.free.fr/anx/th_varignon.html
+%\begin{sol}
+%\begin{enumerate}
+%\item 
+%Dans le triangle $ABC$, en notant $I$ est le milieu de $[AB]$ et $J$ le milieu de $[BC]$, le théorème de Thalès dit que $(IJ)$ est parall\`ele \`a $(AC)$ et $IJ = \frac{1}{2} AC$. On raisonne pareillement avec le triangle $ACD$, ce qui donne $(KL)$ parall\`ele \`a $AC$ et $KL = \frac{1}{2} AC$. Or, un quadrilat\`ere qui a deux c\^ot\'es parall\`eles et de m\^eme longueur est un parall\'elogramme.
+%
+%\item La preuve la plus élémentaire utilise uniquement qu'une médiane d'un triangle donné le partage en deux triangles de même aire.
+%
+%Soit $O$ le point d'intersection des diagonales du quadrilat\`ere $ABCD$. On consid\`ere le triangle $AOB$. Soit $O_1$ le point d'intersection de la diagonale $[AC]$ avec $[IL]$ et soit $O_2$ le point d'intersection de $[IJ]$ avec la diagonale $[BD]$.
+%
+%% Par construction, le quadrilat\`ere $IO_1OO_2$ est un parall\'elogramme. 
+% 
+%Par le théorème de Thalès,  $O_1$ est le milieu de $[AO]$ et $O_2$ le milieu de $[BO]$. Les triangles $IO_1A$ et $IO_1B$ ont même aire, de même que les triangles $I0_2O$ et $IO_2B$.
+%
+%La somme des aires des triangles $AIO_1$ et $IO_2B$ est donc exactement \'egale \`a l'aire du parallélogramme $IO_1OO_2$. 
+% 
+%On applique le même raisonnement aux triangles $BCO$, $CDO$ et $ADO$, ce qui signifie que, dans le quadrilatère $ABCD$, la partie compl\'ementaire de $IJKL$ a une aire qui est exactement \'egale \`a celle de $IJKL$, ce qui permet de conclure. \end{enumerate}
+%
+%\end{sol}
+%\end{exo}
+%
+%- - - - - 
+
+
+
+\begin{exo}[Centre de gravité d'un quadrilatère]
+Soit $ABCD$ un quadrilatère et $I$, $J$, $K$ et $L$ les milieux de ses côtés.
+Montrer que le milieu du segment $[IK]$ est aussi le milieu du segment $[JL]$.
+
+(Ce point est appelé le \emph{centre de gravité} des quatre sommets, ou aussi l'\emph{isobarycentre} des quatre sommets. Attention, ce n'est \underline{pas} le centre de gravité du quadrilatère plein, contrairement au cas des triangles ! Ce n'est pas non plus l'intersection des diagonales.
+%-> exo sur le centre de gravité du quadrilatère plein ?
+)
+% http://mathafou.free.fr/pbw/pb427.html
+\begin{center}
+\def\isobarycentre{
+\tkzDefPoints{0/0/A, 5/0/B, 4/4/C, 1/3/D}
+\tkzDefMidPoint(A,B)\tkzGetPoint{I}
+\tkzDefMidPoint(B,C)\tkzGetPoint{J}
+\tkzDefMidPoint(C,D)\tkzGetPoint{K}
+\tkzDefMidPoint(D,A)\tkzGetPoint{L}
+\tkzDefMidPoint(I,K)\tkzGetPoint{O}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawPoints(A,B,C,D,I,J,K,L,O)
+\tkzMarkSegments[mark=|||](A,I I,B)
+\tkzMarkSegments[mark=||](B,J J,C)
+\tkzMarkSegments[mark=|](C,K K,D)
+\tkzMarkSegments[mark=s](D,L L,A)
+\tkzAutoLabelPoints[center=O](A,B,C,D,I,J,K,L)
+}
+\begin{tikzpicture}[rotate=10,scale=.7]
+\isobarycentre{}
+\tkzDrawSegment[dashed](I,K)
+\tkzMarkSegments[mark=x](I,O O,K)
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[rotate=10,scale=.7]
+\isobarycentre{}
+\tkzDrawSegment[dashed](J,L)
+\tkzMarkSegments[mark=o](J,O O,L)
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
+
+
+
+% - - - - - - - -
+% - - - - - - - -
+\begin{exo}%vecten
+Sur l'extérieur d'un triangle $ABC$, on accole des carrés $ABIJ$ et $CAMN$ de centres $Z$ et $Y$.
+On note $X$, le milieu du segment $[BC]$.
+Montrer que le triangle $XYZ$ est rectangle isocèle en $X$.
+\begin{center}
+\begin{tikzpicture}[scale=.6,rotate=90]
+\tkzDefPoint(190:2){A}
+\tkzDefPoint(60:2){B}
+\tkzDefPoint(-10:2){C}
+\tkzDefPoint(0,0){O}
+\tkzDefSquare(A,B) \tkzGetFirstPoint{I}\tkzGetSecondPoint{J}
+\tkzDefSquare(B,C) \tkzGetFirstPoint{K}\tkzGetSecondPoint{L}
+\tkzDefSquare(C,A) \tkzGetFirstPoint{M}\tkzGetSecondPoint{N}
+%\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(A,B,I,J)
+\tkzDrawPolygon(C,A,M,N)
+\tkzDrawPolygon[very thick](A,B,C)
+
+\tkzDefMidPoint(M,C)\tkzGetPoint{Y}
+\tkzDefMidPoint(C,B)\tkzGetPoint{X}
+\tkzDefMidPoint(B,J)\tkzGetPoint{Z}
+\tkzDrawPoints(X,Y,Z)
+\tkzDrawPolygon[dashed](X,Y,Z)
+\tkzAutoLabelPoints[center=O](A,B,C,I,J,M,N,X,Y,Z)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Considérer une rotation de centre $A$ et d'angle $90^\circ$.
+\end{hint}
+\begin{sol}
+La rotation de centre $A$ et d'angle $90^\circ$ envoie $B$ sur $J$ et $M$ sur $C$.
+Elle envoie donc le segment $[BM]$ sur $[JC]$.
+On en déduit que ces deux segments sont de même longueur et perpendiculaires.
+
+Ensuite on applique Thalès pour en déduire que $[XY]$ et $[XZ]$ sont de même longueur et perpendiculaires.
+\end{sol}
+\end{exo}
+
+% - - - - - - 
+
+
+% - - - - - - - -
+% - - - - - - - -
+% - - - - - - - -
+\begin{exo}[Partage en trois]
+%barycentres
+Soit $ABCD$ un parallélogramme, $M$ le milieu de $[AB]$ et $N$ le milieu de $[CD]$. Montrer que les droites $(DM)$ et $(BN)$ coupent la diagonale $[AC]$ en deux points $K$ et $L$ qui la partagent en trois segments égaux.
+\begin{center}
+\begin{tikzpicture}[rotate=-5]
+\tkzDefPoints{-3/-1/A, 2/-1/B, 3/1/C, -2/1/D, 0/0/O}
+\tkzDefMidPoint(A,B)\tkzGetPoint{M}
+\tkzDefMidPoint(C,D)\tkzGetPoint{N}
+\tkzInterLL(D,M)(A,C)\tkzGetPoint{K}
+\tkzInterLL(B,N)(A,C)\tkzGetPoint{L}
+\tkzDrawPolygon(A,B,C,D)
+\tkzDrawSegments[dashed](D,M B,N A,C)
+\tkzMarkSegments[mark=||](A,M M,B C,N N,D)
+\tkzLabelPoints[above=3pt](D,C,K,N)
+\tkzLabelPoints[below=3pt](A,B,L,M)
+\tkzDrawPoints(M,N,K,L)
+\end{tikzpicture}
+\end{center}
+
+\begin{hint}
+Il y a plusieurs triangles dans lesquels on peut appliquer le théorème de Thalès.
+\end{hint}
+\begin{sol}
+On a $MB=DN$ donc $MBND$ est un parallélogramme.
+
+On en déduit que $(DM)//(BN)$.
+
+Comme $M$ est le milieu de $[AB]$, on a par le théorème des milieux que $AK=KL$.
+
+De la même façon, le théorème de Thalès appliqué dans $DCK$ entraîne que $KL=LC$, d'où le résultat.
+
+\underline{Variante, demande plus d'initiative} :\\
+Soit $Q$ le symétrique de $M$ par rapport à $B$. On a $MB=BQ$, donc $BQ=NC$ et $(BQ)//(NC)$. Donc $BQCM$ est un parallélogramme et donc $(NB)//(CQ)$.
+
+Comme $AM=MB=BQ$ et que $(MK)//(BL)//(QC)$, le théorème de Thalès donne $AK=KL=LC$.
+
+\underline{Autre preuve, avec centre de gravité} :\\
+Dans le triangle $ABD$, le point $K$ est l'intersection des deux médianes $(DM)$ et $(AO)$. C'est donc le centre de gravité de $ABD$.
+
+On en déduit que $KA = 2KO$.
+
+Par symétrie centrale de centre $O$, on a $AK=CL$ et $KO=LO$, et finalement $AK = KO+OL = KL = LC$.
+\end{sol}
+\end{exo}
+
+
+
+
+% - - - - - - - -
+% - - - - - - - -
+% - - - - - - - -
+\begin{exo}[Médiane sur médiane]
+% source : http://ressources.unisciel.fr/sillages/mathematiques/geometrie/res/Barycentres.pdf
+% faisable avec barycentres
+
+Soit $ABC$ un triangle, $M$ le milieu de $[BC]$ et $N$ le milieu de $[AM]$. À quel endroit la droite $(CN)$ coupe-t-elle le segment $[AB]$ ?
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoints{1/4/A,-3/0/B, 3/0/C}
+\tkzDefMidPoint(B,C)\tkzGetPoint{M}
+\tkzDefMidPoint(A,M)\tkzGetPoint{N}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawSegment(A,M)
+\tkzMarkSegments[mark=||](B,M M,C)
+\tkzMarkSegments[mark=|](M,N N,A)
+
+\tkzLabelPoints[below=3pt](B,M,C)
+\tkzLabelPoints[above=3pt](A)
+\tkzLabelPoints[above right](N)
+\tkzInterLL(C,N)(A,B)\tkzGetPoint{X}
+\tkzDrawPoints(M,N)
+
+\tkzDrawLine[dashed](C,X)
+\tkzDrawPoint[fill=white](X)
+\tkzLabelPoint[above=3pt](X){$?$}
+\end{tikzpicture}
+\end{center}
+
+\begin{hint}
+Tracer la parallèle à $(PC)$ passant par $M$.
+\end{hint}
+\begin{sol}
+La parallèle à $(PC)$ passant par $M$ coupe le segment $[AB]$ en un point $Q$. D'après le théorème de Thalès dans le triangle $AQM$, on a : 
+\[ \frac{AP}{AQ}=\frac{AN}{AM}.\]
+On en déduit que  $P$ est le milieu du segment $[AQ]$.
+
+Appliquons maintenant le théorème de Thalès dans le triangle $BPC$ : on obtient alors
+\[\frac{BM}{BC}=\frac{BQ}{BP}, \]
+et donc $Q$ est le milieu du segment $[BP]$.
+
+On en déduit donc que $BQ=QP=PA$, et donc la droite $(CN)$ coupe le segment $[AB]$ aux deux tiers.
+\end{sol}
+\end{exo}
+
+
+
+
+% - - - - - - - -
+% - - - - - - - -
+\begin{exo}[Échange médiane contre hauteur]%vecten, moulin à vent
+Sur l'extérieur d'un triangle $ABC$, on accole des carrés $ABIJ$ et $BCKL$.
+On note $P$ le milieu du segment$[IL]$.
+Montrer que la droite $(PB)$ est perpendiculaire à $(AC)$ et que de plus $AC=2PB$.
+\begin{center}
+\begin{tikzpicture}[scale=.7]
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(1,3){B}
+\tkzDefPoint(4,0){C}
+\tkzDefPoint(0,0){O}
+\tkzDefSquare(A,B) \tkzGetFirstPoint{I}\tkzGetSecondPoint{J}
+\tkzDefSquare(B,C) \tkzGetFirstPoint{K}\tkzGetSecondPoint{L}
+%\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(A,B,I,J)
+\tkzDrawPolygon(B,C,K,L)
+
+\tkzDefMidPoint(I,L)\tkzGetPoint{P}
+\tkzDrawSegment(I,P)
+\tkzDrawSegment(P,L)
+\tkzMarkSegment[mark=s||](P,L)
+\tkzMarkSegment[mark=s||](I,P)
+\tkzDrawSegment(A,C)
+\tkzDrawSegment[dashed](P,B)
+\tkzAutoLabelPoints[center=B](A,C,I,J,K,L,P)
+\tkzLabelPoints[left](B)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Considérer une rotation de $90^\circ$ de centre $B$, appliquée au triangle $ABC$.
+\end{hint}
+\begin{sol}
+ATTENTIOn finir figure.
+
+
+La rotation d'angle $90^\circ$ et de centre $B$ envoie le triangle $ABC$ sur le triangle $IBM$, où $M$ est le symétrique de $L$ par rapport à $B$.
+
+On en déduit que $IM=AC$ et que $(IM)\bot(AC)$.
+Maintenant, dans le triangle $ILM$, on applique le théorème des milieux avec le segment $[PB]$.
+
+On aurait pu appliquer la rotation à $IBL$, ça marche aussi.
+On peut aussi considérer la rotation de centre $B$ et d'angle $-90^\circ$, ça marche aussi.
+\end{sol}
+\end{exo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exo}[Deux triangles isocèles rectangles] % exo7
+% rotations
+Soient $AOB$ et $COD$ deux triangles directs, isocèles rectangles en $O$. Soient $I$, $J$, $K$ et $L$ les milieux des segments $[AB]$, $[BC]$, $[CD]$ et $[DA]$.
+%Montrer que $(AC)\bot (BD)$ et que $AC=BD$.
+Montrer que $IJKL$ est un carré. 
+\begin{center}
+\definecolor{uuuuuu}{rgb}{0,0,0}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.9]
+\clip(-4.42,-2.62) rectangle (7.18,6.76);
+\draw[very thick] (-3.5,1.02)-- (0.48,1.46) -- (0.04,5.44) -- (-3.5,1.02);
+\draw[very thick] (2.2,0.)-- (0.48,1.46) -- (1.94,3.18) -- (2.2,0.);
+%\draw [dash pattern=on 2pt off 2pt] (-3.5,1.02)-- (1.94,3.18); % indication
+%\draw [dash pattern=on 2pt off 2pt] (2.2,0.)-- (0.04,5.44);
+\draw (-3.5,1.02)-- (2.2,0.);
+\draw (1.94,3.18)-- (0.04,5.44);
+\draw (-0.65,0.51)-- (-1.73,3.23);
+\draw (-1.73,3.23)-- (0.99,4.31);
+\draw (0.99,4.31)-- (2.07,1.59);
+\draw (2.07,1.59)-- (-0.65,0.51);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0.48,1.46) circle (1.5pt);
+\draw[color=uuuuuu] (0.2,1.15) node {$O$};
+\draw [fill=uuuuuu] (-3.5,1.02) circle (1.5pt);
+\draw[color=uuuuuu] (-3.68,1.51) node {$A$};
+\draw [fill=uuuuuu] (0.04,5.44) circle (1.5pt);
+\draw[color=uuuuuu] (0.18,5.81) node {$B$};
+\draw [fill=uuuuuu] (1.94,3.18) circle (1.5pt);
+\draw[color=uuuuuu] (2.08,3.55) node {$C$};
+\draw [fill=uuuuuu] (2.2,0.) circle (1.5pt);
+\draw[color=uuuuuu] (2.34,0.37) node {$D$};
+\draw [fill=uuuuuu] (-1.73,3.23) circle (1.5pt);
+\draw[color=uuuuuu] (-2.34,3.33) node {$I$};
+\draw [fill=uuuuuu] (0.99,4.31) circle (1.5pt);
+\draw[color=uuuuuu] (1.22,4.69) node {$J$};
+\draw [fill=uuuuuu] (2.07,1.59) circle (1.5pt);
+\draw[color=uuuuuu] (2.3,1.79) node {$K$};
+\draw [fill=uuuuuu] (-0.65,0.51) circle (1.5pt);
+\draw[color=uuuuuu] (-0.8,0.03) node {$L$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{hint}
+Tracer les \og diagonales\fg{} $[AC]$ et $[BD]$.
+\end{hint}
+\begin{sol}
+ATTENTION VIRER LES VECTEURS pour le collège.
+On commence par prouver que $(AC)\bot (BD)$ et que $AC=BD$. Ensuite on rouve le résultat.
+
+\begin{enumerate}
+\item Soit $\rho$ la rotation de centre $O$ et d'angle $\pi/2$. D'après l'énoncé, on a $\rho(B)=A$ et $\rho(D)=C$. Donc $[AC]$ est l'image de $[AD]$ par $\rho$, d'où on déduit que $(AC)\bot (BD)$ et que $AC=BD$.
+
+\item Le quadrilatère $IJKL$ est toujours un parallélogramme, même sans hypothèses sur $ABCD$ (c'est le théorème de Varignon). En effet, par le théorème de Thalès (ou simplement le théorème des milieux) : 
+\[ \overrightarrow{IL} = \frac12 \overrightarrow{BD} = \overrightarrow{JK}.\]
+Ceci signifie que les côtés $[IL]$ et $[JK]$ ont même longueur et sont parallèles, donc $IJKL$ est un parallélogramme.
+
+Pour voir que c'est un carré, remarquons qu'on montre de même que  
+\[ \overrightarrow{IJ} = \frac12 \overrightarrow{AC} = \overrightarrow{LK},\]
+et d'après la première question, $(AC)\bot (BD)$ et que $AC=BD$, donc $IJKL$ est un parallélogramme ayant un angle droit et des cotés consécutifs de même longueur. C'est donc un carré.
+\end{enumerate}
+\end{sol}
+\end{exo}
+
+% - - - - ---  - 
+% - - - - - - - -
+% - - - - - - - -
+\begin{exo}[Théorème de la bissectrice]
+
+Soit $ABC$ un triangle, et $M$ le pied de la bissectrice issue de $A$. Montrer que $\frac{AB}{AC}=\frac{MB}{MC}$.
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoints{1/4/A, 0/0/B, 6/0/C}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDefLine[bisector](B,A,C) \tkzGetPoint{x}
+\tkzInterLL(A,x)(B,C)\tkzGetPoint{M}
+\tkzDrawSegment[dashed](A,M)
+\tkzDrawPoint[fill=white](M)
+\tkzMarkAngles[mark=|](B,A,M M,A,C)
+\tkzLabelPoints[above](A)
+\tkzLabelPoints[below](B,M,C)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Tracer la parallèle à la bissectrice passant par un des sommets.
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+%\newpage
+% - - - - - - - -
+% - - - - - - - -
+\begin{exo}[Le miraculeux \og cercle des neuf points\fg]
+\def\neufpoints{
+\tkzDefPoints{0/0/A,6/0/B,1/4/C}
+
+\tkzDefTriangleCenter[centroid](A,B,C)
+\tkzGetPoint{G}
+\tkzDefSpcTriangle[medial](A,B,C){I,J,K}
+
+\tkzDefSpcTriangle[orthic](A,B,C){H_A,H_B,H_C}
+\tkzDefTriangleCenter[ortho](B,C,A)
+\tkzGetPoint{H}
+
+\tkzDrawSegments[thin](A,H_A B,H_B C,H_C)
+\tkzMarkRightAngles[fill=gray!20,
+opacity=.5](A,H_A,C B,H_B,A C,H_C,A)
+
+\tkzDefMidPoint(A,H)\tkzGetPoint{X}
+\tkzDefMidPoint(B,H)\tkzGetPoint{Y}
+\tkzDefMidPoint(C,H)\tkzGetPoint{Z}
+\tkzMarkSegments[size=1.5pt,mark=|](A,X X,H)
+\tkzMarkSegments[size=1.5pt,mark=|||](B,Y Y,H)
+\tkzMarkSegments[size=1.5pt,mark=||](C,Z Z,H)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPoints[size=5pt](I,J,K,H_A,H_B,H_C,X,Y,Z)
+\tkzDrawPoints[fill=white,draw=black](H)
+
+}
+Soit $ABC$ un triangle.
+On place:
+\begin{itemize}
+\item les milieux des trois côtés $I$, $J$ et $K$;
+\item les pieds des hauteurs $H_A$ $H_B$ et $H_C$;
+\item les points $X$, $Y$ et $Z$ situés à mi-chemin entre l'orthocentre $H$ et les sommets du triangle.
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}[scale=1.3]
+\neufpoints{}
+\tkzAutoLabelPoints[center=G](A,B,C,I,J,K)
+\tkzAutoLabelPoints[center=H](H_A,H_C)
+\tkzLabelPoints[left=3pt](H_B)
+\tkzLabelPoints[below](X,Y)
+\tkzLabelPoints[right](Z)
+\end{tikzpicture}
+\end{center}
+Le théorème des neuf cercles est la propriété incroyable suivante : 
+\begin{mdframed}
+\noindent \textbf{Théorème} : les neuf points $I$, $J$, $K$, $H_A$, $H_B$, $H_C$, $X$, $Y$ et $Z$ sont sur un seul et même cercle.
+\end{mdframed}
+Ce cercle est appelé cercle des neuf points, cercle d'Euler, cercle de Feuerbach ou encore cercle de Terquem.
+
+Pour démontrer le théorème, on s'intéressera au quadrilatère $IJXY$, puis à d'autres du même type. Ne pas hésiter à demander des indications, ce problème n'est pas facile.
+\begin{hint}
+Ce magnifique théorème se démontre en plusieurs étapes.
+
+\paragraph{Étape 1}
+Montrer que le quadrilatère $IJXY$ est un parallélogramme en appliquant le théorème de Thalès dans deux triangles différents.
+\begin{center}
+\begin{tikzpicture}[scale=1.3]
+\tkzDefPoints{0/0/A,6/0/B,1/4/C}
+
+\tkzDefTriangleCenter[centroid](A,B,C)
+\tkzGetPoint{G}
+\tkzDefSpcTriangle[medial](A,B,C){I,J,K}
+
+\tkzDefSpcTriangle[orthic](A,B,C){H_A,H_B,H_C}
+\tkzDefTriangleCenter[ortho](B,C,A)
+\tkzGetPoint{H}
+
+\tkzDrawSegments[thin](A,H_A B,H_B C,H_C)
+\tkzMarkRightAngles[fill=gray!20,
+opacity=.5](A,H_A,C B,H_B,A C,H_C,A)
+
+\tkzDefMidPoint(A,H)\tkzGetPoint{X}
+\tkzDefMidPoint(B,H)\tkzGetPoint{Y}
+\tkzDefMidPoint(C,H)\tkzGetPoint{Z}
+\tkzMarkSegments[size=1.5pt,mark=|](A,X X,H)
+\tkzMarkSegments[size=1.5pt,mark=|||](B,Y Y,H)
+\tkzMarkSegments[size=1.5pt,mark=||](C,Z Z,H)
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPoints[size=5pt](I,J,K,H_A,H_B,H_C,X,Y,Z)
+\tkzDrawPoints[fill=white,draw=black](H)
+\tkzAutoLabelPoints[center=G](A,B,C,I,J,K)
+\tkzAutoLabelPoints[center=H](H_A,H_C)
+\tkzLabelPoints[left=3pt](H_B)
+\tkzDrawPolygon[dashed](I,J,X,Y)% rectangle
+\tkzLabelPoints[below](X,Y)
+\tkzLabelPoints[right](Z)
+\end{tikzpicture}
+\end{center}
+\paragraph{Étape 1bis}
+Montrer que le quadrilatère $IJXY$ est en réalité un rectangle et en déduire que $I$, $J$, $X$ et $Y$ se trouvent sur un même cercle $\mathcal C$.
+\paragraph{Étape 2}
+Montrer que les pieds des hauteurs $H_A$, et $H_B$ se trouvent également sur ce cercle $\mathcal C$. À ce stade il ne manque plus que trois points.
+\paragraph{Étape 3}
+En appliquant les étapes 1 et 1bis à un autre quadrilatère, en déduire que $Z$ et $K$ sont eux aussi sur le cercle $\mathcal C$.
+\paragraph{Étape 4 et fin}
+Comme dans l'étape 2, montrer que $H_C$ est sur le cercle.
+\end{hint}
+\end{exo}
+
+
+
+
+
+
+\Closesolutionfile{indications}
+\Closesolutionfile{solutions}
+
+\indications
+\correction
+
+\end{document}
+

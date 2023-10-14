@@ -1,0 +1,920 @@
+\input{../preambule_club}
+\input{../macros_answers}
+
+
+\begin{document}
+\Opensolutionfile{indications}[_\jobname_hints]
+\Opensolutionfile{solutions}[_\jobname_sol]
+
+
+\title{Théorème de Ptolémée}
+\author{Damien Mégy}
+\maketitle
+
+Catalogue d'exos sur Ptolémée pour le Club Mathématique de Nancy. Rédaction en cours, ne pas diffuser.
+
+
+
+
+\begin{exo}
+Soit $ABC$ un triangle équilatéral, et $P$ un point de l'arc $BC$. Montrer que $PA=PB+PC$.
+\begin{sol}
+En notant $a$ le côté du triangle équilatéral, Ptolémée donne 
+\[ a\times PA = a\times PB+a\times PC.\]
+Comme $a$ est non nul, on peut simplifier par $a$ dans l'équation.
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+%Joli petit exo, refaire la figure, metre après (triangle équilatéral) 
+On place trois carrés comme sur la figure ci-dessous. Leurs aires valent $18$, $25$ et $32$ cm$^2$. Calculer la distance entre $M$ et $N$.
+\begin{center}
+%\includegraphics[scale=.5]{trois_carres.png}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.,-4.) rectangle (2.56,3.08);
+\fill[line width=1pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (2.,0.) -- (2.,2.) -- (0.,2.) -- cycle;
+\fill[line width=1pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (-3.42,0.) -- (-3.42,-3.42) -- (0.,-3.42) -- cycle;
+\fill[line width=1pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-3.42,0.) -- (-0.71,-0.71) -- (0.,2.) -- (-2.71,2.71) -- cycle;
+\draw[line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.,-0.4242640687119283) -- (0.42426406871192823,-0.42426406871192845) -- (0.4242640687119283,0.) -- (0.,0.) -- cycle; 
+\draw [line width=1pt,color=zzttqq] (0.,0.)-- (2.,0.);
+\draw [line width=1pt,color=zzttqq] (2.,0.)-- (2.,2.);
+\draw [line width=1pt,color=zzttqq] (2.,2.)-- (0.,2.);
+\draw [line width=1pt,color=zzttqq] (0.,2.)-- (0.,0.);
+\draw [line width=1pt,color=zzttqq] (0.,0.)-- (-3.42,0.);
+\draw [line width=1pt,color=zzttqq] (-3.42,0.)-- (-3.42,-3.42);
+\draw [line width=1pt,color=zzttqq] (-3.42,-3.42)-- (0.,-3.42);
+\draw [line width=1pt,color=zzttqq] (0.,-3.42)-- (0.,0.);
+\draw [line width=1pt,color=zzttqq] (-3.42,0.)-- (-0.71,-0.71);
+\draw [line width=1pt,color=zzttqq] (-0.71,-0.71)-- (0.,2.);
+\draw [line width=1pt,color=zzttqq] (0.,2.)-- (-2.71,2.71);
+\draw [line width=1pt,color=zzttqq] (-2.71,2.71)-- (-3.42,0.);
+\begin{scriptsize}
+\draw[color=zzttqq] (1.12,1.17) node {18};
+\draw[color=zzttqq] (-1.6,-1.53) node {32};
+\draw[color=zzttqq] (-1.6,1.17) node {25};
+\draw [fill=uuuuuu] (-2.71,2.71) circle (2.0pt);
+\draw[color=uuuuuu] (-3.24,2.59) node {$M$};
+\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+\draw[color=uuuuuu] (0.14,0.33) node {$N$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+
+\begin{sol}
+
+Le cercle circonscrit dans le carré d'aire $25$ contient aussi le point $N$. On applique Ptolémée au bon quadrilatère et on trouve une longueur égale à $7$.
+
+Source : 
+\url{https://twitter.com/Cshearer41/status/1213375792807370752}, 
+
+
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+On place un triangle rectangle dans un quart de cercle comme sur la figure ci-dessous. Si $AB=3$ et $AC=4$, que vaut le rayon du cercle?
+%\url{https://twitter.com/EdwinWa93021333/status/1315348297297604608}
+\begin{center}
+%\includegraphics[scale=.5]{quart_cercle.png}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.04,-0.52) rectangle (3.58,4.52);
+\draw[line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.2629615599498205,0.33294326542033725) -- (-0.06998170547051667,0.5959048253701578) -- (-0.3329432654203372,0.26296155994982057) -- (0.,0.) -- cycle; 
+\draw[line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-1.0638369960344751,3.4645302742786743) -- (-0.6489949683467084,3.375614066172939) -- (-0.5600787602409731,3.7904560938607053) -- (-0.9749207879287397,3.879372301966441) -- cycle; 
+\draw [line width=1pt] (2.4792253630921444,3.1390192097215053)-- (0.,0.);
+\draw [line width=1pt] (-3.1390192097215053,2.4792253630921444)-- (0.,0.);
+\draw [shift={(0.,0.)},line width=1pt]  plot[domain=0.9023004243826921:2.4730967511775885,variable=\t]({1.*4.*cos(\t r)+0.*4.*sin(\t r)},{0.*4.*cos(\t r)+1.*4.*sin(\t r)});
+\draw [line width=1pt] (2.4792253630921444,3.1390192097215053)-- (-0.9749207879287397,3.879372301966441);
+\draw [line width=1pt] (-1.5448883270737437,1.220166576797097)-- (-0.9749207879287397,3.879372301966441);
+\draw [line width=1pt] (2.4792253630921444,3.1390192097215053)-- (-1.5448883270737437,1.220166576797097);
+\begin{scriptsize}
+\draw [fill=black] (0.,0.) circle (1.5pt);
+\draw[color=black] (0.38,0.03) node {$O$};
+\draw [fill=black] (2.4792253630921444,3.1390192097215053) circle (1.5pt);
+\draw[color=black] (2.86,3.19) node {$C$};
+\draw [fill=black] (-3.1390192097215053,2.4792253630921444) circle (1.5pt);
+\draw [fill=black] (-0.9749207879287397,3.879372301966441) circle (1.5pt);
+\draw[color=black] (-1.46,4.13) node {$A$};
+\draw [fill=black] (-1.5448883270737437,1.220166576797097) circle (1.5pt);
+\draw[color=black] (-2.06,1.27) node {$B$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+Déjà, dans le triangle rectangle $ABC$, on a $BC=5$ par Pythagore.
+
+Ensuite, l'important est de voir que le quadrilatère $OCAB$ est inscriptible (deux triangles rectangles), et que $[BC]$ est un diamètre du cercle. On applique Ptolémée dans ce cercle, et on trouve que $B$ est au milieu du rayon, c'est-à-dire $BO=R/2$. Ensuite on applique Pythagore dans le triangle $OBC$ et on trouve $R=2\sqrt 5$.
+\end{sol}
+\end{exo}
+
+
+
+
+\begin{exo}(Projection orthogonale)\\
+%(un peu plus dur mais sans puissance, Pythagore et triangles semblables.)
+Dans le triangle rectangle ci-dessous, on a $AP=2$ et $AC=3$. Le point $Q$ est le projeté orthogonal de $P$ sur la droite $(BC)$. Calculer la longueur $AQ$.
+
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=1]
+\clip(-1.02,-0.84) rectangle (5.3,4.1);
+\draw[line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (2.465441558772843,0.6205887450304572) -- (2.804852813742386,0.36603030380330015) -- (3.0594112549695427,0.7054415587728429) -- (2.72,0.96) -- cycle; 
+\draw[line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.4242640687119284,0.) -- (0.42426406871192845,0.4242640687119284) -- (0.,0.4242640687119284) -- (0.,0.) -- cycle; 
+\draw [line width=1pt] (0.,3.)-- (4.,0.);
+\draw [line width=1pt] (0.,0.)-- (0.,3.);
+\draw [line width=1pt] (0.,0.)-- (2.,0.);
+\draw [line width=1pt] (0.95,0.12) -- (0.95,-0.12);
+\draw [line width=1pt] (1.05,0.12) -- (1.05,-0.12);
+\draw [line width=1pt] (2.,0.)-- (4.,0.);
+\draw [line width=1pt] (2.95,0.12) -- (2.95,-0.12);
+\draw [line width=1pt] (3.05,0.12) -- (3.05,-0.12);
+\draw [line width=1pt] (0.,0.)-- (2.72,0.96);
+\draw [line width=1pt] (2.,0.)-- (2.72,0.96);
+\begin{scriptsize}
+\draw [fill=black] (0.,0.) circle (1.5pt);
+\draw[color=black] (-0.4,-0.09) node {$A$};
+\draw [fill=black] (4.,0.) circle (1.5pt);
+\draw[color=black] (4.42,0.01) node {$B$};
+\draw [fill=black] (0.,3.) circle (1.5pt);
+\draw[color=black] (-0.42,3.61) node {$C$};
+\draw [fill=black] (2.,0.) circle (1.5pt);
+\draw[color=black] (2.04,-0.37) node {$P$};
+\draw [fill=black] (2.72,0.96) circle (1.5pt);
+\draw[color=black] (2.6,1.55) node {$Q$};
+\end{scriptsize}
+\end{tikzpicture}
+\begin{sol}
+n trouve $BC=5$ par Pythagore, ensuite $PQ=6/5$, $QB=8/5$ avec les triangles semblables, puis $CQ:17/5$.
+
+Ensuite, on calcule $PC=\sqrt{13}$ avec Pythagore,  
+
+Enfin, $APQC$ est inscriptible (deux angles droits opposés) et Ptolémée donne  $AQ=\frac{52}{5\sqrt{13}}$.
+\end{sol}
+\end{exo}
+
+
+
+
+%Mais on peut faire avec Al Kashi
+
+%Exo avec deux triangles rectabgles qui partagent une hypoténuse.
+
+
+%wikipedia \url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
+
+
+\begin{exo}
+On place un point sur un quart de cercle de sorte à obtenir les distances marquées sur la figure ci-dessous. Quel est le rayon du cercle ?
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.8]
+\clip(-1.44,-0.46) rectangle (4.42,5.1);
+\draw[line width=1pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.0810542912912795,0.29208919067520983) -- (0.02896510061606966,0.7131434819664894) -- (-0.39208919067520986,0.6610542912912796) -- (-0.34,0.24) -- cycle; 
+\draw[line width=1pt] (-0.82,4.12)-- (2.404529668472952,3.0243054607696607);
+\draw[line width=1pt] (2.404529668472952,3.0243054607696607)-- (3.54,0.72);
+\draw[line width=1pt] (3.54,0.72)-- (-0.34,0.24);
+\draw[line width=1pt] (-0.34,0.24)-- (-0.82,4.12);
+\draw [line width=1pt,shift={(-0.34,0.24)}] plot[domain=0.12308595969500578:1.6938822864899026,variable=\t]({1.*3.9095779823402936*cos(\t r)+0.*3.9095779823402936*sin(\t r)},{0.*3.9095779823402936*cos(\t r)+1.*3.9095779823402936*sin(\t r)});
+\begin{scriptsize}
+\draw [fill=black] (-0.34,0.24) circle (2.5pt);
+\draw[color=black] (-0.78,0.25) node {$A$};
+\draw [fill=black] (3.54,0.72) circle (2.5pt);
+\draw[color=black] (3.88,0.69) node {$B$};
+\draw [fill=uuuuuu] (-0.82,4.12) circle (2.5pt);
+\draw[color=uuuuuu] (-1.18,4.01) node {$C$};
+\draw [fill=black] (2.404529668472952,3.0243054607696607) circle (2.5pt);
+\draw[color=black] (2.54,3.39) node {$D$};
+\draw[color=black] (1.04,3.09) node {$\sqrt 2$};
+\draw[color=black] (2.76,1.63) node {$1$};
+\draw[color=black] (1.74,0.23) node {??};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+On complète le quart de cercle en un demi-cercle :
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.14,-0.78) rectangle (4.46,4.9);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0.08105429129127995,0.2920891906752099) -- (0.028965100616070105,0.7131434819664899) -- (-0.3920891906752099,0.66105429129128) -- (-0.34,0.24) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (2.02396067390612,2.836776155394764) -- (2.211489979281017,2.4562071608279323) -- (2.5920589738478483,2.643736466202829) -- (2.404529668472952,3.0243054607696607) -- cycle; 
+\draw (-0.82,4.12)-- (2.404529668472952,3.0243054607696607);
+\draw (2.404529668472952,3.0243054607696607)-- (3.54,0.72);
+\draw (3.54,0.72)-- (-0.34,0.24);
+\draw (-0.34,0.24)-- (-0.82,4.12);
+\draw [shift={(-0.34,0.24)}] plot[domain=0.12308595969500578:1.6938822864899026,variable=\t]({1.*3.9095779823402936*cos(\t r)+0.*3.9095779823402936*sin(\t r)},{0.*3.9095779823402936*cos(\t r)+1.*3.9095779823402936*sin(\t r)});
+\draw [shift={(-0.34,0.24)}] plot[domain=1.6938822864899026:3.264678613284799,variable=\t]({1.*3.9095779823402936*cos(\t r)+0.*3.9095779823402936*sin(\t r)},{0.*3.9095779823402936*cos(\t r)+1.*3.9095779823402936*sin(\t r)});
+\draw (-0.34,0.24)-- (-4.22,-0.24);
+\draw (-4.22,-0.24)-- (2.404529668472952,3.0243054607696607);
+\draw (-0.82,4.12)-- (-4.22,-0.24);
+\draw (-0.82,4.12)-- (3.54,0.72);
+\begin{scriptsize}
+\draw [fill=qqqqff] (-0.34,0.24) circle (2.5pt);
+\draw[color=qqqqff] (-0.46,-0.07) node {$A$};
+\draw [fill=qqqqff] (3.54,0.72) circle (2.5pt);
+\draw[color=qqqqff] (3.88,0.69) node {$B$};
+\draw [fill=uuuuuu] (-0.82,4.12) circle (1.5pt);
+\draw[color=uuuuuu] (-1.18,4.51) node {$C$};
+\draw [fill=xdxdff] (2.404529668472952,3.0243054607696607) circle (2.5pt);
+\draw[color=black] (2.54,3.39) node {$D$};
+\draw[color=black] (1.16,3.89) node {$\sqrt 2$};
+\draw[color=black] (3.4,1.93) node {$1$};
+\draw[color=black] (1.9,0.01) node {$R$};
+\draw [fill=black] (-4.22,-0.24) circle (2.5pt);
+\draw[color=black] (-4.62,-0.19) node {$B'$};
+\draw[color=black] (-2.1,-0.33) node {$R$};
+\draw[color=black] (-2.7,2.27) node {$R\sqrt 2$};
+\draw[color=black] (1.82,1.37) node {$R\sqrt 2$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+On applique Ptolémée:
+\[ R\sqrt 2 \times B'D = R\sqrt 2 + 2R\sqrt 2.\]
+Donc $B'D=3$.
+
+Ensuite on applique Pythagore dans le triangle $B'DB$ ce qui donne $10=4R^2$ et donc : 
+\[ R=\frac{\sqrt 5}{\sqrt 2}\]
+
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}%[l'angle de 60 ne sert à rien : changer ?)]
+Dans un cercle de rayon $5$, on place deux points $A$ et $B$ à distance $5$. De combien de façons peut-on placer un point $C$ sur le cercle de sorte que $AC=6$ ?  Calculer la distance $BC$ dans chacun des cas.
+%\begin{center}
+%\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+%\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+%\definecolor{qqqqff}{rgb}{0.,0.,1.}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\clip(-6.3201096912875885,-4.785490916721843) rectangle (6.244441343897677,7.654349934491355);
+%\draw(-0.18,1.56) circle (5.cm);
+%\draw (-1.6166944858701977,6.349144908464368)-- (-5.045868396070141,2.7103585319915697);
+%\draw (-1.6166944858701977,6.349144908464368)-- (4.015304656082137,4.280187280805413);
+%\draw (-1.6166944858701977,6.349144908464368)-- (-5.179853568169447,1.5217338679346337);
+%\draw (-5.179853568169447,1.5217338679346337)-- (-5.045868396070141,2.7103585319915697);
+%\draw (4.015304656082137,4.280187280805413)-- (-5.045868396070141,2.7103585319915697);
+%\draw (1.2566944858701974,-3.229144908464366)-- (-1.6166944858701977,6.349144908464368);
+%\draw (-5.179853568169447,1.5217338679346337)-- (1.2566944858701974,-3.229144908464366);
+%\draw (1.2566944858701974,-3.229144908464366)-- (4.015304656082137,4.280187280805413);
+%\begin{scriptsize}
+%\draw [fill=qqqqff] (-0.18,1.56) circle (2.5pt);
+%\draw[color=qqqqff] (0.0401096912875832,2.1515130667241134) node {$O$};
+%\draw [fill=xdxdff] (-1.6166944858701977,6.349144908464368) circle (2.5pt);
+%\draw[color=xdxdff] (-1.394057424391132,6.92167760365549) node {$A$};
+%\draw [fill=uuuuuu] (-5.045868396070141,2.7103585319915697) circle (1.5pt);
+%\draw[color=uuuuuu] (-5.571848587455215,3.3362598144587037) node {$B$};
+%\draw [fill=uuuuuu] (-5.179853568169447,1.5217338679346337) circle (1.5pt);
+%\draw[color=uuuuuu] (-5.727736317420293,1.527962146863803) node {$C$};
+%\draw [fill=uuuuuu] (4.015304656082137,4.280187280805413) circle (1.5pt);
+%\draw[color=uuuuuu] (4.342611038323729,4.7392493841444026) node {$C'$};
+%\draw [fill=uuuuuu] (1.2566944858701974,-3.229144908464366) circle (1.5pt);
+%\draw[color=uuuuuu] (1.7548747209034383,-3.398090120032651) node {$M$};
+%\end{scriptsize}
+%\end{tikzpicture}
+%\end{center}
+
+\begin{sol}
+Il y a deux façons de placer le point, mais une partie ru raisonnement s'applique dans les deuxc cas. 
+Soit  $M$ le point opposé à $A$. On a d'abord $OB=5$, puis $MB=5\sqrt 3$ avec Pythagore. Toujours avec Pythagore, on a $MC=8$. Ensuite on applique Ptolémée, mais il y a deux cas différents.
+\begin{enumerate}
+\item Traitons le premier cas, celui où le point $C$ est le plus proche de $B$.
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-6.3201096912875885,-4.785490916721843) rectangle (6.244441343897677,7.654349934491355);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-4.56454747271171,2.256764123843324) -- (-4.110953064563464,2.7380850472017553) -- (-4.592273987921895,3.191679455350001) -- (-5.045868396070141,2.7103585319915697) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-4.64773156853754,1.1289694399708596) -- (-4.254967140573766,1.6610914396027667) -- (-4.787089140205673,2.053855867566541) -- (-5.179853568169447,1.5217338679346337) -- cycle; 
+\draw(-0.18,1.56) circle (5.cm);
+\draw (-1.6166944858701977,6.349144908464368)-- (-5.045868396070141,2.7103585319915697);
+\draw (-1.6166944858701977,6.349144908464368)-- (-5.179853568169447,1.5217338679346337);
+\draw (-5.179853568169447,1.5217338679346337)-- (-5.045868396070141,2.7103585319915697);
+\draw (1.2566944858701974,-3.229144908464366)-- (-1.6166944858701977,6.349144908464368);
+\draw (-5.179853568169447,1.5217338679346337)-- (1.2566944858701974,-3.229144908464366);
+\draw (-5.045868396070141,2.7103585319915697)-- (1.2566944858701974,-3.229144908464366);
+\begin{scriptsize}
+\draw [fill=qqqqff] (-0.18,1.56) circle (2.5pt);
+\draw[color=qqqqff] (0.0401096912875832,2.1515130667241134) node {$O$};
+\draw [fill=xdxdff] (-1.6166944858701977,6.349144908464368) circle (2.5pt);
+\draw[color=xdxdff] (-1.394057424391132,6.92167760365549) node {$A$};
+\draw [fill=uuuuuu] (-5.045868396070141,2.7103585319915697) circle (1.5pt);
+\draw[color=uuuuuu] (-5.571848587455215,3.3362598144587037) node {$B$};
+\draw [fill=uuuuuu] (-5.179853568169447,1.5217338679346337) circle (1.5pt);
+\draw[color=uuuuuu] (-5.727736317420293,1.527962146863803) node {$C$};
+\draw[color=black] (-3.5453080979092046,4.957492206095511) node {5};
+\draw[color=black] (-3.2647101839720647,3.835100550346952) node {6};
+\draw [fill=uuuuuu] (1.2566944858701974,-3.229144908464366) circle (1.5pt);
+\draw[color=uuuuuu] (1.7548747209034383,-3.398090120032651) node {$M$};
+\draw[color=black] (0.6948381571409097,-0.280335520731098) node {10};
+\draw[color=qqwuqq] (-3.7011958278742823,1.7150274228218958) node { };
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+Dans cette configuration, Ptolémée donne
+\[ 40+10x=30\sqrt 3 \iff x=3\sqrt 3-4\]
+
+\item Dans le second cas, on a la figure suivante:
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-6.3201096912875885,-4.785490916721843) rectangle (6.244441343897677,7.654349934491355);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-4.56454747271171,2.256764123843324) -- (-4.110953064563464,2.7380850472017553) -- (-4.592273987921895,3.191679455350001) -- (-5.045868396070141,2.7103585319915697) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.3944934966056493,4.508246971753702) -- (3.16643380565736,3.887435812277215) -- (3.7872449651338473,3.659376121328926) -- (4.015304656082137,4.280187280805413) -- cycle; 
+\draw(-0.18,1.56) circle (5.cm);
+\draw (-1.6166944858701977,6.349144908464368)-- (-5.045868396070141,2.7103585319915697);
+\draw (-1.6166944858701977,6.349144908464368)-- (4.015304656082137,4.280187280805413);
+\draw (4.015304656082137,4.280187280805413)-- (-5.045868396070141,2.7103585319915697);
+\draw (1.2566944858701974,-3.229144908464366)-- (-1.6166944858701977,6.349144908464368);
+\draw (1.2566944858701974,-3.229144908464366)-- (4.015304656082137,4.280187280805413);
+\draw (-5.045868396070141,2.7103585319915697)-- (1.2566944858701974,-3.229144908464366);
+\begin{scriptsize}
+\draw [fill=qqqqff] (-0.18,1.56) circle (2.5pt);
+\draw[color=qqqqff] (0.0401096912875832,2.1515130667241134) node {$O$};
+\draw [fill=xdxdff] (-1.6166944858701977,6.349144908464368) circle (2.5pt);
+\draw[color=xdxdff] (-1.394057424391132,6.92167760365549) node {$A$};
+\draw [fill=uuuuuu] (-5.045868396070141,2.7103585319915697) circle (1.5pt);
+\draw[color=uuuuuu] (-5.571848587455215,3.3362598144587037) node {$B$};
+\draw [fill=uuuuuu] (4.015304656082137,4.280187280805413) circle (1.5pt);
+\draw[color=uuuuuu] (4.342611038323729,4.7392493841444026) node {$C'$};
+\draw[color=black] (-3.5453080979092046,4.957492206095511) node {5};
+\draw[color=black] (1.1001462550501118,5.113379936060588) node {6};
+\draw [fill=uuuuuu] (1.2566944858701974,-3.229144908464366) circle (1.5pt);
+\draw[color=uuuuuu] (1.7548747209034383,-3.398090120032651) node {$M$};
+\draw[color=black] (0.6948381571409097,-0.280335520731098) node {10};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+Et donc cette fois-ci Ptolémée donne l'équation
+\[8\times 5+6\times 3\sqrt 3 = 10x \iff x=3\sqrt 3+4\]
+\end{enumerate}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+On considère un hexagone convexe inscrit dans un cercle. Les côtés sont de mesure $2$, $7$, $11$, $11$, $2$ et $7$. Trouver le diamètre du cercle.
+\begin{sol}
+Vu les longueurs des côtés, si on note $ABCDEF$ l'hexagone, alors $[AD]$ est un diamètre. On applique Ptolémée dans $ABCD$, et on exploite aussi deux triangles rectangles.
+
+Plus précisément:
+\[x^2+4=d^2\]
+\[ y^2+121=d^2\]
+\[ xy=22+7d\]
+Les deux premières donnent $x$ et $y$ en fonction de $d$. Ensuite on remplace dans la troisième après avoir élevé au carré, on trouve
+\[ (d^2-4)(d^2-121)=(7d+22)^2\]
+Après simplification, ceci équivaut à 
+\[ d^3-174d-308=0.\]
+On cherche les racines évidentes, c'est-à-dire rationnelles... on trouve que $14$ est la seule racine évidente. Les deux autres racines sont négatives...
+
+
+Donc $d=14$ mais c'est un peu chaud, il y a peut-être une autre voie  ?
+On peut peut-être obtenir $x=8\sqrt 3$ ou $y=5\sqrt 3$ d'une manière plus rapide.
+\end{sol}
+\end{exo}
+%
+%\begin{exo}
+%Corde de l'arc moitié. \url{https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Ptol%C3%A9m%C3%A9e}. Joli.
+%\end{exo}
+%
+%\begin{exo}
+%On considère un parallélogramme $ABCD$, deux points $P$ et $R$ sur $[AB]$ et $[AD]$. Le cercle circonscrit à $ARP$ coupe a diagonale $[AC]$ en $Q$. Montrer que
+%\[ AQ\cdot AC = AP\cdot AB+AR\cdot AD\]
+%\end{exo}
+
+
+
+
+
+%\url{http://culturemath.ens.fr/histoire%20des%20maths/htm/Vitrac/grecs9/encart1/encart1.html}
+
+%Chercher ptolemy's theorm sur twitter et sur le net.
+
+%chercher sur brilliant, cut the knot etc
+
+
+%Exemples simples ici:
+%\url{https://brilliant.org/wiki/ptolemys-theorem/}
+
+%exos plus ou moins simples avec solution ici:
+%\url{https://artofproblemsolving.com/wiki/index.php/Ptolemy%27s_Theorem}
+
+%exos de \url{https://artofproblemsolving.com/community/c1257h990937_ptolemys_theorem_and_some_of_its_applications}
+
+\begin{exo}[Formules de trigonométrie]
+Prouver les formules pour $\sin(a+b)$ et $\sin(a-b)$ avec Ptolémée.
+\begin{hint}
+Considérer un quadrilatère inscriptible dont une diagonale (ou un côté, pour le second) est un diamètre.
+\end{hint}
+\end{exo}
+
+
+\begin{exo}
+Soient $ABC$ et $ABD$ des triangles directs, rectangles en $C$ et en $D$, qui vérifient $AB=25$, $BC=7$ et $BD=15$. Calculer la longueur $CD$.% 8.8
+\begin{center}
+\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.3cm,y=.3cm]
+\clip(-2.0276690092772722,-1.974257611770953) rectangle (27.08803903551359,13.780513662943838);
+\draw[line width=1pt] (0.,0.)-- (25.,0.);
+\draw[line width=1pt] (0.,0.)-- (16.,12.);
+\draw[line width=1pt] (25.,0.)-- (16.,12.);
+\draw[line width=1pt] (25.,0.)-- (23.04,6.72);
+\draw[line width=1pt] (23.04,6.72)-- (0.,0.);
+\draw [line width=1pt,dash pattern=on 7pt off 7pt,color=ccqqqq] (16.,12.)-- (23.04,6.72);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (23.04,6.72) circle (1.5pt);
+\draw[color=uuuuuu] (23.41378142374266,7.517574551970643) node {$C$};
+\draw [fill=uuuuuu] (25.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (25.36225136937876,1.0041178765585215) node {$B$};
+\draw [fill=uuuuuu] (0.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (-1.081269321396881,0.725765027181935) node {$A$};
+\draw [fill=uuuuuu] (16.,12.) circle (1.5pt);
+\draw[color=uuuuuu] (16.399289619452702,12.806278690125785) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+
+On a tout d'abord par Pythagore $AD=20$ et $AC=24$.
+
+
+(Rq : l'énoncé utilise les triplets pythagoriciens $(3,4,5)$, multiplié par cinq et $(7,24,25)$.)
+
+
+
+Ensuite, on applique Ptolémée, ce qui donne
+\[ 15\times 24 = 25\times CD + 7\times 20\]
+Autrement dit $CD=(360-140)/25=44/5$.
+\end{sol}
+
+\end{exo}
+
+
+%Même exo mais sans introduire le point $A$ : donner juste le rayon. Ceci permet donc de calculer la corde de la différence de deux arcs.
+
+
+
+
+
+
+
+
+
+
+
+\begin{exo}
+Dans un pentagone régulier, tous les côtés ont la même longueur $a$ et toutes les diagonales ont la même longueur $b$. Que vaut $\frac{b}{a}$ ?
+\begin{center}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.8]
+\clip(-4.3,-0.42) rectangle (2.38,6.3);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.8,0.34) -- (1.9,3.84) -- (-1.0887791132205944,5.967721648236984) -- (-4.035946190056692,3.782725945446389) -- (-2.8686165008454796,0.3046026876123533) -- cycle;
+\draw [line width=1pt,color=zzttqq] (0.8,0.34)
+-- (1.9,3.84) -- (-1.0887791132205944,5.967721648236984)
+-- (-4.035946190056692,3.782725945446389)
+-- (-2.8686165008454796,0.3046026876123533) -- cycle;
+\draw (-4.035946190056692,3.782725945446389)-- (0.8,0.34);
+\draw (-2.8686165008454796,0.3046026876123533)-- (1.9,3.84);
+\draw (-1.0887791132205944,5.967721648236984)-- (-2.8686165008454796,0.3046026876123533);
+\draw (-1.0887791132205944,5.967721648236984)-- (0.8,0.34);
+\draw (1.9,3.84)-- (-4.035946190056692,3.782725945446389);
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+En oubliant un des sommets du pentagone, on obtient un quadrilatère inscrit dans un cercle, et le théorème de Ptolémée donne
+\[ a^2+ab=b^2\]
+C'est-à-dire, en divisant par $a^2$ qui est non nul : 
+\[ 1+\frac{b}{a} = \left(\frac{b}{a}\right)^2\]
+Autrement dit, si on note $x=b/a$, alors $x$ vérifie
+\[ x^2-x-1=0\]
+Cette équation est équivalente à 
+\[ (x-1/2)^2=5/4\]
+Et ses solutions sont donc $\frac{1\pm \sqrt 5}{2}$. Une seule de ces deux solutions est positive et peut donc être une longueur. Il s'agit de $\frac{1+\sqrt 5}{2}$. C'est le nombre d'or.
+\end{sol}
+\end{exo}
+
+\begin{exo}[Carré inscrit]
+Soit $ABCD$ un carré inscrit dans un cercle, et $P$ un point de l'arc $BC$. Montrer que
+\[ \frac{PA+PC}{PB+PD}=\frac{PD}{DA}\]
+\end{exo}
+
+\begin{exo}
+Soit $ABCD$ un carré.
+Sur son cercle circonscrit, on place un point $P$ qui vérifie $AP\times CP=56$ et $BP\times DP=90$.
+Quelle est l'aire du carré ? %106
+%https://artofproblemsolving.com/wiki/index.php/Ptolemy%27s_theorem
+\end{exo}
+
+\begin{exo}[Carré inscrit]
+Soit $ABCD$ un carré et $P$ un point de son cercle circonscrit, situé sur l'arc $\overset{\frown}{CD}$. Montrer que
+\[ PA+PC = PB\sqrt 2 \]
+\begin{sol}
+Source : \url{https://studymath.github.io/assets/docs/An%20Introduction%20to%20Ptolemy%20Theorem.pdf}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soit $ABC$ un triangle isocèle en $C$ et $P$ un point de son cercle circonscrit, situé sur l'arc $\overset{\frown}{AB}$.
+Montrer que la quantité $d\frac{PA+PB}{PC}$ ne varie pas, quel que soit l'emplacement de $P$ sur l'arc.
+\begin{sol}
+Source : \url{https://studymath.github.io/assets/docs/An%20Introduction%20to%20Ptolemy%20Theorem.pdf}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Soit $ABC$ un triangle.
+La bissectrice de l'angle $\widehat A$ recoupe le cercle circonscrit en $D$.
+Montrer que 
+\[ AB\times AC \leq 2AD\]
+\begin{sol}
+joli, à la limite lorsque la corde $BC$ est petite on se rapproche du rapport $2$.
+
+Source : \url{https://studymath.github.io/assets/docs/An%20Introduction%20to%20Ptolemy%20Theorem.pdf}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soit $ABCD$ un quadrilatère inscriptible convexe, tel que $[AC]$ soit un diamètre de son cercle circonscrit.
+Montrer que 
+\[ BD = AC \sin \widehat{BAD}\]
+\begin{sol}
+On écrit $\widehat{BAD} = \widehat{BAC}+\widehat{CAD}$, puis on utilise la formule de trigo sur le sinus d'une somme, puis Ptolémée.
+
+Source : \url{https://studymath.github.io/assets/docs/An%20Introduction%20to%20Ptolemy%20Theorem.pdf}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soit $ABC$ un triangle tel que $AB=7$, $AC=8$ et $BC=9$.
+La bissectrice de l'angle $\widehat A$ recoupe le cercle circonscrit en un point $D$.
+Que vaut le rapport $\dfrac{DA}{DC}$ ? %5/3
+\end{exo}
+
+
+\begin{exo}[Le théorème d'Appolonius]
+Soit $ABC$ un triangle de côtés $a$, $b$ et $c$, et soit $P$ le milieu du segment $[BC]$. On note $p=AP$.
+Montrer que l'on a 
+\[ 2(b^2+c^2)=a^2+4p^2.\]
+\begin{hint}
+La droite $(AP)$ coupe le cercle circonscrit en un point $D$. 
+\end{hint}
+\begin{sol}
+On applique Ptolémée dans le quadrilatère $ABDC$ puis on utilise deux paires de triangles semblables pour écrire toutes les distances en fonction de $a$, $b$, $c$ et $p$.
+
+Il y a aussi une preuve avec la loi des cosinus, à mettre dans l'autre feuille.
+\end{sol}
+\end{exo}
+
+\begin{exo}[Le théorème de Stewart]
+Soit $ABC$ un triangle de côtés $a$, $b$ et $c$, et soit $P$ un point du segment $[BC]$. On note $p=AP$, $m=BP$ et $n=PC$.
+Montrer que l'on a 
+\[ b^2m+c^2,=a(p^2+mn)\]
+\begin{hint}
+La droite $(AP)$ coupe le cercle circonscrit en un point $D$. 
+\end{hint}
+\begin{sol}
+On applique Ptolémée dans le quadrilatère $ABDC$ puis on utilise deux paires de triangles semblables pour écrire toutes les distances en fonction de $a$, $b$, $c$, $m$, $n$, $p$.
+
+Il y a aussi une preuve avec la loi des cosinus, à mettre dans l'autre feuille.
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}[Heptagone régulier]
+Soit $ABCDEFG$ un heptagone régulier.
+Montrer que $\dfrac{1}{AB} = \dfrac{1}{AC} +\dfrac{1}{AE}$.
+%https://artofproblemsolving.com/wiki/index.php/Ptolemy%27s_theorem
+\end{exo}
+
+\begin{exo}
+Un hexagone est inscrit dans un cercle. 
+On a $AB=31$ et $BC=CD=DE=EF=FG=GA=81$.
+Calculer $AC+AD+AE$.
+%source :https://artofproblemsolving.com/wiki/index.php/Ptolemy%27s_theorem
+%https://artofproblemsolving.com/wiki/index.php/1991_AIME_Problems/Problem_14#Solution
+\end{exo}
+
+
+
+
+\begin{exo}% (Ptolémée, puis quand même pas mal d'Al Kashi à la fin ?)
+
+Soit $ABC$ un triangle isocèle en $A$. On note $\mathcal C$ le cercle circonscrit à $ABC$, et on place un point $D$ sur l’arc $BC$ ne contenant pas $A$. Enfin, on note $E$ le pied de la perpendiculaire à $(CD)$ issue de $A$.
+
+Montrer que $BD + CD = 2.DE$ 
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.42,-0.4) rectangle (5.12,5.74);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (3.34514146304832,2.1348742421284337) -- (2.9213935419922104,2.1139529754214412) -- (2.942314808699203,1.6902050543653315) -- (3.3660627297553125,1.711126321072324) -- cycle; 
+\draw[line width=1pt] (2.1400716175641503,2.524037977319953) circle (2.4466817513980876cm);
+\draw [line width=1pt,domain=-1.42:5.12] plot(\x,{(-14.756508279364274--4.2765739515072285*\x)/-0.21114285117592946});
+\draw [line width=1pt,domain=-1.42:5.12] plot(\x,{(-6.6070381704387255-0.21114285117592946*\x)/-4.2765739515072285});
+\draw[line width=1pt] (-0.1,1.54)-- (1.48,4.88);
+\draw[line width=1pt] (-0.1,1.54)-- (3.4286155083533103,0.44415667442443785);
+\begin{scriptsize}
+\draw [fill=black] (-0.1,1.54) circle (2.5pt);
+\draw[color=black] (-0.44,1.19) node {$A$};
+\draw [fill=black] (1.48,4.88) circle (2.5pt);
+\draw[color=black] (1.62,5.25) node {$B$};
+\draw [fill=black] (3.4286155083533103,0.44415667442443785) circle (2.5pt);
+\draw[color=black] (3.74,0.39) node {$C$};
+\draw [fill=black] (3.217472657177381,4.720730625931666) circle (2.5pt);
+\draw[color=black] (3.36,5.09) node {$D$};
+\draw [fill=black] (3.3660627297553125,1.711126321072324) circle (2.5pt);
+\draw[color=black] (3.5,2.01) node {$E$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\begin{sol}(Attention, angle inscrit et AL-Kashi...)
+
+On commence par Ptolémée : il s'agit donc de montrer que $2DE=\frac{AD\times BC}{AB}$.
+
+Ensuite : 
+Angle inscrit: $\widehat{ABC}=\widehat{ADC}=\alpha$. Ensuite on fait Al-Kashi dans $ABC$ avec l'angle $\alpha$, puis on écrit le cosinus de cet angle avec le triangle rectangle $ADE$.
+
+Source : \url{http://www.les-mathematiques.net/phorum/read.php?8,931239,931421}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Soit $ABC$ un triangle équilateral de côté $13$, et $D$ un point sur son cercle circonscrit, situé entre $A$ et $C$, et tel que $DA$, $DB$ et $DC$ soient des nombres \textbf{entiers}. Que peut-on dire de la longueur
+\[ DA+DB+DC ?\]
+\begin{center}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.34,-1.52) rectangle (3.36,4.4);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-1.58,0.74) -- (2.36,-0.32) -- (1.3079869280115062,3.6221400909106887) -- cycle;
+\draw [line width=1pt,color=zzttqq] (-1.58,0.74)-- (2.36,-0.32);
+\draw [line width=1pt,color=zzttqq] (2.36,-0.32)-- (1.3079869280115062,3.6221400909106887);
+\draw [line width=1pt,color=zzttqq] (1.3079869280115062,3.6221400909106887)-- (-1.58,0.74);
+\draw(0.6959956426705018,1.3473800303035635) circle (2.3556457005811944cm);
+\draw [line width=1pt,dash pattern=on 2pt off 2pt] (-0.4377166275852238,3.412268200384034)-- (-1.58,0.74);
+\draw [line width=1pt,dash pattern=on 2pt off 2pt] (-0.4377166275852238,3.412268200384034)-- (2.36,-0.32);
+\draw [line width=1pt,dash pattern=on 2pt off 2pt] (-0.4377166275852238,3.412268200384034)-- (1.3079869280115062,3.6221400909106887);
+\begin{scriptsize}
+\draw [fill=black] (-1.58,0.74) circle (2.5pt);
+\draw[color=black] (-1.98,0.83) node {$A$};
+\draw [fill=black] (2.36,-0.32) circle (2.5pt);
+\draw[color=black] (2.74,-0.41) node {$B$};
+\draw [fill=black] (1.3079869280115062,3.6221400909106887) circle (2.5pt);
+\draw[color=black] (1.44,3.99) node {$C$};
+\draw [fill=black] (-0.4377166275852238,3.412268200384034) circle (2.5pt);
+\draw[color=black] (-0.88,3.87) node {$D$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+Avec Ptolémée on obtient que $DA+DC=DB$, donc la longueur vaut $2DB$.
+Or, $DB$ est entier, il est compris entre $13$ (exclu) et $2\times 13/\sqrt 3\simeq 15,01$, il peut donc valoir $14$ ou $15$.
+
+
+S'il vaut $15$, vu que c'est presque la limite, on voit que les côtés restants doivent être $7$ et $8$.
+
+On vérifie que ça marche en caculant les cosinus et sinus avec Al-Kashi et la li des sinus et en vérifiant que l'on a bien la relation $\cos^2+\sin^2=1$. Dans les autre cas, cela e marche pas.
+
+La longueur totale vaut donc $30$ mais on a mieux, on a les trois côtés.
+
+Si on appelle $E$ l'intersection des diagonales, on a $DE=2+\sqrt 3$.
+\end{sol}
+\end{exo}
+
+
+%Exercices du chap 7, hints p. 234
+
+
+%Ptolémée trigo avec la loi des sinus ? bof
+%\url{http://villemin.gerard.free.fr/aMaths/Trigonom/aaaBases/RelABC.htm#Ptolem} 
+
+
+%Livre "challenging problems in geometry", de Alfred S. Posamentier, Charles T. Salkind.  \url{https://books.google.fr/books?id=eijDAgAAQBAJ&pg=PA234&lpg=PA234&dq=use+ptolemy+theorem&source=bl&ots=XuEq_xYkVe&sig=ACfU3U278WwTP0BkO9PqOSALZOPmcn8vvg&hl=fr&sa=X&ved=2ahUKEwj82IbkjPXmAhVkzoUKHaWwD744KBDoATAEegQICRAB#v=onepage&q=use%20ptolemy%20theorem&f=false}
+
+
+\begin{exo}[Théorème de Carnot]
+Soit $ABC$ un triangle de côtés $a$, $b$ et $c$, $O$ le centre du cercle circonscrit et $R$ son rayon, $r$ le rayon du cercle inscrit, et $d_a$, $d_b$ et $d_c$ les distances de $O$ aux côtés du triangle.
+Montrer que
+\[ d_a+d_b+d_c = R+r\]
+Indication : montrer que $\dfrac{ad_a+bd_b+cd_c}{a+b+c}=r$.
+\begin{hint}
+À un moment il faut rajouter des termes aux deux membres de l'équation pour réussir à factoriser à gauche par $(a+b+c)$. À droite, il va sortir la quantité mentionnée dans l'indication.
+
+Pour l'indication, penser à des aires.
+
+Et en ce qui concerne Ptolémée, il y a trois petits cercles.
+\end{hint}
+\begin{sol}
+Source : An introduction to ptolemy's theorem, Qi Zhu. Pdf en ligne
+\end{sol}
+\end{exo}
+
+
+
+wikipedia \url{https://en.wikipedia.org/wiki/Ptolemy%27s_theorem}
+
+\url{http://culturemath.ens.fr/histoire%20des%20maths/htm/Vitrac/grecs9/encart1/encart1.html}
+
+Chercher ptolemy's theorm sur twitter et sur le net.
+
+chercher sur brilliant, cut the knot etc
+
+
+Exemples simples ici:
+\url{https://brilliant.org/wiki/ptolemys-theorem/}
+
+exos plus ou moins simples avec solution ici:
+\url{https://artofproblemsolving.com/wiki/index.php/Ptolemy27s_Theorem}
+
+exos de \url{https://artofproblemsolving.com/community/c1257h990937_ptolemys_theorem_and_some_of_its_applications}
+
+
+
+\begin{exo}
+Corde de l'arc moitié. \url{https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Ptol%C3%A9m%C3%A9e}. 
+Joli.
+\end{exo}
+
+\begin{exo}
+On considère un parallélogramme $ABCD$, deux points $P$ et $R$ sur $[AB]$ et $[AD]$. Le cercle circonscrit à $ARP$ coupe a diagonale $[AC]$ en $Q$. Montrer que
+\[ AQ\cdot AC = AP\cdot AB+AR\cdot AD\]
+\end{exo}
+
+
+%
+\begin{exo}
+Soit $BAC$ un triangle direct avec $BA=4$ et $BC=3$. On place le point $D$ tel que $ADC$ soit équilatéral direct. Quelle est la longueur maximale de $BD$ ?
+\begin{center}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.5,-0.54) rectangle (3.64,5.96);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (1.3010301154397381,0.28163530826058336) -- (-0.39092135237307657,5.093727479821396) -- (-3.7123396843905594,1.222408440944724) -- cycle;
+\draw [color=zzttqq] (1.3010301154397381,0.28163530826058336)-- (-0.39092135237307657,5.093727479821396);
+\draw [color=zzttqq] (0.38175912187079786,2.6248100578773457) -- (0.5515685185854341,2.684515742593387);
+\draw [color=zzttqq] (0.3585402444812267,2.690847045488593) -- (0.5283496411958629,2.7505527302046344);
+\draw [color=zzttqq] (-0.39092135237307657,5.093727479821396)-- (-3.7123396843905594,1.222408440944724);
+\draw [color=zzttqq] (-1.9605347142629643,3.1260280716201523) -- (-2.0971460523347183,3.2432344806183164);
+\draw [color=zzttqq] (-2.0061149844289172,3.072901440147804) -- (-2.142726322500671,3.190107849145968);
+\draw [color=zzttqq] (-3.7123396843905594,1.222408440944724)-- (1.3010301154397381,0.28163530826058336);
+\draw [color=zzttqq] (-1.223455328931732,0.8469330995292058) -- (-1.2566533875746144,0.6700210058150011);
+\draw [color=zzttqq] (-1.154656181376207,0.8340227433903074) -- (-1.1878542400190897,0.6571106496761032);
+\draw (-0.39092135237307657,5.093727479821396)-- (2.9,2.82);
+\draw (1.3010301154397381,0.28163530826058336)-- (2.9,2.82);
+\draw (2.9,2.82)-- (-3.7123396843905594,1.222408440944724);
+\begin{scriptsize}
+\draw [fill=qqqqff] (2.9,2.82) circle (2.5pt);
+\draw[color=qqqqff] (3.04,3.19) node {$B$};
+\draw [fill=xdxdff] (1.3010301154397381,0.28163530826058336) circle (2.5pt);
+\draw[color=xdxdff] (1.7,0.45) node {$C$};
+\draw [fill=xdxdff] (-0.39092135237307657,5.093727479821396) circle (2.5pt);
+\draw[color=xdxdff] (-0.26,5.47) node {$A$};
+\draw [fill=uuuuuu] (-3.7123396843905594,1.222408440944724) circle (2.5pt);
+\draw[color=uuuuuu] (-4.08,1.69) node {$D$};
+\draw[color=black] (1.28,4.39) node {4};
+\draw[color=black] (2.42,1.57) node {3};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+La source est \url{https://twitter.com/Caner_KMZ/status/1250086153769934854}.
+
+On utilise l'inégalité de Ptolémée, avec égalité en cas de quadrilatère cyclique. Si on note $x$ le côté du triangle équilatéral, et $d$ la distance $BD$, on obtient 
+\[ 3x+4x\geq dx.\]
+\end{sol}
+\end{exo}
+
+
+\begin{exo}[Second théorème de Ptolémée]
+Soit $ABCD$ un quadrilatère convexe inscriptible.
+Montrer que
+\[ \frac{AC}{BD} = \frac{AB\times DA + BC\times CD}{AB\times BC + DA\times CD}\]
+\begin{hint}
+Construire deux autres quadrilatères inscriptibles ayant les mêmes côtés que $ABCD$.
+\end{hint}
+\begin{sol}
+Source : \url{https://publications.azimpremjiuniversity.edu.in/1370/1/13_How%20to%20Prove%20It.pdf}
+
+\end{sol}
+\end{exo}
+
+
+\begin{exo}[Démonstration de la loi des cosinus (Al-Kashi)]
+Soit $ABC$ un triangle de côtés $a$, $b$ et $c$.
+Montrer que $a^2=b^2+c^2-2bc\cos\widehat A$.
+\begin{hint}
+Considérer le symétrique de $C$par rapport à la médiatrice de $[AB]$.
+Source : \url{https://publications.azimpremjiuniversity.edu.in/1370/1/13_How%20to%20Prove%20It.pdf}
+\end{hint}
+\end{exo}
+
+
+\begin{exo}
+Une distanec à trouver:
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.304549389584038,-2.271905361494528) rectangle (2.3725112284927197,2.4051552565822174);
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-0.40051569733385656,1.8136447246312206) -- (-0.2298469386666342,1.663129027297364) -- (-0.07933124133277764,1.8337977859645864) -- (-0.25,1.984313483298443) -- cycle; 
+\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-1.2871386594804162,-1.2424216311387732) -- (-1.3675926838739383,-1.0295602906191892) -- (-1.5804540243935221,-1.1100143150127115) -- (-1.5,-1.3228756555322954) -- cycle; 
+\draw [dash pattern=on 1pt off 1pt] (0.,0.) circle (2.cm);
+\draw (-2.,0.)-- (-0.25,1.984313483298443);
+\draw (-0.25,1.984313483298443)-- (2.,0.);
+\draw (-2.,0.)-- (-1.5,-1.3228756555322954);
+\draw (-1.5,-1.3228756555322954)-- (2.,0.);
+\draw (-1.5,-1.3228756555322954)-- (-0.25,1.984313483298443);
+\draw (0.,0.)-- (2.,0.);
+\draw (0.,0.)-- (-1.,0.);
+\draw (-0.4812273943081781,-0.04827241463611319) -- (-0.4812273943081781,0.04827241463611319);
+\draw (-0.5187726056918218,-0.04827241463611319) -- (-0.5187726056918218,0.04827241463611319);
+\draw (-1.,0.)-- (-2.,0.);
+\draw (-1.4812273943081784,-0.04827241463611319) -- (-1.4812273943081784,0.04827241463611319);
+\draw (-1.518772605691822,-0.04827241463611319) -- (-1.518772605691822,0.04827241463611319);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (-0.10547272282776449,0.2543510044620627) node {$O$};
+\draw [fill=xdxdff] (2.,0.) circle (2.5pt);
+\draw[color=xdxdff] (2.07214953742357,0.20071498819971473) node {$C$};
+\draw [fill=xdxdff] (-2.,0.) circle (2.5pt);
+\draw[color=xdxdff] (-2.218731763564281,0.2436238012095931) node {$A$};
+\draw [fill=xdxdff] (-1.,0.) circle (2.5pt);
+\draw[color=xdxdff] (-1.0387394057926223,0.23289659795712353) node {$I$};
+\draw [fill=uuuuuu] (-0.25,1.984313483298443) circle (1.5pt);
+\draw[color=uuuuuu] (-0.27710797486727856,2.217429199663999) node {$B$};
+\draw[color=black] (-1.2103746578321362,1.1447088744170393) node {?};
+\draw[color=black] (0.9136115861568502,1.176890484174448) node {3};
+\draw [fill=uuuuuu] (-1.5,-1.3228756555322954) circle (1.5pt);
+\draw[color=uuuuuu] (-1.7038260074457392,-1.386911093165786) node {$D$};
+\draw[color=black] (-1.7252804139506783,-0.421462800443522) node {?};
+\draw[color=black] (0.33434261052349024,-0.7218244915126708) node {?};
+\draw[color=black] (-0.6096512756938369,0.7156207443182554) node {?};
+\draw[color=black] (0.8385211633895628,0.14707897193736671) node {2};
+\end{scriptsize}
+\end{tikzpicture}
+
+\end{center}
+\begin{sol}
+On trouve $AB=\sqrt 7$. Ensuite il reste trois inconnues. Puis $AD=\sqrt 2$ et $CD=\sqrt{14}$ avec angle inscrit, Ptolémée, Pythagore, la puissance du point $I$ par rapport au cercle, et un peu de calcul.
+
+Autre solution (Laurent Aubert):\\
+
+On a $\cos(BCA)=3/4$. En appliquant Al Kashi à BIC, on obtient $BI=3/\sqrt 2$.
+
+Ensuite, en appliquant Al Kashi à ABI, on obtient $\cos(ABI)=\sqrt{14}/4$.
+
+On a donc $\cos(ACD)=sqrt{14}/4$ et on en déduit facilement $CD$ et $AD$.
+
+Là aussi, c'est calculatoire et il y a peut être plus simple. Cette méthode a l'air de fonctionner même si $BCI$ n'est pas isocèle.
+
+
+\end{sol}
+\end{exo}
+
+Autres exos de \url{https://brilliant.org/wiki/ptolemys-theorem/}
+
+et aussi \url{https://brilliant.org/problems/ptolemys-riddle/}
+
+
+
+
+\Closesolutionfile{indications}
+\Closesolutionfile{solutions}
+
+\indications
+\correction
+
+\end{document}
+
