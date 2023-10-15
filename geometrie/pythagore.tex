@@ -17,7 +17,20 @@ Catalogue d'exos sur Pythagore pour le Club Mathématique de Nancy. Rédaction e
 
 (Les exercices sont faisables sans connaître le concept de cosinus ni de sinus, uniquement avec Pythagore.)
 
-
+\begin{exo}
+Soit $ABCD$ un trapèze rectangle comme sur la figure.
+Calculer la longueur $AD$.
+\begin{center}
+\begin{tikzpicture}[scale=2,rotate=90,scale=.6]
+\tkzDefPoint(2,3){A} \tkzDefPoint(2,0){B}  \tkzDefPoint(0,0){C}   \tkzDefPoint(0,1){D}  
+\tkzDrawPolygon[very thick](A,B,C,D)
+\tkzMarkRightAngles[size=.2](A,B,C B,C,D)
+\tkzLabelSegment(A,B){$3$}
+\tkzLabelSegment(B,C){$2$}
+\tkzLabelSegment(C,D){$1$}
+\end{tikzpicture}
+\end{center}
+\end{exo}
 
 \begin{exo}
 On considère une ligne brisée $ABCDE$ avec des angles droits et des distances comme sur la figure.
@@ -49,9 +62,10 @@ On a alors $AE^2 = (1+3)^2+(2+4)^2=4^2+6^2=52$, d'où $AE=2\sqrt{13}$.
 \end{sol}
 \end{exo}
 
-Double Pythagore : \url{https://www.youtube.com/watch?v=izbTPRWuO50} (facile)
+%TODO : Double Pythagore : \url{https://www.youtube.com/watch?v=izbTPRWuO50} (facile)
+% ou mettre la spirale directement...
 
-Un trapèze rectangle, aussi.
+
 
 \begin{exo}
 Dans un demi-cercle de rayon $1$cm, on inscrit un autre demi-cercle plus petit, comme sur la figure.
@@ -839,6 +853,72 @@ En utilisant la même technique qu'au problème précédent, calculer $AC$.
 
 
 \begin{exo}
+On inscrit trois cercles dans un demi-cercle de diamètre $8$cm, comme sur la figure ci-dessous. 
+On note $A$ et $B$ le s points de contact du demi-cercle avec les deux petits cercles latéraux.
+Combien mesure le segment $[AB]$ ?
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(0,0){O} \tkzDefPoint(-sqrt{8},1){O'} \tkzDefPoint(sqrt{8},1){O''} \tkzDefPoint(0,2){I} 
+\tkzDefPoint(4,0){P} \tkzDefPoint(-4,0){Q} 
+\tkzDefPoint(-8*sqrt{2}/3,4/3){A} \tkzDefPoint(8*sqrt{2}/3,4/3){B} 
+\tkzDrawSemiCircle[black,very thick](O,P)
+\tkzDrawSegment[very thick](P,Q)
+\tkzDrawCircle(I,O)
+\tkzDrawCircle(O',A)\tkzDrawCircle(O'',B)
+\tkzDrawPoints(A,B)
+\tkzLabelPoint[above left](A){$A$} \tkzLabelPoint[above right](B){$B$}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Notons $R$ le rayon des petits cercles, $O$ le centre du demi-cercle, $I$ le centre du grand cercle, $O'$ le centre du petit cercle latéral gauche, $C$ son projeté orthogonal sur la base du demi-cercle, $D$ son projeté orthogonal sur $(OI)$.
+Appliquer Pythagore dans les triangles $OO'C$ et $O'DI$.
+\end{hint}
+\begin{sol}
+En exprimant toutes les distances en fonction de $R$, les termes en $R^2$ s'annulent et on trouve une équation de degré un qui donne $R=1$.
+Ensuite, on en déduit que $AB=16\sqrt 2 / 3$.
+
+%Source :  vu par exemple sur la chaîne Math Booster, qui est pas trop mal : \url{https://www.youtube.com/watch?v=HbPQco5PVuU}
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}[Olympiades polonaises]
+Dans un demi-cercle de rayon $2$cm, on inscrit un premier demi-cercle deux fois plus petit, de rayon $1$cm, et un un cercle de rayon $R$, comme sur la figure.
+Que vaut $R$ ?
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(2,0){P} \tkzDefPoint(-2,0){Q} 
+\tkzDefPoint(-1,0){I} \tkzDefPoint(2/3,0){H}\tkzDefPoint(2/3,8/9){O'}
+\tkzDrawSemiCircle[black,very thick](O,P)
+\tkzDrawSegment[very thick](P,Q)
+\tkzDrawSemiCircle[black](I,O)
+\tkzDrawCircle(O',H)
+
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+
+\end{hint}
+\begin{sol}
+On note $H$ le projeté du centre du petit cercle sur la base du grand demi-cercle.
+On écrit Pythagore dans les deux triangles rectangles.
+En notant $x=OH$, on trouve en éliminant $r^2$ l'équation $3r=2+x$.
+On  injecte $x=3r-2$ dans la première équation, il reste $0=9r^2-8r$ d'où $r=8/9$.
+
+%Source :  Olympiades polonaises, via Math booster \url{https://www.youtube.com/watch?v=KKzf3vh7-pY}
+\end{sol}
+\end{exo}
+
+
+
+
+
+
+
+
+\begin{exo}
 Dans un quart de cercle, on inscrit un demi-cercle comme sur la figure.
 Si le rayon du demi-cercle est $1$cm, quel est le rayon du quart de cercle ?
 \begin{center}
@@ -859,8 +939,6 @@ Si le rayon du demi-cercle est $1$cm, quel est le rayon du quart de cercle ?
 Le rayon du quart de cercle est $\sqrt 3$.
 \end{sol}
 \end{exo}
-
-
 
 
 
@@ -1368,36 +1446,81 @@ blabla
 \end{exo}
 
 
-\begin{exo}
-Identité du parallélogramme
+
+
+\begin{exo}[Premier théorème de la médiane (théorème d'Apollonius)]
+%\url{https://www.youtube.com/watch?v=pqHpU84ggpY}
+Soit $ABC$ un triangle et $I$ le milieu de $[BC]$.
+Établir les deux identités (équivalentes) suivantes :
+\[ 2AB^2+2AC^2 = BC^2+4AI^2\]
+\[ AB^2+AC^2 = 2BI^2+2AI^2\]
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(.5,3){A}\tkzDefPoint(0,0){B}\tkzDefPoint(4,0){C}
+\tkzDefBarycentricPoint(B=1,C=1)\tkzGetPoint{I}
+%\tkzDefPointBy[projection = onto B--C](A) \tkzGetPoint{H}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDrawSegment[dashed](A,I)
+\tkzMarkSegment[mark=||](B,I)\tkzMarkSegment[mark=||](I,C)
+\tkzDrawPoint(I)
+\tkzLabelPoint[above](A){$A$}\tkzLabelPoint[below left](B){$B$}\tkzLabelPoint[below right](C){$C$}\tkzLabelPoint[below](I){$I$}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+On peut par exemple démontrer la seconde identité pour commencer.
+(Conseil : noter les longueurs $a$, $b$, $c$, $h$ et $m$, par exemple. Et on peut noter $BI : a/2 = a'$. Ainsi on veut démontrer 
+ que $b^2+c^2 = 2m^2+2a'^2$.)
+Considérer la hauteur $[AH]$ issue de $A$ et utiliser Pythagore dans les trois triangles $AHB$, $AHI$ et $AHC$. Puis, exprimer toutes les quantités inconnues autres que les côtés du triangle en fonction de $AI$ et $BI$. 
+\end{hint}
+\end{exo}
+
+
+\begin{exo}[Identité du parallélogramme]
+Soit $ABCD$ un parallélogramme.
+Montrer que
+\[ AC^2+BD^2 = 2AB^2+2BC^2\]
 \begin{center}
 \begin{tikzpicture}
 \end{tikzpicture}
 \end{center}
+\begin{hint}
+Utiliser le premier théorème de la médiane. Sinon, on peut refaire le travail en projetant un sommet du parallélogramme sur une diagonale.
+\end{hint}
+\begin{sol}
+Il y a aussi une rédaction courte ici \url{https://math.stackexchange.com/questions/3185755/parallelogram-law-geometric-proof} avec Pythagore.
+\end{sol}
 \end{exo}
 
-\begin{exo}
-Théorème de la médiane (idem que plus haut)
-\url{https://www.youtube.com/watch?v=pqHpU84ggpY}
-et chercher variantes sur wikipedia
+
+\begin{exo}[Troisième théorème de la médiane]
+Soit $ABC$ un triangle,  $I$ le milieu de $[BC]$ et $H$ le pied de la hauteur issue de $A$.
+En supposant que $I$ est dans le segment $[BI]$ comme sur la figure ci-dessous, montrer que 
+\[ AC^2-AB^2 = 2BC\times IH.\]
+Et si la hauteur n'appartient pas au segment $[BI]$? 
+% C'est  \[ |AC^2-AB^2| = 2BC\times IH.\]
 \begin{center}
 \begin{tikzpicture}
+\tkzDefPoint(.5,3){A}\tkzDefPoint(0,0){B}\tkzDefPoint(4,0){C}
+\tkzDefBarycentricPoint(B=1,C=1)\tkzGetPoint{I}
+\tkzDefPointBy[projection = onto B--C](A) \tkzGetPoint{H}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDrawSegment[dashed](A,I)
+\tkzDrawSegment[dashed](A,H)
+%\tkzMarkSegment[mark=||](B,I)\tkzMarkSegment[mark=||](I,C)
+\tkzDrawPoint(I)\tkzDrawPoint(H)
+\tkzMarkRightAngle[size=.2](I,H,A)
+\tkzLabelPoint[above](A){$A$}\tkzLabelPoint[below left](B){$B$}\tkzLabelPoint[below right](C){$C$}
+\tkzLabelPoint[below](I){$I$}\tkzLabelPoint[below](H){$H$}
 \end{tikzpicture}
 \end{center}
-\end{exo}
+\begin{hint}
 
-\begin{exo}
-Plus dur : \url{https://www.youtube.com/watch?v=HbPQco5PVuU}
-Demi-cercle avec trois cercles inscrits.
-\begin{center}
-\begin{tikzpicture}
-\end{tikzpicture}
-\end{center}
+\end{hint}
 \end{exo}
 
 
-Plus difficile, avec trinôme et factoriastion : 
-\url{https://www.youtube.com/watch?v=KKzf3vh7-pY}
+%Plus difficile, avec trinôme et factoriastion : 
+%\url{https://www.youtube.com/watch?v=KKzf3vh7-pY}
 
 
 
