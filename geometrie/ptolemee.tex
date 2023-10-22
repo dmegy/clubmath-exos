@@ -903,6 +903,28 @@ Là aussi, c'est calculatoire et il y a peut être plus simple. Cette méthode a
 \end{sol}
 \end{exo}
 
+
+
+\begin{exo}
+%olympiades lelingrad 1980, facile, angle inscrit et triangles semblables à la fin. Fan de géom 273. Facile. TODO : figure
+Soit $ABCD$ un parallélogramme.
+Un cercle passant par $A$ recoupe les demi-droites $[AB)$, $[AC)$ et $[AD)$ en $P$, $Q$ et $R$.
+Montrer que $AP\times AB + AR\times AD = AQ\times AC$.
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}\tkzDefPoint(5,0){B} \tkzDefPoint(6,3){C} \tkzDefPoint(1,3){D}
+\tkzDefBarycentricPoint(A=1,B=3)\tkzGetPoint{P}
+\tkzDefBarycentricPoint(A=1,D=4)\tkzGetPoint{R}
+\tkzDefCircle[circum](A,P,R) \tkzGetPoint{O}
+\tkzDrawPolygon[very thick](A,B,C,D)
+\tkzDrawSegment(A,C)
+\tkzDrawCircle(O,A)
+\tkzDrawPoints(A,B,C,D,P,R)
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
 Autres exos de \url{https://brilliant.org/wiki/ptolemys-theorem/}
 
 et aussi \url{https://brilliant.org/problems/ptolemys-riddle/}

@@ -1,0 +1,195 @@
+\input{../preambule_club}
+\input{../macros_answers}
+
+
+
+\begin{document}
+\Opensolutionfile{indications}[_\jobname_hints]
+\Opensolutionfile{solutions}[_\jobname_sol]
+
+
+\title{Équations diophantiennes}
+\author{Damien Mégy}
+\maketitle
+\avertissement
+\section{Équations linéaires}
+
+
+\begin{exo}[Non testé]
+Résoudre sur $\Z$ :  (ou sur $\N$ ?)
+\[ \begin{cases}
+8x+5y+z&=100\\
+x+y+z&=20
+\end{cases}\]
+\begin{hint}
+\end{hint}
+\begin{sol}
+Source : \url{https://www.youtube.com/watch?v=bd960eS5GAs}
+On peut virer les $z$ trop facilement...
+
+Attention on résout sur $\N$ ?
+
+La vidéo présente ça avec des congruences, ok.
+\end{sol}
+\end{exo}
+
+\section{Équations de degré supérieur}
+
+(Séparer suivant la signature ? )
+
+\begin{exo}
+Factoriser $x^4-3x^2+1$ comme produit de deux polynômes de degré deux \emph{à coefficients entiers}.
+\begin{hint}
+Attention si on fait le changement de variable tout de suite, on tombe sur des radicaux. Il faut alors regrouper les racines.
+
+Ou alors faire $x^4-2x^2+1 -x^2$ et factoriser comme différence de carrés.
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+\begin{exo}[Bouger dans arithmétique. bof]
+Soient $a$ et $b$ des entiers relatifs. On suppose que $a+ab+b=52$.
+Quelles sont les valeurs possibles pour $a+b$?
+\begin{hint}
+Factoriser. Attention aux nombres négatifs.
+\end{hint}
+\begin{sol}
+$52$ ou $-56$.
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Résoudre $x^2+3x+9=9y^2$ sur $\Z$.
+\begin{hint}
+\end{hint}
+\begin{sol}
+Source : \url{https://www.youtube.com/watch?v=BdhrFqYzd-w}
+Pas mal du tout. Technique utilisée : trinôme en $x$, dire que le discriminant doit être un carré parfait, le nommer, injecter, refactoriser...
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}
+Résoudre sur $\N$ l'équation 
+\[ \sqrt x + \sqrt y = \sqrt{250}\]
+\begin{hint}
+Séparer $x$ et $y$. Montrer que $10x$ doit être un carré parfait, puis que $x$ doit être de la forme $10k^2$, puis injecter.
+\end{hint}
+\begin{sol}
+Noter que $x$ et $y$ sont $\leq 250$ donc en théorie on pourrait \og brute-forcer\fg, mais en pratique ça serait un peu long.
+
+Après avoir suivi l'indication, on se retrouve avec une majoration $|k|\leq 5$ donc là on pteste tout.
+
+Autre méthode : si $sqty x + \sqty y = 5\sqrt{10}$, on a forcément $x$ et $y$ de la forme $a\sqrt{10}$ ? 
+
+
+Source : \url{https://www.youtube.com/watch?v=cqyjsjSi-2c}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Trouver les solutions entières de l'équation
+\[ x^2-xy+y^2 = x+y.\]
+\begin{hint}
+\end{hint}
+\begin{sol}
+Isoler les $x$ d'un côté, trinôme en $x$, le dscriminant doit être défini et entier.
+
+Autre méthode : tout ramener d'un côté, multiplier par deux, somme de carrés !!
+
+On trouve
+\[ (x-y)^2 + (x-1)^2+(y-1)^2=2\]
+
+Finir avec soin, il y a plein de cas.
+
+Autre technique :
+\[ (2x - y  - 1)^2 = -(3y^2 - 6y - 1)\]
+Donc $-3y^2-6y-1$ doit être négative, mais ça redonne la même chose que la technique avec le disciminant.
+\end{sol}
+\end{exo}
+
+\begin{exo}[Nontesté]
+Résoudre sur $\Z$ : 
+\[ \begin{cases}
+x^2-y^2-z^2 &=1\\
+y+z-x&=3
+\end{cases}\]
+\begin{hint}
+\end{hint}
+\begin{sol}
+Source : \url{https://www.youtube.com/watch?v=vmZNecBOIKw}
+
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+
+\begin{exo}
+Résoudre $x^2+y^2=z^2$ c'est-à-dire paramétrer les triplets pythagoriciens.
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Résoudre $\frac1x+\frac1y = \frac1z$ c'est-à-dire paramétrer les  solutions. Exhiber plusieurs solutions obtenues de cette façon.
+\begin{hint}
+L'équation est homogène : factoriser le pgcd.
+\end{hint}
+\begin{sol}
+Source : \url{https://www.youtube.com/watch?v=f7vKUzGYev4}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Déterminer tous les couples de nombres premiers $(x,y)$ qui vérifient l'équation suivante : 
+\[ x^2-2y^2 = 1\]
+\begin{hint}
+\end{hint}
+\begin{sol}
+Source : \url{https://www.youtube.com/watch?v=Wl1NCS9OySw} attention il ne cherche que les solutions avec des nombres premiers.
+Mettre la résolution complète ?
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\Closesolutionfile{indications}
+\Closesolutionfile{solutions}
+
+\indications
+\correction
+
+\end{document}
+

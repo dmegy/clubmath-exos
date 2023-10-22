@@ -14,7 +14,7 @@
 
 \avertissement 
 
-(Les exercices sont faisables sans connaître le concept de cosinus ni de sinus, uniquement avec Pythagore.)
+(Les exercices sont faisables sans connaître le concept de cosinus ni de sinus, uniquement avec Pythagore, à part les exceptions mentionnées à la fin.)
 
 \begin{exo}
 Soit $ABCD$ un trapèze rectangle comme sur la figure.
@@ -83,6 +83,27 @@ Quel est le rayon du petit demi-cercle ?
 
 
 
+\begin{exo}
+Deux carrés identiques de $1\mathrm{cm}^2$ sont juxtaposés et inscrits dans un cercle, comme sur la figure.
+Quel est le rayon du cercle ?
+\begin{center}
+\begin{tikzpicture}
+\draw (2,1) -- (-2,1) -- (-2,-1) -- (2,-1) -- cycle;
+\draw (0,1) -- (0,-1);
+\draw[very thick] (0,0) circle (2.2360679775); % racine de 5...
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+
+\end{hint}
+\begin{sol}
+
+\end{sol}
+\end{exo}
+
+
+
+
 
 \begin{exo}[Le triangle $30^\circ-60^\circ-90^\circ$]
 Le triangle $ABC$ a des angles qui mesurent $30^\circ$, $60^\circ$ et $90^\circ$.
@@ -106,6 +127,44 @@ Considérer la symétrie axiale d'axe $(AC)$.
 On obtient un triangle équilatéral quand on dédouble le triangle suivant l'axe proposé. On en déduit qu'un côté mesure $1/2$, et ensuite Pythagore donne $\sqrt{1-\frac14} = \frac{\sqrt 3}{2}$ pour le troisième côté.
 \end{sol}
 \end{exo}
+
+
+
+
+
+\begin{exo}[Trois carrés dans un triangle équilatéral]
+Trois carrés identiques de $1\mathrm{cm}^2$ sont placés dans un triangle équilatéral comme sur la figure.
+Combien mesure le triangle équilatéral ?
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}\tkzDefPoint(1,0){B}
+\tkzDefSquare(A,B)\tkzGetPoints{C}{D}
+\tkzDrawPolygon(A,B,C,D)
+
+\tkzDefPoint(3/2,0){E}\tkzDefPoint(3/2+sqrt{3}/2,1/2){F}
+\tkzDefSquare(E,F)\tkzGetPoints{G}{H}
+\tkzDrawPolygon(E,F,G,H)
+
+\tkzDefPoint(3/4,1+3*sqrt{3}/4){I} \tkzDefPoint(1/4,1+sqrt{3}/4){J}
+\tkzDefSquare(I,J)\tkzGetPoints{K}{L}
+\tkzDrawPolygon(I,J,K,L)
+
+\tkzDefPoint(-1/sqrt{3},0){X}\tkzDefPoint(3/2+2/sqrt{3},0){Y}
+\tkzDefTriangle[equilateral](X,Y) \tkzGetPoint{Z}
+\tkzDrawPolygon[very thick](X,Y,Z)
+
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Le triangles qui apparaissent sont tous des triangles rectangles ayant des angles de $30^\circ$ et $60^\circ$, dont on sait calculer les côtés.
+\end{hint}
+\begin{sol}
+On trouve $\frac{1}{\sqrt 3}+1+\frac12+\frac{2}{\sqrt 3} = \frac32+\sqrt 3$.
+\end{sol}
+\end{exo}
+
+
+
 
 
 
@@ -137,6 +196,10 @@ La diagonale mesure $d=4+2\sqrt 2$.
 On en déduit que le côté du carré est égal à  :
 \[ c = \frac{d}{\sqrt 2} = 2\sqrt 2+2.\]
 \end{sol}
+\end{exo}
+
+\begin{exo}
+\url{https://www.youtube.com/watch?v=2x_GjrvnEJ0} un peu calculatoire mais juste Pythagore.
 \end{exo}
 
 
@@ -281,6 +344,10 @@ Appliquer Pythagore dans les triangles rectangles en partant du plus petit. Le r
 \end{exo}
 
 
+\begin{exo}[Pythagore et triangles isocèles]
+\url{https://www.youtube.com/watch?v=tbRtYT1bLNs}
+Début avec Pythagore et triangles isocèles. Tronquer l'exo pour ne pas avoir besoin de trigo.
+\end{exo}
 
 % - - - - - - - - - - - - - - - - - - - - 
 
@@ -1520,6 +1587,7 @@ Et si la hauteur n'appartient pas au segment $[BI]$?
 
 %Plus difficile, avec trinôme et factoriastion : 
 %\url{https://www.youtube.com/watch?v=KKzf3vh7-pY}
+
 
 
 
