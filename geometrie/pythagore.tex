@@ -16,6 +16,14 @@
 
 (Les exercices sont faisables sans connaître le concept de cosinus ni de sinus, uniquement avec Pythagore, à part les exceptions mentionnées à la fin.)
 
+\tableofcontents
+
+
+
+%Rajouter \url{https://twitter.com/maliuhudmuaz/status/1315383186852118530} utilse les demi-cercles.
+
+\section{Échauffement, calculs concrets}
+
 \begin{exo}
 Soit $ABCD$ un trapèze rectangle comme sur la figure.
 Calculer la longueur $AD$.
@@ -337,6 +345,194 @@ Quelle est la distance $PQ$ ?
 \end{exo}
 
 
+
+\begin{exo}
+% pythagore 2 fois, simples
+Dans la figure ci-dessous, le segment $[PR]$ est un diamètre du cercle.
+Si $PQ=7$, $QR=6$ et $RS=2$, que vaut le périmètre du quadrilatère $PQRS$ ?
+\begin{center}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.8]
+\clip(-3.5797558586948437,-3.881851674112303) rectangle (4.125414120251267,3.396782109570719);
+\draw [very thick] (0.,0.) circle (3.cm);
+\draw [very thick] (-3.,0.)-- (3.,0.);
+\draw [very thick] (3.,0.)-- (0.5768677789417458,2.9440148718406327);
+\draw [very thick] (0.5768677789417458,2.9440148718406327)-- (-3.,0.);
+\draw [very thick] (3.,0.)-- (2.6083696721783043,-1.482028222828582);
+\draw [very thick] (2.6083696721783043,-1.482028222828582)-- (-3.,0.);
+
+\draw [fill=black] (0.,0.) circle (2.0pt);
+\draw[color=black] (0.025162952883515128,0.3353529661501663) node {$O$};
+\draw [fill=black] (3.,0.) circle (2.5pt);
+\draw[color=black] (3.2585824976198294,0.06016832404494808) node {$R$};
+\draw [fill=black] (-3.,0.) circle (2.0pt);
+\draw[color=black] (-3.3320896808001472,0.10144602036073082) node {$P$};
+\draw [fill=black] (0.5768677789417458,2.9440148718406327) circle (2.5pt);
+\draw (0.6718468618307779,3.197273244044436) node {$Q$};
+\draw (1.896418519198999,1.7) node {6};
+\draw (-1.4057971860636196,1.614961551939431) node {7};
+\draw [fill=black] (2.6083696721783043,-1.482028222828582) circle (2.5pt);
+\draw (2.8595647665672628,-1.5496618322705786) node {$S$};
+\draw (2.6256578207778274,-0.6965894417444021) node {2};
+\draw (-0.27754015343222493,-0.94) node {?};
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
+
+\begin{exo}
+Les diagonales du losange ci-dessous mesurent $6\,$cm et $8\,$cm. 
+Combien mesure la hauteur marquée sur la figure ?
+\begin{center}
+\begin{tikzpicture}[scale=.7,rotate=atan(3/4)]
+\tkzDefPoint(0,0){O}
+\tkzDefPoint(-4,0){A}
+\tkzDefPoint(0,3){B}
+\tkzDefPoint(4,0){C}
+\tkzDefPoint(0,-3){D}
+\tkzDrawSegments[very thick](A,B B,C C,D D,A)
+\tkzDefPointBy[projection=onto A--D](B)
+ \tkzGetPoint{H}
+\tkzDrawSegment(B,H)
+\tkzAutoLabelPoints[center = O,dist= .1](A,B,C,D,H)
+\tkzMarkRightAngles(D,H,B)
+\end{tikzpicture}
+
+\end{center}
+
+\end{exo}
+
+
+\begin{exo}
+Combien mesure le segment $[DF]$ ?
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.6,rotate=40]
+
+\draw[very thick] (-0.4242640687119284,4.) -- (-0.4242640687119285,3.5757359312880714) -- (0.,3.5757359312880714) -- (0.,4.) -- cycle; 
+\draw[very thick] (0.4242640687119284,0.) -- (0.42426406871192845,0.4242640687119284) -- (0.,0.4242640687119284) -- (0.,0.) -- cycle; 
+\draw[very thick] (-1.1421023839543198,5.783993283625307) -- (-0.8482507356267196,5.477968433694534) -- (-0.5422258856959464,5.771820082022135) -- (-0.8360775340235467,6.0778449319529075) -- cycle; 
+\draw[very thick] (-3.,4.)-- (0.,4.);
+\draw[very thick] (0.,4.)-- (0.,0.);
+\draw[very thick] (0.,0.)-- (5.,0.);
+\draw[very thick](-3.,4.)-- (-0.8360775340235467,6.0778449319529075);
+\draw[very thick] (-0.8360775340235467,6.0778449319529075)-- (5.,0.);
+
+\draw [fill=black] (-3.,4.) circle (2.5pt);
+\draw(-3.58,4.31) node {$A$};
+\draw [fill=black] (0.,4.) circle (2.5pt);
+\draw (0.36,3.73) node {$B$};
+\draw [fill=black] (0.,0.) circle (2.0pt);
+\draw  (-0.34,-0.21) node {$C$};
+\draw [fill=black] (5.,0.) circle (2.5pt);
+\draw (5.3,-0.31) node {$D$};
+\draw(-1.52,3.77) node {3};
+\draw (-0.26,2.03) node {4};
+\draw (2.66,-0.29) node {5};
+\draw [fill=black] (-0.8360775340235467,6.0778449319529075) circle (2.0pt);
+\draw (-0.88,6.65) node {$F$};
+\draw (-2.02,5.45) node {3};
+\end{tikzpicture}
+%\includegraphics[scale=.4]{pythagore4.png}
+\end{center}
+\end{exo}
+
+
+
+\begin{exo}
+Le quadrilatère suivant est un trapèze. 
+Les longueurs de ses côtés sont données sur la figure.
+Quelle est son aire ?
+\begin{center}
+\begin{tikzpicture}[scale=.2]
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(5,12){B}
+\tkzDefPoint(15,12){C}
+\tkzDefPoint(24,0){D}
+%\tkzDefPoint(14,0)
+\tkzDrawPolygon[very thick](A,B,C,D)
+%\tkzdrawSegment(B,E)
+\tkzLabelSegment[above left](A,B){$13$}
+\tkzLabelSegment[above](B,C){$10$}
+\tkzLabelSegment[above right](C,D){$15$}
+\tkzLabelSegment[below](D,A){$24$}
+\end{tikzpicture}
+%\includegraphics[scale=.4]{pythagore7.png}
+\end{center}
+\begin{sol}
+\begin{center}
+\begin{tikzpicture}[scale=.2]
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(5,12){B}
+\tkzDefPoint(15,12){C}
+\tkzDefPoint(24,0){D}
+\tkzDefPoint(14,0){E}
+\tkzDefPoint(5,0){H}
+\tkzDrawPolygon[very thick](A,B,C,D)
+\tkzDrawSegment(B,E)
+\tkzDrawSegment(B,H)
+\tkzLabelSegment[above left](A,B){$13$}
+\tkzLabelSegment[above](B,C){$10$}
+\tkzLabelSegment[above right](C,D){$15$}
+\tkzLabelSegment[below](D,A){$24$}
+\end{tikzpicture}
+%\includegraphics[scale=.4]{pythagore7.png}
+\end{center}
+\end{sol}
+\end{exo}
+
+
+
+
+
+\begin{exo}
+Dans un triangle rectangle, le cercle inscrit touche l'hypoténuse en la divisant en deux segments de $3$ et $5$ cm.
+Quelle est l'aire du triangle ?
+
+\begin{center}
+\begin{tikzpicture}
+
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.7]
+\draw[very thick] (-0.5938096629462137,3.4597430801129723) -- (-0.30355274305918567,3.2578745078742624) -- (-0.10168417082047576,3.5481314277612905) -- (-0.3919410907075038,3.75) -- cycle; 
+\draw [very thick] (0.,1.5677643628300215) circle (1.5677643628300215cm);
+\draw [very thick] (-0.3919410907075038,3.75)-- (5.,0.);
+\draw [very thick] (-3.,0.)-- (-0.3919410907075038,3.75);
+\draw [very thick] (-3.,0.)-- (0.,0.);
+\draw [very thick] (0.,0.)-- (5.,0.);
+\draw [very thick,dash pattern=on 5pt off 5pt] (0.,1.5677643628300215)-- (0.,0.);
+
+
+\draw [fill=black] (-3.,0.) circle (2.5pt);
+\draw (-3.6,-0.01) node {$A$};
+\draw [fill=black](0.,0.) circle (2.0pt);
+\draw [fill=black](5.,0.) circle (2.5pt);
+\draw (5.46,-0.17) node {$C$};
+\draw[fill=black] (0.,1.5677643628300215) circle (2.5pt);
+\draw (0.14,1.93) node {$O$};
+\draw[fill=black] (-0.3919410907075038,3.75) circle (2.0pt);
+\draw(-0.48,4.25) node {$D$};
+\draw[color=black] (-1.44,-0.3) node {3};
+\draw[color=black] (2.56,-0.3) node {5};
+\draw[color=black] (-0.26,0.97) node {R};
+\end{tikzpicture}
+%\includegraphics[scale=.4]{pythagore9.png}
+\end{center}
+%\emph{(Bonus : en déduire ensuite le rayon du cercle inscrit, puis les dimensions du triangle. Ceci n'est pas nécessaire pour trouver l'aire du triangle !)}
+\begin{sol}
+Pythagore donne $2r^2+16r=30$.
+
+Or, en reliant $O$ aux sommets du triangle, on remarque que l'aire recherchée est $r^2+3r+5r=r^2+8r=15$.
+
+En bonus, on peut trouver$R=-4+\sqrt{31}$ et calculer les dimensions du triangle, mais il n'y a pas besoin de ça pour trouver l'aire.
+\end{sol}
+\end{exo}
+
+
+
+
 \begin{exo}[Spirale pythagoricienne]
 Cette spirale est formée de triangles rectangles juxtaposés. On a 
 $OA=AB=BC=CD= DE=EF=FG=GH=HI=1$.
@@ -509,6 +705,107 @@ Pour le second la source d'origine est : \url{https://twitter.com/0y6tr4/status/
 \end{sol}
 \end{exo}
 
+
+
+\begin{exo}
+Une feuille de papier rectangulaire de dimensions $12\times 8$ est pliée de sorte que le coin de la feuille revienne exactement à la moitié du grand côté.
+Quelle est la longueur du pli?
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,scale=.4]
+\draw [very thick] (12.,8.)-- (12.,0.);
+\draw [very thick] (0.,6.2741019624591665)-- (6.,8.);
+\draw [very thick](8.301197383387779,0.)-- (0.,6.2741019624591665);
+\draw [very thick] (6.,8.)-- (8.301197383387779,0.);
+\draw [very thick] (0.,8.)-- (0.,6.2741019624591665);
+\draw [very thick](8.301197383387779,0.)-- (12.,0.);
+\draw [very thick,dash pattern=on 6pt off 6pt] (8.301197383387779,0.)-- (0.,0.);
+\draw [very thick,dash pattern=on 6pt off 6pt] (0.,0.)-- (0.,6.2741019624591665);
+\draw [very thick] (0.,8.)-- (6.,8.);
+\draw [very thick] (2.935418600966369,8.154995357680713) -- (2.935418600966369,7.845004642319288);
+\draw [very thick] (3.064581399033631,8.154995357680713) -- (3.064581399033631,7.845004642319288);
+\draw [very thick] (6.,8.)-- (12.,8.);
+\draw [very thick] (8.935418600966369,8.154995357680713) -- (8.935418600966369,7.845004642319288);
+\draw [very thick] (9.064581399033631,8.154995357680713) -- (9.064581399033631,7.845004642319288);
+\begin{scriptsize}
+\draw [fill=black] (0.,0.) circle (2.0pt);
+\draw (-0.5927513169194987,-0.0419588630298644) node {$C$};
+\draw [fill=black] (12.,0.) circle (2.5pt);
+\draw (12.168533132126012,0.4746923292391769) node {$D$};
+\draw [fill=black] (12.,8.) circle (2.5pt);
+\draw (12.168533132126012,8.482785809409318) node {$E$};
+\draw [fill=black] (0.,8.) circle (2.5pt);
+\draw (-0.3602582803984267,8.61194860747658) node {$F$};
+\draw [fill=black] (0.,6.2741019624591665) circle (2.5pt);
+\draw (-0.6185838765329512,6.2870182422658925) node {$G$};
+\draw [fill=black] (6.,8.) circle (2.5pt);
+\draw (6.175379301805044,8.482785809409318) node {$H$};
+\draw [fill=black] (8.301197383387779,0.) circle (2.0pt);
+\draw (8.293649190108145,-0.5327774956854536) node {$I$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
+
+
+\begin{exo}
+Dans la figure ci-dessous, une ligne brisée $ABCD$ dont les angles sont droits est inscrite dans un quart de cercle de centre $O$.
+Si $AB=12$ et $BC=2$, que vaut le rayon du cercle ? % 10
+\begin{center}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.02,-1.08) rectangle (5.18,4.86);
+\draw [very thick] (0.,4.)-- (3.8415567807131086,1.1146485995851507);
+\draw [very thick](3.8415567807131086,1.1146485995851507)-- (3.363454090563979,0.47810269014912943);
+\draw [very thick] (3.363454090563979,0.47810269014912943)-- (4.,0.);
+\draw [shift={(0.,0.)},very thick]  plot[domain=0.:1.5707963267948966,variable=\t]({1.*4.*cos(\t r)+0.*4.*sin(\t r)},{0.*4.*cos(\t r)+1.*4.*sin(\t r)});
+\draw [very thick](0.,4.)--  (0.,0.)-- (4.,0.);
+\begin{scriptsize}
+\draw [fill=black] (0.,0.) circle (2.5pt);
+\draw (0.14,0.37) node {$O$};
+\draw [fill=black] (4.,0.) circle (2.5pt);
+\draw (4.14,0.37) node {$D$};
+\draw [fill=black] (0.,4.) circle (2.0pt);
+\draw (0.14,4.33) node {$A$};
+\draw [fill=black] (3.8415567807131086,1.1146485995851507) circle (2.5pt);
+\draw (3.98,1.49) node {$B$};
+\draw [fill=black] (3.363454090563979,0.47810269014912943) circle (2.0pt);
+\draw (3,0.81) node {$C$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
+
+\begin{exo}
+Dans un carré $ABCD$ de côté $24$, on place un point $E$ sur le segment $[BC]$ de sorte que $BE=7$.  La bissectrice de $\widehat{EAD}$ coupe $[CD]$ en $F$.
+Que vaut $AF$ ?
+
+\begin{center}
+%\includegraphics[scale=.4]{img/pythagore8.png}
+\begin{tikzpicture}[scale=.2]
+\tkzDefPoint(0,24){A}\tkzDefPoint(0,0){B}\tkzDefPoint(24,0){C}\tkzDefPoint(24,24){D}
+\tkzDefPoint(7,0){E}
+\tkzDrawPolygon[very thick](A,B,C,D)
+\tkzDrawSegment(A,E)
+\tkzDefLine[bisector](E,A,D) \tkzGetPoint{x}
+\tkzInterLL(A,x)(D,C)\tkzGetPoint{F}
+\tkzDrawSegment(A,F)
+\tkzDrawPoints(E,F)
+\tkzDefBarycentricPoint(A=1,C=1)\tkzGetPoint{O}
+\tkzAutoLabelPoints[center=O](A,B,C,D,E,F)
+\tkzMarkAngle[size=3,mark=|](E,A,F) \tkzMarkAngle[size=3,mark=|](F,A,D)
+\tkzLabelSegment(B,A){$24$} \tkzLabelSegment(B,E){$7$} 
+\end{tikzpicture}
+\end{center}
+\begin{sol}
+Pythagore deux ou trois fois, projeter $E$ sur $[AF]$ (ou $F$ sur $AE$?) 
+\end{sol}
+\end{exo}
 
 
 % - - - - - - - -
@@ -1203,6 +1500,186 @@ On fait Pythagore dans les trois triangles et ça se simplifie.
 
 
 
+\begin{exo}[Inégalité arithmético-géométrique]
+En utilisant l'exercice précédent, démontrer \emph{l'inégalité arithmético-géométrique}  : pour tous réels $x$ et $y$ positifs, on a 
+\[ \sqrt{xy} \leq \frac{x+y}{2}.\]
+(Le terme de gauche est la moyenne géométrique de $x$ et $y$, le terme de droite est leur moyenne arithmétique.) 
+\end{exo}
+
+
+
+
+\begin{exo}
+Soit $ABC$ un triangle rectangle en $C$ et $H$ le pied de la hauteur issue de $C$.
+Montrer que 
+\[ \frac{1}{CH^2} = \frac{1}{BC^2}+\frac{1}{AC^2}.\]
+\begin{center}
+\begin{tikzpicture}[rotate=210]
+\tkzDefPoint(0,3){A}
+\tkzDefPoint(4,0){B}
+\tkzDefPoint(0,0){C}
+\tkzDefBarycentricPoint(A=1,B=1,C=1) \tkzGetPoint{G}
+\tkzDefPointBy[projection=onto A--B](C) \tkzGetPoint{H}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDrawSegment[dashed](C,H)
+\tkzMarkRightAngle(C,H,B)
+\tkzMarkRightAngle(A,C,B)
+\tkzAutoLabelPoints[center=G](A,B,C,H)
+%\tkzLabelSegment(B,C){$a$}
+%\tkzLabelSegment(C,A){$b$}
+%\tkzLabelSegment(C,H){$h$}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Mettre au même dénominateur, éliminer les dénominateurs et calculer l'aire du triangle de deux façons.
+\end{hint}
+\end{exo}
+
+
+
+\begin{exo}[Une corde]
+Dans un cercle, une corde a pour longueur $2a$ et son milieu est à une distance $d$ du cercle.
+Montrer que le diamètre du cercle est égal à $\frac{a^2+d^2}{d}$.
+\begin{center}
+\begin{tikzpicture}[scale=.5,rotate=20]
+\tkzDefPoint(-4,3){A}
+\tkzDefPoint(4,3){B}
+\tkzDefPoint(0,5){C}
+\tkzDefPoint(0,3){I}
+\tkzDefPoint(0,0){O}
+
+\tkzDrawSegment[very thick](A,B)
+\tkzDrawSegment[dashed](I,C)
+\tkzMarkRightAngle(C,I,B)
+\tkzDrawCircle[thick](O,A)
+
+\tkzDrawPoints(I,A,B,C,O)
+\tkzLabelSegment[below](A,I){$a$}
+\tkzLabelSegment[below](I,B){$a$}
+\tkzLabelSegment[left](I,C){$d$}
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+
+\begin{exo}[Deux cordes parallèles]
+Dans un cercle, deux cordes parallèles ont pour longueur $2a$ et $2b$. Elles sont distances d'une distance $d$.
+Montrer que le rayon du cercle est égal à :
+\[R=\frac{(d^2+(a-b)^2)(d^2+(a+b)^2)}{4d^2}.\]
+\begin{center}
+\begin{tikzpicture}[rotate=40]
+\tkzDefPoint(-4,3){A}
+\tkzDefPoint(4,3){B}
+\tkzDefPoint(-3,4){A'}
+\tkzDefPoint(3,4){B'}
+\tkzDefPoint(0,3){M}
+\tkzDefPoint(0,4){M'}
+\tkzDefPoint(0,0){O}
+
+\tkzDrawSegments[very thick](A,B A',B')
+\tkzDrawSegment[dashed](M,M')
+\tkzMarkRightAngles(A,M,M' M,M',A')
+\tkzDrawArc[thick,delta=5](O,B)(A)
+
+\tkzDrawPoints(M,M')
+\tkzLabelSegment[below](A,M){$a$}
+\tkzLabelSegment[below](M,B){$a$}
+\tkzLabelSegment[above right](M,M'){$d$}
+\tkzLabelSegment[above](A',M'){$b$}
+\tkzLabelSegment[above](M',B'){$b$}
+\end{tikzpicture}
+\end{center}
+\end{exo}
+
+\begin{exo}
+Une ligne brisée $ABCD$ à angles droits est inscrite dans un demi-cercle.
+Quel est le rayon du demi-cercle ?
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+\tkzDefPoint(-1,2){A}
+\tkzDefPoint(-1,0){B}
+\tkzDefPoint(2,0){C}
+\tkzDefPoint(2,1){D}
+\tkzDrawSegments[very thick](A,B B,C C,D)
+
+
+\tkzDefPoint(0,0){O}
+\tkzInterLC(B,C)(O,A)
+\tkzGetPoints{a}{b}
+\tkzDrawSegment[thick](a,b)
+\tkzDrawSemiCircle[thick](O,b)
+
+\tkzMarkRightAngles(A,B,C B,C,D)
+\tkzDrawPoints(A,B,C,D)
+\tkzLabelSegment[left](A,B){$2$}
+\tkzLabelSegment[below](B,C){$3$}
+\tkzLabelSegment[left](C,D){$1$}
+\tkzLabelPoints[above left](A)
+\tkzLabelPoints[below left](B)
+\tkzLabelPoints[below right](C)
+\tkzLabelPoints[above right](D)
+\end{tikzpicture}
+%
+%\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+%\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+%\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\clip(-4.3,-7.24) rectangle (12.28,6.3);
+%\draw [line width=2.pt] (0.,4.)-- (0.,0.);
+%\draw [line width=2.pt] (6.,0.)-- (6.,2.);
+%\draw [shift={(2.,0.)},line width=2.pt]  plot[domain=0.:3.141592653589793,variable=\t]({1.*4.47213595499958*cos(\t r)+0.*4.47213595499958*sin(\t r)},{0.*4.47213595499958*cos(\t r)+1.*4.47213595499958*sin(\t r)});
+%\draw [line width=2.pt] (-2.4721359549995796,0.)-- (6.47213595499958,0.);
+%\draw [line width=2.pt] (0.,0.)-- (6.,0.);
+%\begin{scriptsize}
+%\draw [fill=xdxdff] (0.,4.) circle (2.5pt);
+%\draw[color=xdxdff] (0.14,4.37) node {$A$};
+%\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+%\draw[color=uuuuuu] (0.,-0.35) node {$B$};
+%\draw [fill=xdxdff] (6.,0.) circle (2.5pt);
+%\draw[color=xdxdff] (6.12,-0.33) node {$C$};
+%\draw [fill=ududff] (6.,2.) circle (2.5pt);
+%\draw[color=ududff] (6.14,2.37) node {$D$};
+%\draw[color=black] (-0.26,2.19) node {4};
+%\draw[color=black] (5.52,1.19) node {2};
+%\draw[color=black] (3.06,-0.13) node {6};
+%\end{scriptsize}
+%\end{tikzpicture}
+
+
+%\includegraphics[scale=.4]{pythagore3.png}
+\end{center}
+\end{exo}
+
+
+
+\begin{exo}
+Soit $ABC$ un triangle avec $\widehat{A}=60^\circ$ et $\widehat{B}=45^\circ$. 
+Calculer $\frac{CA}{CB}$.
+\begin{center}
+\begin{tikzpicture}[scale=.8]
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(5,0){B}
+\tkzDefPointBy[rotation=center A angle 60](B) \tkzGetPoint{B'}
+\tkzDefPointBy[rotation=center B angle -45](A) \tkzGetPoint{A'}
+\tkzInterLL(A,B')(B,A')\tkzGetPoint{C}
+\tkzDefBarycentricPoint(A=1,B=1,C=1) \tkzGetPoint{G}
+
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzLabelAngle(B,A,C){$60^\circ$}
+\tkzLabelAngle(C,B,A){$45^\circ$}
+\tkzAutoLabelPoints[center=G](A,B,C)
+%\tkzDrawPoints(A,B,C,A',B')
+\end{tikzpicture}
+%\includegraphics[scale=.4]{pythagore5.png}
+\end{center}
+\begin{sol}
+Projeter $C$ sur $[AB]$ et appliquer Pythagore deux fois.
+\end{sol}
+\end{exo}
+
+
+
+
 \begin{exo}
 Dans un triangle rectangle en $A$, en notant $H$ le pied de la hauteur issue de $A$, on a $AB=15$ et $HC=16$.
 Calculer $BH$, $AH$ et $AC$.
@@ -1298,33 +1775,10 @@ On peut aussi refaire trois fois Pythagore, (ou bien utiliser les triangles semb
 
 
 
-\subsection{Calculs avec les racines carrées}
-
-\begin{exo}[Comparaisons de racines carrées]
-
-On considère les trois nombres suivants : $A=3+\sqrt 2$, $B=\sqrt 5 +\sqrt 6$ et $C=1+\sqrt 10$ ?
-Classer ces trois nombres du plus petit au plus grand, sans utiliser évidemment de calculatrice.
-\begin{hint}
-Élever les trois quantités au carré.
-\end{hint}
-\begin{sol}
-On a 
-\[
-A^2 = 11+6\sqrt 2 = 11+\sqrt{72},\quad
-B^2 = 11+2\sqrt{30}=11+\sqrt{120} \quad\text{et}
-C^2 = 11+2\sqrt{10}=11+\sqrt{40}.\]
-On en déduit que 
-\[ C< A < B.\]
-\end{sol}
-\end{exo}
 
 
 
-
-
-%Rajouter \url{https://twitter.com/maliuhudmuaz/status/1315383186852118530} utilse les demi-cercles.
-
-\subsection{Circle Packing}
+\section{Circle Packing}
 
 \begin{exo}[circle packing, 1]
 Les trois cercles ci-dessous sont tangents et inscrits dans un rectangle. Leurs diamètres valent $3$, $4$ et $6$.
@@ -1407,7 +1861,7 @@ Le carré a un côté de $2+\frac{12}{\sqrt 13}$. Voir la vidéo \url{https://ww
 
 
 
-\subsection{Square packing}
+\section{Square packing}
 
 
 
@@ -1495,13 +1949,6 @@ Pour $17$ carrés, la meilleure configuration connue à ce jour est la suivante.
 \end{exo}
 
 
-\paragraph{Carrés dans un triangle équilatéral }
-
-%\url{https://erich-friedman.github.io/packing/squintri/}
-
-
-\subsection{AUtre}
-
 
 
 
@@ -1519,23 +1966,6 @@ Pour $17$ carrés, la meilleure configuration connue à ce jour est la suivante.
 %\end{exo}
 
 
-\begin{exo}[Comparaisons de racines carrées]
-
-On considère les trois nombres suivants : $A=3+\sqrt 2$, $B=\sqrt 5 +\sqrt 6$ et $C=1+\sqrt 10$ ?
-Classer ces trois nombres du plus petit au plus grand, sans utiliser évidemment de calculatrice.
-\begin{hint}
-Élever les trois quantités au carré.
-\end{hint}
-\begin{sol}
-On a 
-\[
-A^2 = 11+6\sqrt 2 = 11+\sqrt{72},\quad
-B^2 = 11+2\sqrt{30}=11+\sqrt{120} \quad\text{et}
-C^2 = 11+2\sqrt{10}=11+\sqrt{40}.\]
-On en déduit que 
-\[ C< A < B.\]
-\end{sol}
-\end{exo}
 
 
 \begin{exo}[Vers le théorème de Descartes]
@@ -1581,24 +2011,8 @@ Commencer par montrer que les deux premiers cercles, de diamètres $1/4$ et $1/9
 \end{hint}
 \end{exo}
 
-\begin{exo}
-blabla
-\begin{center}
-\begin{tikzpicture}
-\end{tikzpicture}
-\end{center}
-\end{exo}
 
-
-\begin{exo}
-blabla
-\begin{center}
-\begin{tikzpicture}
-\end{tikzpicture}
-\end{center}
-\end{exo}
-
-
+\section{Théorèmes classiques démontrés avec Pythagore}
 
 
 \begin{exo}[Premier théorème de la médiane (théorème d'Apollonius)]
@@ -1674,6 +2088,85 @@ Et si la hauteur n'appartient pas au segment $[BI]$?
 
 %Plus difficile, avec trinôme et factoriastion : 
 %\url{https://www.youtube.com/watch?v=KKzf3vh7-pY}
+
+
+
+\begin{exo}[Formule de Héron]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}[Loi des cosinus (Al-Kashi)]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+
+
+\begin{exo}[Loi des sinus]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+
+
+\begin{exo}
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\section{Autre}
+
+
+
+\begin{exo}[Comparaisons de racines carrées]
+
+On considère les trois nombres suivants : $A=3+\sqrt 2$, $B=\sqrt 5 +\sqrt 6$ et $C=1+\sqrt 10$ ?
+Classer ces trois nombres du plus petit au plus grand, sans utiliser évidemment de calculatrice.
+\begin{hint}
+Élever les trois quantités au carré.
+\end{hint}
+\begin{sol}
+On a 
+\[
+A^2 = 11+6\sqrt 2 = 11+\sqrt{72},\quad
+B^2 = 11+2\sqrt{30}=11+\sqrt{120} \quad\text{et}
+C^2 = 11+2\sqrt{10}=11+\sqrt{40}.\]
+On en déduit que 
+\[ C< A < B.\]
+\end{sol}
+\end{exo}
 
 
 
