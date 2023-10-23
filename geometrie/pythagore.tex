@@ -164,6 +164,41 @@ On trouve $\frac{1}{\sqrt 3}+1+\frac12+\frac{2}{\sqrt 3} = \frac32+\sqrt 3$.
 \end{exo}
 
 
+\begin{exo}
+Soit $ABCD$ un quadrilatère. Montrer que les deux propositions suivantes sont équivalentes:
+\begin{enumerate}
+\item $ABCD$ est un rectangle.
+\item Pour tout point $X$ du plan, on a $AX^2+CX^2 = BX^2+DX^2$.
+\end{enumerate}
+\begin{hint}
+Pour $2\implies 1$, on peut prendre des points $P$ particuliers.
+\end{hint}
+\end{exo}
+
+
+
+\begin{exo}[Périmètre et diagonale]
+% note : on a pris le triangle $3-4-5$ et on a doublé les dimensions pour que ça crève moins les yeux.
+Un rectangle a un diagonale de $10$ mètres et un périmètre de $28$ mètres. Calculer sa largeur et sa longueur.
+\begin{center}
+\begin{tikzpicture}[scale=.5]
+\draw[very thick] (0,0) rectangle (8,6) ;
+\draw (0,0) -- (8,6) node[midway,fill=white] {$10$};
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+La largeur et la longueur sont des nombres entiers.
+\end{hint}
+\begin{sol}
+On a d'après Pythagore $\ell^2+L^2=10^2=100$ et $28=p=2\ell+2L$ donc $\ell+L=14$.
+
+On en déduit $(\ell+L)^2=14^2=196$ et donc en soustrayant, $L\times \ell = 48$.
+
+D'après l'indication, la largeur et la longueur sont des nombres entiers.
+En procédant par tâtons, on trouve $l=6$ et $L=8$.
+Sans utiliser l'indication, on peut remplacer $L$ par $14-\ell$, remplacer dans la seconde équation et résoudre le trinôme.
+\end{sol}
+\end{exo}
 
 
 
@@ -198,9 +233,40 @@ On en déduit que le côté du carré est égal à  :
 \end{sol}
 \end{exo}
 
+
+
+
+
+
 \begin{exo}
-\url{https://www.youtube.com/watch?v=2x_GjrvnEJ0} un peu calculatoire mais juste Pythagore.
+Soit $ABC$ un triangle rectangle en $A$ dont l'hypoténuse mesure $4$cm.
+On la partage en quatre segments égaux $[BP]$, $[PQ]$, $[QR]$ et $[RC]$.
+Calculer $AP^2+AQ^2+AR^2$.
+Dans le cas général où l'hypoténuse est de longueur $\ell$, calculer $AP^2+AQ^2+AR^2$ en fonction de $\ell$.
+\begin{center}
+\begin{tikzpicture}[scale=.7]
+\tkzDefPoint(0,0){A}\tkzDefPoint(0,4){B}\tkzDefPoint(8,0){C}
+\tkzDrawPolygon[very thick](A,B,C)
+\tkzDefPoint(2,3){P}\tkzDefPoint(4,2){Q}\tkzDefPoint(6,1){R}
+\tkzDrawPoints(P,Q,R)
+\tkzLabelPoint[above right](P){$P$}\tkzLabelPoint[above right](Q){$Q$}\tkzLabelPoint[above right](R){$R$}
+\tkzLabelPoint[above](B){$B$}\tkzLabelPoint[right](C){$C$}\tkzLabelPoint[below left](A){$A$}
+\tkzDrawSegments(A,P A,Q A,R)
+\tkzMarkSegments[mark=||](B,P P,Q Q,R R,C)
+\tkzMarkRightAngle(C,A,B)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Pour le cas particulier on trouve $14$.
+\end{hint}
+\begin{sol}
+On \og quadrille \fg{}, c'est-à-dire qu'on projette les points $P$, $Q$ et $R$ sur $(AB)$ et $(AC)$. Ensuite on applique plusieurs fois Pythagore.
+Cas général : $\frac{7}{8}BC^2$.
+\end{sol}
 \end{exo}
+
+
+
 
 
 \begin{exo}
@@ -1346,11 +1412,27 @@ Le carré a un côté de $2+\frac{12}{\sqrt 13}$. Voir la vidéo \url{https://ww
 
 
 
+
+
+
 \begin{exo}[Cinq carrés dans un carré]
-Les cinq carrés gris sont de côté $1$ et le carré oblique est   incliné de $45^\circ$.
- Quelle est la taille du grand carré ?
+On cherche à placer cinq petits carrés identiques de $1\mathrm{cm}^2$ dans un grand carré, de la façon la plus \og efficace\fg{} possible.
+
+Les deux figures ci-dessous présentent deux configurations possibles. On arrive à voir à l'\oe il nu que la seconde configuration est la plus efficace des deux.
+Démontrer ce résultat en calculant dans les deux cas les dimensions du grand carré.
 
 \begin{center}
+
+\begin{tikzpicture}[scale=1]
+\begin{scope}[rotate=45,shift={(-1.5,-.5)}]
+\draw[fill=gray] (0,0) rectangle (3,1);
+\draw[fill=gray] (1,-1) rectangle (2,0);
+\draw[fill=gray] (1,0) rectangle (2,1);
+\draw[fill=gray] (1,1) rectangle (2,2);
+\end{scope}
+\draw[very thick] (-1.42,-1.42) rectangle (1.42,1.42);
+\end{tikzpicture}
+\hspace{1cm}
 \begin{tikzpicture}[scale=1]
 \draw[fill=gray] ({sqrt(2)/4},{sqrt(2)/4}) rectangle ({1+sqrt(2)/4},{1+sqrt(2)/4});
 \draw[fill=gray] ({-sqrt(2)/4},{sqrt(2)/4}) rectangle ({-1-sqrt(2)/4},{1+sqrt(2)/4});
@@ -1360,7 +1442,7 @@ Les cinq carrés gris sont de côté $1$ et le carré oblique est   incliné de 
 \draw[very thick] ({-1-sqrt(2)/4},{-1-sqrt(2)/4}) rectangle ({1+sqrt(2)/4},{1+sqrt(2)/4});
 \end{tikzpicture}
 \end{center}
-Note : Frits Göbel a prouvé en 1979 qu'il s'agit là du plus petit carré pouvant contenir cinq carrés de côté $1$. 
+Note : Frits Göbel a prouvé en 1979 que la configuration de droite est la plus efficace parmi toutes les manières de placer cinq carrés dans un carré.
 
 \begin{hint}
 \end{hint}
@@ -1394,9 +1476,15 @@ Pour dix petits carrés, le plus petit carré est le suivant, mais ça n'a été
 \draw[very thick] ({-1-sqrt(2)/4},{-1-sqrt(2)/4}) rectangle ({2+sqrt(2)/4},{2+sqrt(2)/4});
 \end{tikzpicture}
 \end{center}
-Ces problèmes pourraient sembler évidents mais ne le sont pas. Par exemple, pour $11$ et $17$ carrés, les meilleures configurations connues à ce jour sont celles ci-dessous mais on ignore encore si elles sont optimales.
+Ces problèmes pourraient sembler évidents mais ne le sont pas. Par exemple, pour $11$ carrés, on a longtemps cru que la configuration optimale était celle ci-dessous à gauche, avec des carrés inclinés à $45^\circ$.
+Mais en 1979, Walter Trump trouva une autre configuration légèrement meilleure, avec un angle d'environ $40,18^\circ$. On ignore encore si cette dernière configuration est optimale !
 \begin{center}
-\includegraphics[scale=.5]{sqinsq/s11.png}
+\includegraphics[scale=.4]{sqinsq/11squares_comp.png}\\
+Illustration tirée du livre \emph{Which Way Did The Bycicle Go ?}, p. 105.
+\end{center}
+
+Pour $17$ carrés, la meilleure configuration connue à ce jour est la suivante. On connaît finalement assez peu de choses sur ces questions !
+\begin{center}
 \includegraphics[scale=.5]{sqinsq/s17.png}
 \end{center}
 \begin{hint}
@@ -1409,9 +1497,8 @@ Ces problèmes pourraient sembler évidents mais ne le sont pas. Par exemple, po
 
 \paragraph{Carrés dans un triangle équilatéral }
 
-\url{https://erich-friedman.github.io/packing/squintri/}
+%\url{https://erich-friedman.github.io/packing/squintri/}
 
-Mettre les premiers, regarder la biblio pour voir si c'est optimal ou pas.
 
 \subsection{AUtre}
 

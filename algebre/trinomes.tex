@@ -1,0 +1,286 @@
+\input{../preambule_club}
+\input{../macros_answers}
+
+
+\begin{document}
+\Opensolutionfile{indications}[_\jobname_hints]
+\Opensolutionfile{solutions}[_\jobname_sol]
+
+
+\title{Trinômes}
+\author{Damien Mégy}
+\maketitle
+
+\section{Factorisation}
+
+
+Rappel :  $(a+b)^2=a^2+2ab+b^2$, $(a-b)^2=a^2-2ab+b^2$ et $(a+b)(a-b)=a^2-b^2$.
+
+\begin{exo}
+Factoriser les expression suivantes : 
+\[ a^2+4a+4, \quad
+b^2+20b+100,\quad
+c^2+14c+49,\quad
+d^2+26d+169,\quad
+e^2+22e+121,\quad
+f^2+30f+225,
+\]
+\[ 
+4a^2+4a+1,\quad
+9b^2+6b+1,\quad
+64c^2+16c+1,\quad
+49d^2+14d+1,\quad
+144e^2+24e+1,\quad
+256f^2+32f+1,
+\]
+\[
+4a^2+8a+4,\quad
+4b^2+12b+9,\quad
+25c^2+20c+4,\quad
+9d^2+12d+4,\quad
+9e^2+30e+25,\quad
+36f^2+108f+81.
+\]
+\begin{hint}
+Pour les premiers de chaque ligne : $(a+2)^2$, $(2a+1)^2$ et $(2a+2)^2$. À noter que pour ce dernier trinôme, on peut commencer par factoriser l'expression par $4$ ce qui donne $4(a^2+2a+1)$, puis utiliser l'identité remarquable : $4(a+1)^2$, puis \og rentrer\fg{} le $4$ dans le carré en écrivant $4(a+1)^2 = 2^2(a+1)^2 = \big(2(a+1)\big)^2 = (2a+2)^2$.
+\end{hint}
+\end{exo}
+
+\begin{exo}
+Factoriser les expression suivantes : 
+\[ 
+x^2+2x\sqrt{5}+5,\quad
+y^2+y\sqrt{20}+5,\quad
+z^2+z\sqrt{12}+3,\quad
+t^2+4t\sqrt{3}+12,\quad
+u^2+6u\sqrt{2}+18,
+\]
+\[
+3a^2+2a\sqrt{3}+1,\quad
+7b^2+2b\sqrt{7}+1,\quad
+12c^2+4c\sqrt{3}+1,\quad
+18d^2+6d\sqrt{2}+1,\quad
+72e^2+12e\sqrt{2}+1.
+\]
+\end{exo}
+
+
+\begin{exo}
+Factoriser les expressions suivantes :
+\[
+x^2-4,\quad 
+y^2-144,\quad 
+z^2-169,\quad 
+t^2-225,\quad 
+4u^2-121,\quad
+9v^2-81,\quad
+36w^2-25,
+\]
+\[
+x^2-5,\quad
+x^2-20,\quad
+3x^2-1,\quad
+12x^2-1,\quad
+81x^2-7,\quad
+7x^2-121,\quad
+145x^2-144,\quad
+11x^2-40.
+\]
+\end{exo}
+
+
+
+\begin{exo}
+Si on se donne deux nombres $S$ (pour \og somme \fg) et $P$ (pour \og produit\fg), il est parfois possible de deviner deux nombres $a$ et $b$ tels que $a+b=S$ et $ab=P$. Par exemple, si on donne $S=6$ et $P=5$, on peut deviner $a=5$ et $b=1$ (ou l'inverse) : on a alors bien $a+b = 6 = S$ et $ab = 5 = P$. De même, si on se donne $S=5$ et $P=6$, on peut trouver de tête que $S=5=2+3$ et $P=6 = 2\times 3$. Savoir faire ce type de calcul de tête est extrêmement utile. 
+Pour chaque couple d'entiers $S$ et $P$, déterminer des nombres entiers $a$ et $b$ tels que $a+b=S$ et $ab=P$. Attention, dans la troisième ligne, les nombres $a$ et $b$ peuvent être négatifs.
+\[
+S=3 \text{ et } P=2, \quad
+S=6\text{ et } P=8, \quad
+S=5\text{ et } P=4, \quad
+S=13\text{ et } P=12, \quad
+S=12\text{ et } P=35,\quad
+\]
+\[
+S=13\text{ et } P=36,\quad
+S=20\text{ et } P=36,\quad
+S=37\text{ et } P=36,\quad
+S=15\text{ et } P=36,\quad
+S=12\text{ et } P=36,\quad
+\]
+\[
+S=1 \text{ et } P=-2, \quad
+S=1 \text{ et } P=-6, \quad
+S=5 \text{ et } P=-6, \quad
+S=-6 \text{ et } P=5, \quad
+S=-5 \text{ et } P=6. \quad
+\]
+\end{exo}
+
+\begin{exo}[Échauffement pour la suite]
+Développer et réduire les expressions suivantes : 
+\[ (x+1)(x+7), \quad
+(x+3)(x+4), \quad
+(x+11)(x+2), \quad
+(x+12)(x+5), \quad
+(2x+1)(x+3), \quad
+(3x+1)(2x+5).
+\]
+\end{exo}
+
+\begin{exo}
+Si on cherche à factoriser le trinôme $x^2+5x+6$, on \og voit\fg{} (avec de l'entraînement) que $5=2+3$ et $6=2\times 3$ et donc on peut trouver rapidement la factorisation $x^2+5x+6 = (x+2)(x+3)$.
+Utiliser ce principe pour factoriser les trinômes suivants:
+\[
+x^2+3x+2,\quad
+x^2+7x+6,\quad
+x^2+13x+12,\quad
+x^2+7x+12,\quad
+x^2+6x+8,\quad
+x^2+8x+12,\quad
+x^2+12x+35,
+\]
+\[
+x^2+x-2,\quad
+x^2+x-6,\quad
+x^2-x-20,\quad
+x^2-5x+6,\quad
+x^2-3x+2,\quad
+x^2-5x+4,\quad
+x^2-6x+8,\quad
+x^2-7x+10.
+\]
+
+\end{exo}
+
+
+\section{Conditions sur le graphe}
+
+Le graphe est ...
+
+
+
+
+\begin{exo}
+Déterminer les couples $(b,c)$ de réels tels que le graphe du trinôme $x^2+bx+c$ passe par les points de coordonnées $(1,1)$ et $(3,0)$.
+% système 2x2
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Déterminer les triplets $(a,b,c)$ de nombres réels tels que le graphe du trinôme $ax^2+bx+c$ passe par les points de coordonnées $(2,1)$, $(3,2)$ et $(5,0)$.
+
+\begin{hint}
+\end{hint}
+\begin{sol}
+On trouve un système $2\times 3$ dont la résolution donne $a=-2/3$, $b=13/3$ et $c=-5$.
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soient $P$ et $Q$ les points du plan de coordonnées  $(2,3)$ et $(4,5)$.
+Parmi les trinômes $ax^2+bx+c$ dont le graphe passe par les deux points $P$ et $Q$, lesquels ont un graphe qui passe par l'origine ?
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soient $P$ et $Q$ les points du plan de coordonnées  $(2,3)$ et $(4,0)$.
+Parmi les trinômes $ax^2+bx+c$ dont le graphe passe par les deux points $P$ et $Q$, lesquels ont un graphe qui est tangent à l'axe des abscisses ?
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}
+Déterminer les trinômes $ax^2+bx+c$ dont le graphe admet l'axe de symétrie $x=3$ et contient les points de coordonnées $(2,2)$ et $(5,-1)$.
+\begin{hint}
+Distinguer suivant si $a$ est nul ou pas.
+\end{hint}
+\begin{sol}
+Si $a\neq 0$, on trouve $a=-1$ et $b=6$ et $c=-6$. (Si $a=0$ il n'y a pas de solution.)
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soit $p$ un nombre réel et considérons le trinôme $3x^2+px+3$.
+Sachant qu'une de ses racines est le carré de l'autre, que vaut $p$ ?
+\begin{hint}
+\end{hint}
+\begin{sol}
+$-6$.
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Déterminer le nombre réel $b$ de sorte que le trinôme $x^2+bx+3$ possède deux racines à distance un l'une de l'autre, c'est-à-dire deux racines $\alpha$ et $\beta$ telles que $|\alpha-\beta|=1$.
+\begin{hint}
+\end{hint}
+\begin{sol}
+Discriminant, ou bien formules de Viète.
+\end{sol}
+\end{exo}
+
+\begin{exo}
+Soient $a<b$ deux nombres réels.
+Combien de racines le polynôme $(x-a)(x-b)-1$ possède-il dans les intervalles $]-\infty, a[$,  $]a,b[$ et  $]b,+\infty[$ ?
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+\begin{exo}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+
+
+\Closesolutionfile{indications}
+\Closesolutionfile{solutions}
+
+\indications
+\correction
+
+\end{document}
+
