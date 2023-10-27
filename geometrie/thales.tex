@@ -723,13 +723,163 @@ ce qu'il suffisait de démontrer.
 
 
 
+
+% - - - - - - - - - -
+\begin{exo}[Desargues affine]
+Soit $G$ le centre de gravité d'un triangle $ABC$.
+On mène par le point $G$ les parallèles à $(AB)$ et $(AC)$, qui coupent la droite $(BC)$ en $D$ et $E$.
+Comparer les trois segments $[BD]$, $[DE]$ et $[EC]$.
+\begin{hint}
+Où se trouve le centre de gravité sur les médianes ?
+\end{hint}
+\begin{sol}
+Les trois segments sont égaux.
+% source : LH3ème exo 14
+\end{sol}
+\end{exo}
+
+
+% - - - - - - - - - -
+\begin{exo}
+Soit $ABCD$ un quadrilatère et $O$ le point d'intersection de ses diagonales.
+Les parallèles à $(BC)$ et $(CD)$ passant par $O$ coupent les droites $(AD)$ et $(AD)$ en $E$ et $F$.
+Montrer que $(EF)//(BD)$.
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+% LH3ème ex15
+\end{sol}
+\end{exo}
+
+
+% - - - - - - - - - -
+\begin{exo}
+Soit $ABCD$ un parallélogramme.
+On mène par le point $A$ une sécante qui recoupe les droites $(BD)$, $(BC)$ et $(CD)$ en $M$, $P$ et $Q$.
+Montrer que $MA^2=MP\times MQ$.
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+% LH3ème ex17
+\end{sol}
+\end{exo}
+
+
+
+% - - - - - - - - - -
+\begin{exo}
+Soit $ABC$ un triangle avec $\frac{AB}{AC} = \frac{3}{2}$.
+Expliquer comment placer un point $M$ entre $B$ et $C$ de sorte que $\frac{BM}{MC}=\frac{3}{2}$.
+La parallèle à $(AM)$ passant par $C$ recoupe $(AB)$ en $D$.
+Comparer les angles $\widehat{BAM}$ et $\widehat{MAC}$.
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+%LH3ème-ex19
+\end{sol}
+\end{exo}
+
+
+
+% - - - - - - - - - -
+\begin{exo}
+Soient $[AB]$ et $[AC]$ deux cordes d'un cercle et $[IJ]$ le diamètre perpendiculaire à $[BC]$.
+La droite $(IJ)$ recoupe $(AB)$ en $E$ et $(AC)$ en $F$.
+Que représentent $(AI)$ et $(AJ)$ pour l'angle $\widehat{BAC}$ ?
+Comparer les rapports $\dfrac{IE}{IF}$ et $\dfrac{JE}{JF}$. 
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+% LH 3ème 23 p.143
+\end{sol}
+\end{exo}
+
+
+
+
+% - - - - - - - - - -
+\begin{exo}[Triangle orthique]
+Soit $ABC$ un triangle.
+On note $A'$, $B'$ et $C'$ les pieds des hauteurs.
+Montrer que $(AA')$ est la bissectrice de l'angle $\widehat{B'A'C'}$. % avec ou sans angle inscrit ?
+
+
+Notons ensuite  $H$ l'orthocentre du triangle et $P$ l'intersection de $(AA')$ et $(B'C')$. 
+Comparer les rapports $\dfrac{AP}{AA'}$ et $\dfrac{HP}{HA'}$.
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+% LH 24 avec le théorème de la bissectrice et sans angle inscrit !
+\end{sol}
+\end{exo}
+
+
+
+% - - - - - - - - - -
+\begin{exo}
+Soit $\mathcal C$ un cercle de centre $O$ et $B$, $C$ deux points non diamétralement opposés de ce cercle.
+Les tangentes en $B$ et $C$ se recoupent en $A$ et la droite $(OA)$ recoupe le cercle en $D$ puis en  $E$ (de sorte que $D$ est entre $A$ et $E$).
+Enfin, on note $H$ l'intersection de $(AO)$ et de la corde $[BC]$.
+Que représentent $(BD)$ et $(BE)$ pour l'angle $\widehat{ABC}$ ?% attention il faut l'angle inscrit ??
+Comparer $\dfrac{AE}{AD}$ et $\dfrac{HE}{HD}$.
+\begin{center}
+\begin{tikzpicture}[scale=3]
+\tkzDefPoint(0,0){O}\tkzDefPoint(-50:1){B} \tkzDefPoint(85:1){C}
+\tkzDefPointBy[rotation=center B angle 90](O) \tkzGetPoint{B'}
+\tkzDefPointBy[rotation=center C angle 90](O) \tkzGetPoint{C'}
+\tkzInterLL(B,B')(C,C')\tkzGetPoint{A}
+\tkzInterLL(B,C)(O,A)\tkzGetPoint{H}
+\tkzInterLC(O,A)(O,B)\tkzGetPoints{E}{D}
+
+\tkzDrawLines[very thick](A,B A,C)
+\tkzDrawLine(A,E)
+\tkzDrawCircle[very thick](O,B)
+\tkzDrawSegment(B,C)
+\tkzDrawSegments[dashed](B,D B,E)
+
+\tkzDrawPoints(O,B,C,A,D,E,H)
+\tkzLabelPoints(O,A,B,C,D,E,H)
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+
+
+% - - - - - - - - - -
+\begin{exo}
+Énoncé
+\begin{hint}
+Indication.
+\end{hint}
+\begin{sol}
+Correction.
+\end{sol}
+\end{exo}
+
+
+
+
+
+
+
 % - - - - - - - -
 % - - - - - - - -
 % - - - - - - - -
 \begin{exo}[Construction d'un carré inscrit dans un triangle]
 % homothétie, Thalès
 Soit $ABC$ un triangle.
-\begin{multicols}{2}
+%\begin{multicols}{2}
 
 On souhaite construire un carré intérieur à $ABC$ dont un sommet appartienne à $[AB]$, un à $[AC]$ et deux sommets adjacents appartiennent à $(BC)$. On procède en trois étapes:
 
@@ -757,7 +907,7 @@ Montrer que le quadrilatère $IJKL$ ainsi construit est effectivement un carré.
 \tkzMarkRightAngles[size=.3](L,I,B K,J,C)
 \end{tikzpicture}
 \end{center}
-\end{multicols}
+%\end{multicols}
 \begin{hint}   
 
 \end{hint}      
@@ -1061,6 +1211,73 @@ Source : \url{https://www.cut-the-knot.org/Curriculum/Geometry/MidlineInSimTris.
 \end{sol}
 \end{exo}
 
+\section{Théorème de Pappus affine, Desargues affine, et applications}
+
+\begin{exo}[Pappus affine]
+On place trois points $A$, $B$ et $C$ sur une droite $\mathcal D$ et trois autres points $A'$, $B'$ et $C'$ sur une autre droite $\mathcal D'$.
+Montrer que si $(AB')//(BC')$ et $(BA')//(CB')$, alors $(AA')//(CC')$.
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}\tkzDefPoint(3,0){B}\tkzDefPoint(4,0){C}
+\tkzDefPoint(2,3){B'}\tkzDefPoint(6,4){X}
+
+\tkzDefLine[parallel=through B](A,B') \tkzGetPoint{C''}
+\tkzInterLL(B,C'')(B',X)\tkzGetPoint{C'}
+
+\tkzDefLine[parallel=through B](C,B') \tkzGetPoint{A''}
+\tkzInterLL(B,A'')(B',X)\tkzGetPoint{A'}
+
+\tkzDrawLines(A,C A',C')
+\tkzDrawLines(A,B' B,C' A',B B',C)
+\tkzDrawLines[dashed](A,A' C,C')
+\tkzDrawPoints(A,B,C,A',B',C')
+\tkzLabelPoints[above](A,B,C,A',B',C')
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Distinguer selon si $\mathcal D$ et $\mathcal D'$ sont sécantes ou pas.
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+
+\begin{exo}[Desargues affine]
+Soient $ABC$ et $A'B'C'$ deux triangles sans côtés communs et dont les côtés sont deux à deux parallèles, autrement dit $(AB)//(A'B')$, $(BC)//(B'C')$ et $(CA)//(C'A')$.
+Montrer que les trois droites $(AA')$, $(BB')$ et $(CC')$ sont concourantes ou parallèles.
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+Distinguer suivant si  $(AA')$ et $(BB')$ sont parallèles ou bien sécantes.
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+\begin{exo}
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
 
 \section{Théorème de Ceva et applications}
 
@@ -1089,6 +1306,40 @@ Point de Lemoine
 \section{Théorème de Menelaüs et applications}
 
 
+
+\begin{exo}[Menelaus]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
+
+\begin{exo}[Pappus par Menelaus]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+% https://fr-academic.com/dic.nsf/frwiki/1633467
+\end{sol}
+\end{exo}
+
+\begin{exo}[Desargues par Menelaus]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\end{center}
+\begin{hint}
+\end{hint}
+\begin{sol}
+\end{sol}
+\end{exo}
 
 
 \Closesolutionfile{indications}
